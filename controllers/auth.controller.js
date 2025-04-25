@@ -1,113 +1,98 @@
-const db = require("../models");
-const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { sendOTP, sendOTPSMS } = require("../services/otp.service");
+const AuthService = require("../services/auth.services");
 
 exports.register = async (req, res) => {
-  const { email, password, phone } = req.body;
-  const hashedPassword = await bcrypt.hash(password, 10);
-  const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000); // OTP valid for 5 mins
+  const { email, password, phone, title, given_name, family_name, gender } =
+    req.body;
 
   try {
-    const user = await db.User.create({
+    const { status, message, otpId } = await AuthService.registerUser({
       email,
+      password,
       phone,
-      password: hashedPassword,
-      otp,
-      otpExpiresAt,
-      otpRequestedAt: new Date(),
-      otpattempts: 0,
+      title,
+      given_name,
+      family_name,
+      gender,
     });
 
-    await sendOTP(email, otp);
-    if (phone) await sendOTPSMS(phone, otp);
-    res
-      .status(200)
-      .json({ message: "User registered, OTP sent", otpId: user.id });
+    return res.status(status).json(otpId ? { message, otpId } : { message });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    return res.status(500).json({ error: "Internal server error" });
   }
 };
 
 exports.verifyOtp = async (req, res) => {
   const { email, otp } = req.body;
-  const user = await db.User.findOne({ where: { email } });
 
-  if (!user) return res.status(400).json({ message: "User not found" });
-
-  // Check if user is blocked
-  if (user.blockeduntil && new Date() < new Date(user.blockeduntil)) {
-    return res
-      .status(403)
-      .json({ message: "Too many failed attempts. Try again later." });
+  try {
+    const { status, data } = await AuthService.verifyOtp(email, otp);
+    return res.status(status).json(data);
+  } catch (error) {
+    console.error("There was an error verifying the OTP code", error);
+    return res.status(500).json({ message: "Internal server error" });
   }
-
-  // Invalid or expired OTP
-  if (!user.otp || user.otp !== otp || new Date() > user.otpExpiresAt) {
-    user.otpattempts += 1; // Increase OTP attempts
-    await user.save(); 
-    if (user.otpattempts >= 5) {
-      const blockTime = new Date(Date.now() + 15 * 60 * 1000); // Block for 15 mins
-      user.blockeduntil = blockTime;
-      user.otpblockeduntil = blockTime;
-      await user.save(); // Save block time
-      return res
-        .status(403)
-        .json({ message: "Too many failed attempts. Try after 15 mins." });
-    }
-    return res.status(400).json({ message: "Invalid or expired OTP" });
-  }
-
-  // Successful OTP verification
-  user.isVerified = true;
-  user.otp = null;
-  user.otpattempts = 0; // Reset attempts
-  user.otpRequestedAt = null;
-  await user.save();
-
-  // Generate JWT Token
-  const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
-    expiresIn: "1d",
-  });
-
-  res.status(200).json({ message: "OTP verified successfully", token });
 };
 
-exports.login = async (req, res) => {
+exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
-  const user = await db.User.findOne({ where: { email } });
 
-  if (!user || !user.isVerified) {
-    return res.status(400).json({ message: "User not found or not verified" });
+  try {
+    const { status, data } = await AuthService.loginWithOtp(email, password);
+    return res.status(status).json(data);
+  } catch (error) {
+    console.error("Login error:", error);
+    return res.status(500).json({ message: "Internal server error" });
   }
-
-  const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) return res.status(400).json({ message: "Wrong password" });
-
-  // Prevent multiple OTP requests within 1 minute
-
-  if (user.otpRequestedAt && user.otpExpiresAt && new Date() < new Date(user.otpExpiresAt)) {
-    const timeDiff =
-      new Date().getTime() - new Date(user.otpRequestedAt).getTime();
-
-    if (timeDiff < 60000) {
-      return res
-        .status(429)
-        .json({ message: "OTP request limit exceeded. Try after 1 min." });
-    }
-  }
-
-  // Generate and send new OTP
-  const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  user.otp = otp;
-  user.otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
-  user.otpRequestedAt = new Date();
-  await user.save();
-
-  await sendOTP(email, otp);
-  if (user.phone) await sendOTPSMS(user.phone, otp);
-
-  res.status(200).json({ message: "User logged in, OTP sent", otpId: user.id });
 };
 
+exports.createGoogleUser = async (req, res) => {
+  const { credential, clientId } = req.body;
+  if (!credential)
+    return res.status(400).json({ message: "No token provided" });
+
+  try {
+    const { token, user } = await AuthService.loginWithGoogle(credential, clientId);
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 15 * 60 * 1000,
+      sameSite: "lax",
+    });
+
+    res.status(200).json({ user });
+  } catch (error) {
+    console.error("Google auth error:", error);
+    res.status(500).json({ message: "Token verification failed" });
+  }
+};
+
+exports.verifyRecoveryOTP = async (req, res) => {
+  const { email, otp } = req.body;
+
+  try {
+    const result = await AuthService.verifyRecoveryOTP(email, otp);
+    return res
+      .status(result.status)
+      .json(result.data || { message: result.message });
+  } catch (error) {
+    console.error("OTP verification error:", error);
+    return res
+      .status(500)
+      .json({ error: error.message || "Internal Server Error" });
+  }
+};
+
+exports.sendPasswordRecoveryEmail = async (req, res) => {
+  const { email } = req.body;
+  try {
+    const result = await AuthService.sendPasswordRecoveryEmail(email);
+    return res
+      .status(result.status)
+      .json(result.data || { message: result.message });
+  } catch (error) {
+    console.error("Recovery email error:", error);
+    res.status(500).json({ error: error.message || "Internal Server Error" });
+  }
+};

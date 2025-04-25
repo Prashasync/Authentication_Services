@@ -7,7 +7,6 @@
     "start": "node app.js",
     "dev": "nodemon app.js --inspect"
   },
-  "author": "sainadh",
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.782.0",

@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("user", {
+  const User = sequelize.define("users", {
     otpId: {
       type: DataTypes.UUID,
-      allowNull: true, 
-    },    
+      allowNull: true,
+    },
     name: DataTypes.STRING,
     email: {
       type: DataTypes.STRING,
@@ -18,12 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       unique: true,
       allowNull: true,
     },
-    password: DataTypes.STRING,
+    password_hashed: DataTypes.STRING,
     otp: DataTypes.STRING,
-    otpId: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-    },
     otpExpiresAt: DataTypes.DATE,
     isVerified: {
       type: DataTypes.BOOLEAN,
@@ -55,41 +51,47 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.NOW,
     },
     title: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
     },
     first_name: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
     },
     middle_name: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
     },
     last_name: {
-      type: DataTypes.STRING, 
+      type: DataTypes.STRING,
     },
     gender: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
     },
     roles: {
-      type: DataTypes.STRING,  
+      type: DataTypes.STRING,
+    },
+    provider: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "local",
+    },
+    google_id: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     profile_picture: {
-      type: DataTypes.TEXT, 
+      type: DataTypes.TEXT,
     },
     is_active: {
       type: DataTypes.BOOLEAN,
-      defaultValue: true,  
+      defaultValue: true,
     },
     last_login: {
-      type: DataTypes.DATE,  
+      type: DataTypes.DATE,
     },
     is_deleted: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false, 
-    }
+      defaultValue: false,
+    },
   });
 
   return User;
 };
-
-
-
