@@ -4,39 +4,33 @@ const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const bcrypt = require("bcrypt");
 const logger = require("../utils/logger");
 const db = require("../models");
-const { sendEmail } = require("../utils/mailer");
+const jwt = require("jsonwebtoken");
+const sendEmail = require("../utils/mailer");
+const { generateToken, generateTempToken } = require("../utils/jwt");
 require("dotenv").config();
 
-
 // AWS SQS setup
-const sqsClient = new SQSClient({ region: process.env.AWS_REGION });
+// const sqsClient = new SQSClient({ region: process.env.AWS_REGION });
 
 const AuthService = {
-  async sendEmailOTP(to, otp, method = "email") {
-    try {
-      const otpId = Math.random().toString(36).substr(2, 9);
-
-      const messageBody = {
-        to,
-        otp,
-        method,
-        otpId,
-        type: "otp_verification",
-      };
-
-      const command = new SendMessageCommand({
-        QueueUrl: process.env.SQS_QUEUE_URL,
-        MessageBody: JSON.stringify(messageBody),
-      });
-
-      await sqsClient.send(command);
-      logger.info(`OTP message pushed to SQS for: ${to}, OTP ID: ${otpId}`);
-
-      return otpId;
-    } catch (error) {
-      logger.error(`Failed to queue OTP message: ${error.message}`);
-      throw new Error("OTP queueing failed");
+  async getUser(user_id) {
+    const user = await db.User.findOne({
+      where: { user_id },
+    });
+    if (!user) {
+      return { status: 404, data: { message: "User not found" } };
     }
+    return {
+      status: 200,
+      data: {
+        user_id: user.user_id,
+        email: user.email,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        phone: user.phone,
+        title: user.title,
+      },
+    };
   },
 
   async registerUser(
@@ -45,11 +39,11 @@ const AuthService = {
     phone,
     title,
     first_name,
-    family_name,
+    last_name,
     gender
   ) {
-    const existingUser = await User.findOne({ where: { email } });
-    if (existingUser) {
+    const user = await db.User.findOne({ where: { email } });
+    if (user) {
       return { status: 400, message: "User already exists" };
     }
 
@@ -57,35 +51,80 @@ const AuthService = {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
-    const newUser = await User.create({
+    const newUser = await db.User.create({
       email,
-      given_name,
-      family_name,
-      hashedPassword,
+      first_name,
+      last_name,
+      password_hash: hashedPassword,
+      phone,
       title,
       gender,
-      otp,
-      otpExpiresAt,
     });
 
-    await sendEmailOTP(email, otp);
-    if (phone) await sendOTPSMS(phone, otp);
+    const newOtp = await db.Otp.create({
+      otp_text: otp,
+      user_id: newUser.dataValues.user_id,
+      valid_until: otpExpiresAt,
+      status: "pending",
+      created_at: new Date(),
+    });
+
+    await sendEmail(
+      newUser.dataValues.email,
+      "OTP Verification",
+      newOtp.dataValues.otp_text
+    );
+    // if (phone) await sendOTPSMS(phone, otp);
 
     return {
       status: 200,
       message: "User registered, OTP sent",
-      otpId: newUser.id,
+      isVerified: newUser.dataValues.isVerified,
+      token: newUser.dataValues.email,
     };
   },
 
+  async sendEmailOTP(to, otp, method = "email") {
+    const otpId = Math.random().toString(36).substr(2, 9);
+
+    const messageBody = {
+      to,
+      otp,
+      method,
+      otpId,
+      type: "otp_verification",
+    };
+
+    const command = new SendMessageCommand({
+      QueueUrl: process.env.SQS_QUEUE_URL,
+      MessageBody: JSON.stringify(messageBody),
+    });
+
+    await sqsClient.send(command);
+    logger.info(`OTP message pushed to SQS for: ${to}, OTP ID: ${otpId}`);
+
+    return otpId;
+  },
+
   async verifyOtp(email, otp) {
-    const user = await User.findOne({ where: { email } });
+    const user = await db.User.findOne({ where: { email } });
 
     if (!user) {
       return { status: 400, data: { message: "User not found" } };
     }
 
-    if (user.blockeduntil && new Date() < new Date(user.blockeduntil)) {
+    const userOtp = await db.Otp.findOne({
+      where: { user_id: user.user_id },
+    });
+
+    if (!userOtp) {
+      return { status: 400, data: { message: "OTP not found" } };
+    }
+
+    if (
+      userOtp.dataValues.blocked_until &&
+      new Date() < new Date(userOtp.dataValues.blocked_until)
+    ) {
       return {
         status: 403,
         data: { message: "Too many failed attempts. Try again later." },
@@ -93,17 +132,18 @@ const AuthService = {
     }
 
     const isOtpInvalid =
-      !user.otp || user.otp !== otp || new Date() > user.otpExpiresAt;
+      !userOtp.dataValues.otp_text ||
+      userOtp.dataValues.otp_text !== otp ||
+      new Date() > userOtp.valid_until;
 
     if (isOtpInvalid) {
-      user.otpattempts += 1;
-      await user.save();
+      userOtp.dataValues.otp_attempts += 1;
+      await userOtp.save();
 
-      if (user.otpattempts >= 5) {
+      if (userOtp.dataValues.otp_attempts >= 5) {
         const blockTime = new Date(Date.now() + 15 * 60 * 1000);
-        user.blockeduntil = blockTime;
-        user.otpblockeduntil = blockTime;
-        await user.save();
+        userOtp.dataValues.blocked_until = blockTime;
+        await userOtp.save();
 
         return {
           status: 403,
@@ -114,47 +154,59 @@ const AuthService = {
       return { status: 400, data: { message: "Invalid or expired OTP" } };
     }
 
+    user.status = true;
+    user.otp_text = null;
+    user.otp_attempts = 0;
+    user.created_at = null;
     user.isVerified = true;
-    user.otp = null;
-    user.otpattempts = 0;
-    user.otpRequestedAt = null;
     await user.save();
 
-    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
-      expiresIn: "1d",
-    });
-
+    const token = generateToken({ id: user.dataValues.user_id });
     return {
       status: 200,
       data: { message: "OTP verified successfully", token },
     };
   },
 
-  async loginWithOtp(email, password) {
-    const user = await User.findOne({ where: { email } });
+  async loginUser(email, password) {
+    const user = await db.User.findOne({ where: { email } });
 
-    if (!user || !user.isVerified) {
+    if (!user) {
       return {
         status: 400,
-        data: { message: "User not found or not verified" },
+        data: { message: "NOT_FOUND" },
       };
     }
 
-    const isMatch = await bcrypt.compare(password, user.password);
+    if (!user.dataValues.isVerified) {
+      return {
+        status: 400,
+        data: { message: "NOT_VERIFIED" },
+      };
+    }
+
+    const isMatch = await bcrypt.compare(
+      password,
+      user.dataValues.password_hash
+    );
+
     if (!isMatch) {
       return {
         status: 400,
-        data: { message: "Wrong password" },
+        data: { message: "INVALID_CREDENTIALS" },
       };
     }
-
+    const userOtp = await db.Otp.findOne({
+      where: { user_id: user.dataValues.user_id },
+    });
     if (
-      user.otpRequestedAt &&
-      user.otpExpiresAt &&
-      new Date() < new Date(user.otpExpiresAt)
+      userOtp.dataValues.created_at &&
+      userOtp.dataValues.valid_until &&
+      new Date() < new Date(userOtp.dataValues.valid_until)
     ) {
       const timeDiff =
-        new Date().getTime() - new Date(user.otpRequestedAt).getTime();
+        new Date().getTime() -
+        new Date(userOtp.dataValues.created_at).getTime();
 
       if (timeDiff < 60000) {
         return {
@@ -165,17 +217,23 @@ const AuthService = {
     }
 
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    user.otp = otp;
-    user.otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
-    user.otpRequestedAt = new Date();
-    await user.save();
+    userOtp.otp_text = otp;
+    userOtp.valid_until = new Date(Date.now() + 5 * 60 * 1000);
+    userOtp.created_at = new Date();
+    await userOtp.save();
 
-    await sendEmailOTP(email, otp);
-    if (user.phone) await sendOTPSMS(user.phone, otp);
+    await sendEmail(
+      user.dataValues.email,
+      userOtp.otp_text,
+      "OTP Verification"
+    );
+    // if (user.phone) await sendOTPSMS(user.phone, otp);
+
+    const token = generateToken({ id: user.dataValues.user_id });
 
     return {
       status: 200,
-      data: { message: "User logged in, OTP sent", otpId: user.id },
+      data: { message: "LOGIN_SUCCESSFUL", token },
     };
   },
 

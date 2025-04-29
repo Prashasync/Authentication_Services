@@ -1,30 +1,39 @@
-const jwt = require("jsonwebtoken");
-const AuthService = require("../services/auth.services");
+const AuthService = require("../services/auth.service");
 
-exports.register = async (req, res) => {
-  const { email, password, phone, title, given_name, family_name, gender } =
-    req.body;
-
+exports.getUser = async (req, res) => {
+  const { user } = req;
   try {
-    const { status, message, otpId } = await AuthService.registerUser({
+    const { status, data } = await AuthService.getUser(user.id);
+    return res.status(status).json(data);
+  } catch (error) {
+    console.error("Error fetching user:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+exports.registerUser = async (req, res) => {
+  const { email, password, phone, title, first_name, last_name, gender } =
+    req.body;
+  try {
+    const { status, message, token } = await AuthService.registerUser(
       email,
       password,
       phone,
       title,
-      given_name,
-      family_name,
-      gender,
-    });
+      first_name,
+      last_name,
+      gender
+    );
 
-    return res.status(status).json(otpId ? { message, otpId } : { message });
-  } catch (err) {
+    return res.status(status).json({ message, token });
+  } catch (error) {
+    console.error("Error registering user:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 };
 
 exports.verifyOtp = async (req, res) => {
   const { email, otp } = req.body;
-
   try {
     const { status, data } = await AuthService.verifyOtp(email, otp);
     return res.status(status).json(data);
@@ -37,11 +46,31 @@ exports.verifyOtp = async (req, res) => {
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
 
+  if (!email || !password) {
+    return res
+      .status(400)
+      .json({ message: "Email and password are required." });
+  }
+
   try {
-    const { status, data } = await AuthService.loginWithOtp(email, password);
-    return res.status(status).json(data);
+    const { status, data, isVerified } = await AuthService.loginUser(
+      email,
+      password
+    );
+
+    if (isVerified) {
+      return res.status(400).json({ message: "NOT_VERIFIED" });
+    }
+
+    res.cookie("token", data.token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 15 * 60 * 1000,
+      sameSite: "lax",
+    });
+    return res.status(status).json({ message: data.message });
   } catch (error) {
-    console.error("Login error:", error);
+    console.error("Login error:", error.message || error);
     return res.status(500).json({ message: "Internal server error" });
   }
 };
@@ -52,7 +81,10 @@ exports.createGoogleUser = async (req, res) => {
     return res.status(400).json({ message: "No token provided" });
 
   try {
-    const { token, user } = await AuthService.loginWithGoogle(credential, clientId);
+    const { token, user } = await AuthService.loginWithGoogle(
+      credential,
+      clientId
+    );
 
     res.cookie("token", token, {
       httpOnly: true,

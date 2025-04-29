@@ -5,19 +5,28 @@ const db = require("./models");
 const routes = require("./routes");
 const logger = require("./utils/logger");
 const requestLogger = require("./middlewares/requestLogger");
+const cors = require("cors");
+
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(requestLogger);
+app.use(cors(
+  {
+    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }
+));
 
 app.get("/", (req, res) => {
   res.send("👋 Welcome to the API — v1 🚀");
 });
-
 app.use("/api/v1", routes);
 
 db.sequelize.sync().then(() => {
-  app.listen(process.env.PORT, () => {
-    logger.info(`✅ Server running on port ${process.env.PORT}`);
+  app.listen(PORT, () => {
+    logger.info(`✅ Server running on port ${PORT}`);
   });
 });
 
