@@ -7,7 +7,7 @@ const logger = require("./utils/logger");
 const requestLogger = require("./middlewares/requestLogger");
 const cors = require("cors");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(requestLogger);

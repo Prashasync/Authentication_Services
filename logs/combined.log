@@ -1389,3 +1389,365 @@
 [2025-04-29 01:49:59] INFO: [Request] POST /api/v1/auth/register 200 - 1514ms
 [2025-04-29 01:50:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 93ms
 [2025-04-29 01:50:41] INFO: [Request] POST /api/v1/auth/login 400 - 261ms
+[2025-04-29 15:33:57] INFO: [Request] GET /api/v1/patients/onboarding-status 404 - 208ms
+[2025-04-29 15:33:57] INFO: [Request] GET /api/v1/patients/onboarding-status 404 - 2ms
+[2025-04-29 15:37:26] INFO: [Request] GET /api/v1/patient/onboarding-status 404 - 8ms
+[2025-04-29 15:37:26] INFO: [Request] GET /api/v1/patient/onboarding-status 404 - 11ms
+[2025-04-29 15:49:52] INFO: ✅ Database connected successfully
+[2025-04-29 15:49:52] INFO: ✅ Server running on port 3001
+[2025-04-30 11:43:06] INFO: ✅ Database connected successfully
+[2025-04-30 11:44:17] INFO: ✅ Database connected successfully
+[2025-04-30 11:46:09] INFO: ✅ Database connected successfully
+[2025-04-30 11:48:14] INFO: ✅ Database connected successfully
+[2025-04-30 11:49:13] INFO: ✅ Database connected successfully
+[2025-04-30 12:15:20] INFO: ✅ Database connected successfully
+[2025-04-30 12:15:21] INFO: ✅ Server running on port 4000
+[2025-04-30 12:16:43] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-04-30 12:16:44] INFO: [Request] POST /api/v1/auth/login 400 - 246ms
+[2025-04-30 12:20:29] INFO: ✅ Database connected successfully
+[2025-04-30 12:20:29] INFO: ✅ Server running on port 4000
+[2025-04-30 12:33:50] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 16ms
+[2025-04-30 12:33:50] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 257ms
+[2025-04-30 12:34:31] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-04-30 12:34:31] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 263ms
+[2025-04-30 12:34:33] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 53ms
+[2025-04-30 12:35:31] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-04-30 12:35:31] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 218ms
+[2025-04-30 12:35:56] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 5ms
+[2025-04-30 12:35:57] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 314ms
+[2025-04-30 12:38:28] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-04-30 12:38:28] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 288ms
+[2025-04-30 12:40:13] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-04-30 12:40:14] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 317ms
+[2025-04-30 12:40:49] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-04-30 12:40:50] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 233ms
+[2025-04-30 12:40:54] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 41ms
+[2025-04-30 12:41:38] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-04-30 12:41:38] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 215ms
+[2025-04-30 12:43:01] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-04-30 12:43:01] INFO: [Request] POST /api/v1/auth/login 400 - 370ms
+[2025-04-30 12:43:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 12:43:08] INFO: [Request] POST /api/v1/auth/login 400 - 185ms
+[2025-04-30 12:43:49] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 12:43:49] INFO: [Request] POST /api/v1/auth/login 400 - 377ms
+[2025-04-30 12:45:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-04-30 12:45:25] INFO: [Request] POST /api/v1/auth/login 400 - 221ms
+[2025-04-30 12:45:36] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 12:45:36] INFO: [Request] POST /api/v1/auth/login 400 - 160ms
+[2025-04-30 12:46:14] INFO: ✅ Database connected successfully
+[2025-04-30 12:46:14] INFO: ✅ Server running on port 4000
+[2025-04-30 12:46:50] INFO: ✅ Database connected successfully
+[2025-04-30 12:46:50] INFO: ✅ Server running on port 4000
+[2025-04-30 12:46:59] INFO: ✅ Database connected successfully
+[2025-04-30 12:46:59] INFO: ✅ Server running on port 4000
+[2025-04-30 12:47:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-04-30 12:47:03] INFO: [Request] POST /api/v1/auth/login 400 - 33ms
+[2025-04-30 12:47:55] INFO: ✅ Database connected successfully
+[2025-04-30 12:47:55] INFO: ✅ Server running on port 4000
+[2025-04-30 12:48:48] INFO: ✅ Database connected successfully
+[2025-04-30 12:48:48] INFO: ✅ Server running on port 4000
+[2025-04-30 12:48:51] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-04-30 12:48:51] INFO: [Request] POST /api/v1/auth/login 400 - 41ms
+[2025-04-30 12:49:18] INFO: ✅ Database connected successfully
+[2025-04-30 12:49:18] INFO: ✅ Server running on port 4000
+[2025-04-30 12:49:39] INFO: ✅ Database connected successfully
+[2025-04-30 12:49:39] INFO: ✅ Server running on port 4000
+[2025-04-30 12:49:48] INFO: ✅ Database connected successfully
+[2025-04-30 12:49:49] INFO: ✅ Server running on port 4000
+[2025-04-30 12:49:52] INFO: ✅ Database connected successfully
+[2025-04-30 12:49:52] INFO: ✅ Server running on port 4000
+[2025-04-30 12:50:08] INFO: ✅ Database connected successfully
+[2025-04-30 12:50:08] INFO: ✅ Server running on port 4000
+[2025-04-30 12:50:20] INFO: ✅ Database connected successfully
+[2025-04-30 12:50:20] INFO: ✅ Server running on port 4000
+[2025-04-30 12:50:29] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-04-30 12:50:29] INFO: [Request] POST /api/v1/auth/login 400 - 36ms
+[2025-04-30 12:51:15] INFO: ✅ Database connected successfully
+[2025-04-30 12:51:15] INFO: ✅ Server running on port 4000
+[2025-04-30 12:51:24] INFO: ✅ Database connected successfully
+[2025-04-30 12:51:24] INFO: ✅ Server running on port 4000
+[2025-04-30 12:51:39] INFO: ✅ Database connected successfully
+[2025-04-30 12:51:39] INFO: ✅ Server running on port 4000
+[2025-04-30 12:51:43] INFO: ✅ Database connected successfully
+[2025-04-30 12:51:43] INFO: ✅ Server running on port 4000
+[2025-04-30 12:52:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-04-30 12:52:06] INFO: [Request] POST /api/v1/auth/login 200 - 2888ms
+[2025-04-30 12:52:58] INFO: ✅ Database connected successfully
+[2025-04-30 12:52:59] INFO: ✅ Server running on port 4000
+[2025-04-30 12:53:39] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 30ms
+[2025-04-30 12:53:39] INFO: [Request] POST /api/v1/auth/login 400 - 336ms
+[2025-04-30 12:55:40] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 12:55:40] INFO: [Request] POST /api/v1/auth/login 400 - 301ms
+[2025-04-30 12:56:21] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 12:56:22] INFO: [Request] POST /api/v1/auth/login 400 - 296ms
+[2025-04-30 12:56:47] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 12:56:48] INFO: [Request] POST /api/v1/auth/login 400 - 380ms
+[2025-04-30 12:57:18] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 12:57:19] INFO: [Request] POST /api/v1/auth/login 400 - 468ms
+[2025-04-30 12:59:06] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 13ms
+[2025-04-30 12:59:08] INFO: [Request] POST /api/v1/auth/login 200 - 1913ms
+[2025-04-30 12:59:58] INFO: ✅ Database connected successfully
+[2025-04-30 12:59:58] INFO: ✅ Server running on port 4000
+[2025-04-30 13:00:26] INFO: ✅ Database connected successfully
+[2025-04-30 13:00:26] INFO: ✅ Server running on port 4000
+[2025-04-30 13:00:38] INFO: ✅ Database connected successfully
+[2025-04-30 13:00:38] INFO: ✅ Server running on port 4000
+[2025-04-30 13:00:49] INFO: ✅ Database connected successfully
+[2025-04-30 13:00:50] INFO: ✅ Server running on port 4000
+[2025-04-30 13:00:52] INFO: ✅ Database connected successfully
+[2025-04-30 13:00:52] INFO: ✅ Server running on port 4000
+[2025-04-30 13:00:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-04-30 13:00:58] INFO: [Request] POST /api/v1/auth/login 200 - 1102ms
+[2025-04-30 13:02:07] INFO: ✅ Database connected successfully
+[2025-04-30 13:02:07] INFO: ✅ Server running on port 4000
+[2025-04-30 13:02:25] INFO: ✅ Database connected successfully
+[2025-04-30 13:02:25] INFO: ✅ Server running on port 4000
+[2025-04-30 13:02:32] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 15ms
+[2025-04-30 13:02:34] INFO: [Request] POST /api/v1/auth/login 500 - 1635ms
+[2025-04-30 13:03:13] INFO: ✅ Database connected successfully
+[2025-04-30 13:03:13] INFO: ✅ Server running on port 4000
+[2025-04-30 13:03:16] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-04-30 13:03:16] INFO: [Request] POST /api/v1/auth/login 500 - 181ms
+[2025-04-30 13:03:47] INFO: ✅ Database connected successfully
+[2025-04-30 13:03:47] INFO: ✅ Server running on port 4000
+[2025-04-30 13:04:17] INFO: ✅ Database connected successfully
+[2025-04-30 13:04:17] INFO: ✅ Server running on port 4000
+[2025-04-30 13:04:23] INFO: ✅ Database connected successfully
+[2025-04-30 13:04:23] INFO: ✅ Server running on port 4000
+[2025-04-30 13:04:26] INFO: ✅ Database connected successfully
+[2025-04-30 13:04:26] INFO: ✅ Server running on port 4000
+[2025-04-30 13:04:37] INFO: ✅ Database connected successfully
+[2025-04-30 13:04:37] INFO: ✅ Server running on port 4000
+[2025-04-30 13:04:40] INFO: ✅ Database connected successfully
+[2025-04-30 13:04:40] INFO: ✅ Server running on port 4000
+[2025-04-30 13:04:43] INFO: ✅ Database connected successfully
+[2025-04-30 13:04:43] INFO: ✅ Server running on port 4000
+[2025-04-30 13:05:08] INFO: ✅ Database connected successfully
+[2025-04-30 13:05:08] INFO: ✅ Server running on port 4000
+[2025-04-30 13:05:17] INFO: ✅ Database connected successfully
+[2025-04-30 13:05:17] INFO: ✅ Server running on port 4000
+[2025-04-30 13:05:20] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 21ms
+[2025-04-30 13:05:21] INFO: [Request] POST /api/v1/auth/login 500 - 1471ms
+[2025-04-30 13:05:45] INFO: ✅ Database connected successfully
+[2025-04-30 13:05:45] INFO: ✅ Server running on port 4000
+[2025-04-30 13:05:48] INFO: ✅ Database connected successfully
+[2025-04-30 13:05:48] INFO: ✅ Server running on port 4000
+[2025-04-30 13:05:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-04-30 13:05:57] INFO: [Request] POST /api/v1/auth/login 429 - 252ms
+[2025-04-30 13:07:32] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 13:07:33] INFO: [Request] POST /api/v1/auth/login 200 - 1463ms
+[2025-04-30 13:08:13] INFO: ✅ Database connected successfully
+[2025-04-30 13:08:13] INFO: ✅ Server running on port 4000
+[2025-04-30 13:09:40] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-04-30 13:09:40] INFO: [Request] POST /api/v1/auth/login 400 - 296ms
+[2025-04-30 13:09:48] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 13:09:48] INFO: [Request] POST /api/v1/auth/login 400 - 110ms
+[2025-04-30 13:15:01] INFO: ✅ Database connected successfully
+[2025-04-30 13:15:01] INFO: ✅ Server running on port 4000
+[2025-04-30 13:15:06] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-04-30 13:15:06] INFO: [Request] POST /api/v1/auth/login 400 - 133ms
+[2025-04-30 13:23:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 13:23:10] INFO: [Request] POST /api/v1/auth/login 200 - 1311ms
+[2025-04-30 13:29:15] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 13:29:15] INFO: [Request] POST /api/v1/auth/login 400 - 198ms
+[2025-04-30 13:30:38] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 13:30:38] INFO: [Request] POST /api/v1/auth/login 400 - 195ms
+[2025-04-30 13:30:59] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-04-30 13:30:59] INFO: [Request] POST /api/v1/auth/login 400 - 204ms
+[2025-04-30 13:32:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 13:32:57] INFO: [Request] POST /api/v1/auth/login 400 - 216ms
+[2025-04-30 13:35:33] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-04-30 13:35:35] INFO: [Request] POST /api/v1/auth/login 200 - 1903ms
+[2025-04-30 13:36:59] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-04-30 13:37:00] INFO: [Request] POST /api/v1/auth/login 200 - 1007ms
+[2025-04-30 14:05:47] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-04-30 14:05:49] INFO: [Request] POST /api/v1/auth/login 200 - 1876ms
+[2025-04-30 14:08:20] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:08:21] INFO: [Request] POST /api/v1/auth/login 200 - 1660ms
+[2025-04-30 14:08:26] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:08:26] INFO: [Request] POST /api/v1/auth/login 400 - 23ms
+[2025-04-30 14:16:20] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:16:21] INFO: [Request] POST /api/v1/auth/login 400 - 356ms
+[2025-04-30 14:18:10] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:18:11] INFO: [Request] POST /api/v1/auth/login 400 - 242ms
+[2025-04-30 14:20:19] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-04-30 14:20:20] INFO: [Request] POST /api/v1/auth/login 400 - 256ms
+[2025-04-30 14:20:43] INFO: ✅ Database connected successfully
+[2025-04-30 14:20:44] INFO: ✅ Server running on port 4000
+[2025-04-30 14:20:54] INFO: ✅ Database connected successfully
+[2025-04-30 14:20:54] INFO: ✅ Server running on port 4000
+[2025-04-30 14:20:59] INFO: ✅ Database connected successfully
+[2025-04-30 14:20:59] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:07] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:07] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:14] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:14] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:20] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:20] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:25] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:25] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:33] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:33] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:44] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:44] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:48] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:48] INFO: ✅ Server running on port 4000
+[2025-04-30 14:21:54] INFO: ✅ Database connected successfully
+[2025-04-30 14:21:54] INFO: ✅ Server running on port 4000
+[2025-04-30 14:22:20] INFO: ✅ Database connected successfully
+[2025-04-30 14:22:20] INFO: ✅ Server running on port 4000
+[2025-04-30 14:22:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-04-30 14:22:56] INFO: [Request] POST /api/v1/auth/login 400 - 463ms
+[2025-04-30 14:23:12] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-04-30 14:23:12] INFO: [Request] POST /api/v1/auth/login 400 - 265ms
+[2025-04-30 14:23:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 12ms
+[2025-04-30 14:23:25] INFO: [Request] POST /api/v1/auth/login 500 - 164ms
+[2025-04-30 14:24:17] INFO: ✅ Database connected successfully
+[2025-04-30 14:24:17] INFO: ✅ Server running on port 4000
+[2025-04-30 14:24:19] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-04-30 14:24:19] INFO: [Request] POST /api/v1/auth/login 500 - 31ms
+[2025-04-30 14:24:38] INFO: ✅ Database connected successfully
+[2025-04-30 14:24:38] INFO: ✅ Server running on port 4000
+[2025-04-30 14:24:47] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-04-30 14:24:47] INFO: [Request] POST /api/v1/auth/login 400 - 125ms
+[2025-04-30 14:25:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:25:10] INFO: [Request] POST /api/v1/auth/login 200 - 1853ms
+[2025-04-30 14:27:52] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-04-30 14:27:54] INFO: [Request] POST /api/v1/auth/login 200 - 1615ms
+[2025-04-30 14:30:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:30:05] INFO: [Request] POST /api/v1/auth/login 200 - 1875ms
+[2025-04-30 14:31:42] INFO: ✅ Database connected successfully
+[2025-04-30 14:31:42] INFO: ✅ Server running on port 4000
+[2025-04-30 14:31:45] INFO: ✅ Database connected successfully
+[2025-04-30 14:31:45] INFO: ✅ Server running on port 4000
+[2025-04-30 14:31:51] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-04-30 14:31:52] INFO: [Request] POST /api/v1/auth/login 200 - 1396ms
+[2025-04-30 14:34:05] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:05] INFO: ✅ Server running on port 4000
+[2025-04-30 14:34:33] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:33] INFO: ✅ Server running on port 4000
+[2025-04-30 14:34:35] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:35] INFO: ✅ Server running on port 4000
+[2025-04-30 14:34:37] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:37] INFO: ✅ Server running on port 4000
+[2025-04-30 14:34:46] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:46] INFO: ✅ Server running on port 4000
+[2025-04-30 14:34:50] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:50] INFO: ✅ Server running on port 4000
+[2025-04-30 14:34:58] INFO: ✅ Database connected successfully
+[2025-04-30 14:34:58] INFO: ✅ Server running on port 4000
+[2025-04-30 14:35:01] INFO: ✅ Database connected successfully
+[2025-04-30 14:35:01] INFO: ✅ Server running on port 4000
+[2025-04-30 14:38:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-04-30 14:38:27] INFO: [Request] POST /api/v1/auth/login 200 - 1861ms
+[2025-04-30 14:40:31] INFO: [Request] GET /api/v1/patient/verify-token 404 - 4ms
+[2025-04-30 14:40:31] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 14:40:31] INFO: [Request] GET /api/v1/patient/verify-token 404 - 3ms
+[2025-04-30 14:40:31] INFO: [Request] GET /api/v1/patient/verify-token 404 - 2ms
+[2025-04-30 14:44:42] INFO: [Request] OPTIONS /api/v1/patient/onboarding-status 204 - 1ms
+[2025-04-30 14:44:42] INFO: [Request] POST /api/v1/patient/onboarding-status 404 - 1ms
+[2025-04-30 14:44:49] INFO: [Request] OPTIONS /api/v1/patient/onboarding-status 204 - 3ms
+[2025-04-30 14:44:49] INFO: [Request] POST /api/v1/patient/onboarding-status 404 - 1ms
+[2025-04-30 14:45:20] INFO: [Request] OPTIONS /api/v1/patient/onboarding-status 204 - 1ms
+[2025-04-30 14:45:20] INFO: [Request] POST /api/v1/patient/onboarding-status 404 - 1ms
+[2025-04-30 14:46:00] INFO: ✅ Database connected successfully
+[2025-04-30 14:46:00] INFO: ✅ Server running on port 4000
+[2025-04-30 14:47:01] INFO: ✅ Database connected successfully
+[2025-04-30 14:47:01] INFO: ✅ Server running on port 4000
+[2025-04-30 14:48:41] INFO: ✅ Database connected successfully
+[2025-04-30 14:48:41] INFO: ✅ Server running on port 4000
+[2025-04-30 14:48:48] INFO: ✅ Database connected successfully
+[2025-04-30 14:48:48] INFO: ✅ Server running on port 4000
+[2025-04-30 14:49:04] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 13ms
+[2025-04-30 14:49:04] INFO: [Request] POST /api/v1/auth/login 200 - 494ms
+[2025-04-30 14:50:22] INFO: ✅ Database connected successfully
+[2025-04-30 14:50:22] INFO: ✅ Server running on port 4000
+[2025-04-30 14:50:25] INFO: ✅ Database connected successfully
+[2025-04-30 14:50:25] INFO: ✅ Server running on port 4000
+[2025-04-30 14:50:38] INFO: ✅ Database connected successfully
+[2025-04-30 14:50:38] INFO: ✅ Server running on port 4000
+[2025-04-30 14:50:43] INFO: ✅ Database connected successfully
+[2025-04-30 14:50:43] INFO: ✅ Server running on port 4000
+[2025-04-30 14:50:47] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-04-30 14:50:47] INFO: [Request] POST /api/v1/auth/login 200 - 172ms
+[2025-04-30 14:52:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 19ms
+[2025-04-30 14:52:09] INFO: [Request] POST /api/v1/auth/login 200 - 392ms
+[2025-04-30 14:53:24] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:53:25] INFO: [Request] POST /api/v1/auth/login 200 - 538ms
+[2025-04-30 14:53:25] INFO: [Request] GET /api/v1/patient/verify-token 404 - 15ms
+[2025-04-30 14:53:25] INFO: [Request] GET /api/v1/patient/verify-token 404 - 2ms
+[2025-04-30 14:53:25] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 14:53:25] INFO: [Request] GET /api/v1/patient/verify-token 404 - 13ms
+[2025-04-30 14:54:49] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 14:54:49] INFO: [Request] POST /api/v1/auth/login 400 - 296ms
+[2025-04-30 14:54:53] INFO: [Request] POST /api/v1/auth/login 400 - 111ms
+[2025-04-30 14:54:58] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-04-30 14:54:58] INFO: [Request] POST /api/v1/auth/login 200 - 149ms
+[2025-04-30 14:54:59] INFO: [Request] GET /api/v1/patient/verify-token 404 - 27ms
+[2025-04-30 14:54:59] INFO: [Request] GET /api/v1/patient/verify-token 404 - 9ms
+[2025-04-30 14:54:59] INFO: [Request] GET /api/v1/patient/verify-token 404 - 9ms
+[2025-04-30 14:54:59] INFO: [Request] GET /api/v1/patient/verify-token 404 - 5ms
+[2025-04-30 15:16:11] INFO: [Request] GET /api/v1/patient/verify-token 404 - 8ms
+[2025-04-30 15:16:11] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:16:12] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:16:12] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:16:30] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:16:31] INFO: [Request] POST /api/v1/auth/login 400 - 310ms
+[2025-04-30 15:16:38] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:16:38] INFO: [Request] POST /api/v1/auth/login 400 - 115ms
+[2025-04-30 15:17:05] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-04-30 15:17:05] INFO: [Request] POST /api/v1/auth/login 400 - 285ms
+[2025-04-30 15:17:27] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:17:28] INFO: [Request] POST /api/v1/auth/login 400 - 312ms
+[2025-04-30 15:17:31] INFO: [Request] POST /api/v1/auth/login 400 - 111ms
+[2025-04-30 15:17:33] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 15:17:33] INFO: [Request] POST /api/v1/auth/login 400 - 114ms
+[2025-04-30 15:17:40] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 15:17:40] INFO: [Request] POST /api/v1/auth/login 400 - 118ms
+[2025-04-30 15:21:53] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:21:53] INFO: [Request] POST /api/v1/auth/login 400 - 348ms
+[2025-04-30 15:22:00] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:22:00] INFO: [Request] POST /api/v1/auth/login 400 - 115ms
+[2025-04-30 15:22:29] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 15:22:29] INFO: [Request] POST /api/v1/auth/login 400 - 360ms
+[2025-04-30 15:22:58] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:22:58] INFO: [Request] POST /api/v1/auth/login 400 - 266ms
+[2025-04-30 15:23:00] INFO: [Request] POST /api/v1/auth/login 400 - 113ms
+[2025-04-30 15:23:01] INFO: [Request] POST /api/v1/auth/login 400 - 110ms
+[2025-04-30 15:34:32] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:34:32] INFO: [Request] POST /api/v1/auth/login 400 - 489ms
+[2025-04-30 15:34:55] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-04-30 15:34:55] INFO: [Request] POST /api/v1/auth/login 400 - 352ms
+[2025-04-30 15:35:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-04-30 15:35:03] INFO: [Request] POST /api/v1/auth/login 400 - 117ms
+[2025-04-30 15:36:06] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:36:07] INFO: [Request] POST /api/v1/auth/login 400 - 349ms
+[2025-04-30 15:36:13] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-04-30 15:36:14] INFO: [Request] POST /api/v1/auth/login 400 - 115ms
+[2025-04-30 15:36:28] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-04-30 15:36:29] INFO: [Request] POST /api/v1/auth/login 400 - 301ms
+[2025-04-30 15:38:48] INFO: ✅ Database connected successfully
+[2025-04-30 15:38:48] INFO: ✅ Server running on port 4000
+[2025-04-30 15:39:22] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 14ms
+[2025-04-30 15:39:23] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 230ms
+[2025-04-30 15:39:39] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-04-30 15:39:39] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 244ms
+[2025-04-30 15:41:16] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-04-30 15:41:16] INFO: [Request] POST /api/v1/auth/login 400 - 322ms
+[2025-04-30 15:41:21] INFO: [Request] POST /api/v1/auth/login 200 - 166ms
+[2025-04-30 15:41:21] INFO: [Request] GET /api/v1/patient/verify-token 404 - 37ms
+[2025-04-30 15:41:21] INFO: [Request] GET /api/v1/patient/verify-token 404 - 4ms
+[2025-04-30 15:41:21] INFO: [Request] GET /api/v1/patient/verify-token 404 - 4ms
+[2025-04-30 15:41:21] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:53:35] INFO: [Request] GET /api/v1/patient/verify-token 404 - 2ms
+[2025-04-30 15:53:35] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:53:36] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:53:36] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:55:07] INFO: ✅ Database connected successfully
+[2025-04-30 15:55:07] INFO: ✅ Server running on port 4000
+[2025-04-30 15:55:31] INFO: ✅ Database connected successfully
+[2025-04-30 15:55:31] INFO: ✅ Server running on port 4000
+[2025-04-30 15:55:33] INFO: [Request] GET /api/v1/patient/verify-token 404 - 9ms
+[2025-04-30 15:55:33] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:55:33] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms
+[2025-04-30 15:55:33] INFO: [Request] GET /api/v1/patient/verify-token 404 - 1ms

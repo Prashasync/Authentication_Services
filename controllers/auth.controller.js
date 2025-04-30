@@ -35,8 +35,16 @@ exports.registerUser = async (req, res) => {
 exports.verifyOtp = async (req, res) => {
   const { email, otp } = req.body;
   try {
-    const { status, data } = await AuthService.verifyOtp(email, otp);
-    return res.status(status).json(data);
+    const { status, message, token } = await AuthService.verifyOtp(email, otp);
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 15 * 60 * 1000,
+      sameSite: "lax",
+    });
+
+    return res.status(status).json(message);
   } catch (error) {
     console.error("There was an error verifying the OTP code", error);
     return res.status(500).json({ message: "Internal server error" });
@@ -53,22 +61,28 @@ exports.loginUser = async (req, res) => {
   }
 
   try {
-    const { status, data, isVerified } = await AuthService.loginUser(
+    const { status, message, token } = await AuthService.loginUser(
       email,
       password
     );
 
-    if (isVerified) {
-      return res.status(400).json({ message: "NOT_VERIFIED" });
+    const errorMessages = [
+      "INVALID_CREDENTIALS",
+      "NOT_VERIFIED",
+      "OTP request limit exceeded. Try after 1 min.",
+    ];
+    if (errorMessages.includes(message)) {
+      return res.status(status).json({ message });
     }
 
-    res.cookie("token", data.token, {
+    res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      maxAge: 15 * 60 * 1000,
+      maxAge: 15 * 60 * 1000, 
       sameSite: "lax",
     });
-    return res.status(status).json({ message: data.message });
+
+    return res.status(status).json({ message });
   } catch (error) {
     console.error("Login error:", error.message || error);
     return res.status(500).json({ message: "Internal server error" });

@@ -164,7 +164,8 @@ const AuthService = {
     const token = generateToken({ id: user.dataValues.user_id });
     return {
       status: 200,
-      data: { message: "OTP verified successfully", token },
+      message: "OTP verified successfully",
+      token,
     };
   },
 
@@ -174,14 +175,7 @@ const AuthService = {
     if (!user) {
       return {
         status: 400,
-        data: { message: "NOT_FOUND" },
-      };
-    }
-
-    if (!user.dataValues.isVerified) {
-      return {
-        status: 400,
-        data: { message: "NOT_VERIFIED" },
+        message: "INVALID_CREDENTIALS",
       };
     }
 
@@ -189,19 +183,27 @@ const AuthService = {
       password,
       user.dataValues.password_hash
     );
-
     if (!isMatch) {
       return {
         status: 400,
-        data: { message: "INVALID_CREDENTIALS" },
+        message: "INVALID_CREDENTIALS",
       };
     }
+
+    if (!user.dataValues.isVerified) {
+      return {
+        status: 400,
+        message: "NOT_VERIFIED",
+      };
+    }
+
     const userOtp = await db.Otp.findOne({
       where: { user_id: user.dataValues.user_id },
     });
+
     if (
-      userOtp.dataValues.created_at &&
-      userOtp.dataValues.valid_until &&
+      userOtp?.dataValues.created_at &&
+      userOtp?.dataValues.valid_until &&
       new Date() < new Date(userOtp.dataValues.valid_until)
     ) {
       const timeDiff =
@@ -211,29 +213,35 @@ const AuthService = {
       if (timeDiff < 60000) {
         return {
           status: 429,
-          data: { message: "OTP request limit exceeded. Try after 1 min." },
+          message: "OTP request limit exceeded. Try after 1 min.",
         };
       }
     }
 
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    userOtp.otp_text = otp;
-    userOtp.valid_until = new Date(Date.now() + 5 * 60 * 1000);
-    userOtp.created_at = new Date();
-    await userOtp.save();
 
-    await sendEmail(
-      user.dataValues.email,
-      userOtp.otp_text,
-      "OTP Verification"
-    );
+    if (userOtp) {
+      userOtp.otp_text = otp;
+      userOtp.valid_until = new Date(Date.now() + 5 * 60 * 1000);
+      userOtp.created_at = new Date();
+      await userOtp.save();
+    } else {
+      await db.Otp.create({
+        user_id: user.dataValues.user_id,
+        otp_text: otp,
+        valid_until: new Date(Date.now() + 5 * 60 * 1000),
+        created_at: new Date(),
+      });
+    }
+    // await sendEmail(user.dataValues.email, otp, "OTP Verification");
     // if (user.phone) await sendOTPSMS(user.phone, otp);
 
     const token = generateToken({ id: user.dataValues.user_id });
 
     return {
       status: 200,
-      data: { message: "LOGIN_SUCCESSFUL", token },
+      message: "LOGIN_SUCCESSFUL",
+      token,
     };
   },
 
