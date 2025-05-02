@@ -29,35 +29,3 @@ db.sequelize.sync().then(() => {
     logger.info(`✅ Server running on port ${PORT}`);
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Drop all tables
-// db.sequelize.sync({ force: true }).then(() => {
-//   logger.info("✅ All tables dropped and recreated");
-//   app.listen(process.env.PORT, () => {
-//     logger.info(`🚀 Server running on port ${process.env.PORT}`);
-//   });
-// });
