@@ -52,7 +52,7 @@ const AuthService = {
     const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
     console.log(otp);
-    
+
     const newUser = await db.User.create({
       email,
       first_name,
