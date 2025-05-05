@@ -14,34 +14,18 @@ require("dotenv").config();
 
 const AuthService = {
   async getUser(user_id) {
-    const user = await db.User.findOne({
+    const user = await db.Patient.findOne({
       where: { user_id },
     });
     if (!user) {
       return { status: 404, data: { message: "User not found" } };
     }
     return {
-      status: 200,
-      data: {
-        user_id: user.user_id,
-        email: user.email,
-        first_name: user.first_name,
-        last_name: user.last_name,
-        phone: user.phone,
-        title: user.title,
-      },
+      data: user,
     };
   },
 
-  async registerUser(
-    email,
-    password,
-    phone,
-    title,
-    first_name,
-    last_name,
-    gender
-  ) {
+  async registerUser(email, password, title, first_name, last_name, gender) {
     const user = await db.User.findOne({ where: { email } });
     if (user) {
       return { status: 400, message: "User already exists" };
@@ -51,14 +35,13 @@ const AuthService = {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
-    console.log(otp);
+    console.log(otp)
 
     const newUser = await db.User.create({
       email,
       first_name,
       last_name,
       password_hash: hashedPassword,
-      phone,
       title,
       gender,
     });
@@ -123,10 +106,9 @@ const AuthService = {
       return { status: 400, data: { message: "OTP not found" } };
     }
 
-    if (
-      userOtp.dataValues.blocked_until &&
-      new Date() < new Date(userOtp.dataValues.blocked_until)
-    ) {
+    const now = new Date();
+
+    if (userOtp.blocked_until && now < new Date(userOtp.blocked_until)) {
       return {
         status: 403,
         data: { message: "Too many failed attempts. Try again later." },
@@ -134,36 +116,48 @@ const AuthService = {
     }
 
     const isOtpInvalid =
-      !userOtp.dataValues.otp_text ||
-      userOtp.dataValues.otp_text !== otp ||
-      new Date() > userOtp.valid_until;
+      !userOtp.otp_text ||
+      userOtp.otp_text !== otp ||
+      now > new Date(userOtp.valid_until);
 
     if (isOtpInvalid) {
-      userOtp.dataValues.otp_attempts += 1;
-      await userOtp.save();
+      userOtp.otp_attempts += 1;
 
-      if (userOtp.dataValues.otp_attempts >= 5) {
-        const blockTime = new Date(Date.now() + 15 * 60 * 1000);
-        userOtp.dataValues.blocked_until = blockTime;
-        await userOtp.save();
-
-        return {
-          status: 403,
-          data: { message: "Too many failed attempts. Try after 15 mins." },
-        };
+      if (userOtp.otp_attempts >= 5) {
+        userOtp.blocked_until = new Date(now.getTime() + 15 * 60 * 1000);
       }
 
-      return { status: 400, data: { message: "Invalid or expired OTP" } };
+
+
+      await userOtp.save();
+
+      const message =
+        userOtp.otp_attempts >= 5
+          ? "Too many failed attempts. Try after 15 mins."
+          : "Invalid or expired OTP";
+
+      return { status: 400, data: { message } };
     }
 
-    user.status = true;
-    user.otp_text = null;
-    user.otp_attempts = 0;
-    user.created_at = null;
+    userOtp.otp_text = otp;
+    userOtp.otp_attempts = 0;
+    userOtp.blocked_until = null;
+    userOtp.status = true;
+    await userOtp.save();
+
     user.isVerified = true;
     await user.save();
 
-    const token = generateToken({ id: user.dataValues.user_id });
+    await db.Patient.create({
+      first_name: user.dataValues.first_name,
+      last_name: user.dataValues.last_name,
+      user_id: user.dataValues.user_id,
+      gender: user.dataValues.gender,
+      title: user.dataValues.title,
+    });
+
+    const token = generateToken({ id: user.user_id });
+
     return {
       status: 200,
       message: "OTP verified successfully",
@@ -203,38 +197,38 @@ const AuthService = {
       where: { user_id: user.dataValues.user_id },
     });
 
-    if (
-      userOtp?.dataValues.created_at &&
-      userOtp?.dataValues.valid_until &&
-      new Date() < new Date(userOtp.dataValues.valid_until)
-    ) {
-      const timeDiff =
-        new Date().getTime() -
-        new Date(userOtp.dataValues.created_at).getTime();
+    // if (
+    //   userOtp?.dataValues.created_at &&
+    //   userOtp?.dataValues.valid_until &&
+    //   new Date() < new Date(userOtp.dataValues.valid_until)
+    // ) {
+    //   const timeDiff =
+    //     new Date().getTime() -
+    //     new Date(userOtp.dataValues.created_at).getTime();
 
-      if (timeDiff < 60000) {
-        return {
-          status: 429,
-          message: "OTP request limit exceeded. Try after 1 min.",
-        };
-      }
-    }
+    //   if (timeDiff < 60000) {
+    //     return {
+    //       status: 429,
+    //       message: "OTP request limit exceeded. Try after 1 min.",
+    //     };
+    //   }
+    // }
 
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    // const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
-    if (userOtp) {
-      userOtp.otp_text = otp;
-      userOtp.valid_until = new Date(Date.now() + 5 * 60 * 1000);
-      userOtp.created_at = new Date();
-      await userOtp.save();
-    } else {
-      await db.Otp.create({
-        user_id: user.dataValues.user_id,
-        otp_text: otp,
-        valid_until: new Date(Date.now() + 5 * 60 * 1000),
-        created_at: new Date(),
-      });
-    }
+    // if (userOtp) {
+    //   userOtp.otp_text = otp;
+    //   userOtp.valid_until = new Date(Date.now() + 5 * 60 * 1000);
+    //   userOtp.created_at = new Date();
+    //   await userOtp.save();
+    // } else {
+    //   await db.Otp.create({
+    //     user_id: user.dataValues.user_id,
+    //     otp_text: otp,
+    //     valid_until: new Date(Date.now() + 5 * 60 * 1000),
+    //     created_at: new Date(),
+    //   });
+    // }
     // await sendEmail(user.dataValues.email, otp, "OTP Verification");
     // if (user.phone) await sendOTPSMS(user.phone, otp);
 
