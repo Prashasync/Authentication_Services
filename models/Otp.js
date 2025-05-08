@@ -16,14 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      // otp_attempts: {
-      //   type: DataTypes.INTEGER,
-      //   defaultValue: 0,
-      // },
-      // blocked_until: {
-      //   type: DataTypes.DATE,
-      //   allowNull: true,
-      // },
       created_at: {
         type: DataTypes.DATE,
         allowNull: true,
@@ -42,6 +34,6 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
   );
-
+ 
   return Otp;
 };

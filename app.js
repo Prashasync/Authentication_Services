@@ -7,7 +7,7 @@ const logger = require("./utils/logger");
 const requestLogger = require("./middlewares/requestLogger");
 const cors = require("cors");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(requestLogger);
@@ -29,35 +29,3 @@ db.sequelize.sync().then(() => {
     logger.info(`✅ Server running on port ${PORT}`);
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Drop all tables
-// db.sequelize.sync({ force: true }).then(() => {
-//   logger.info("✅ All tables dropped and recreated");
-//   app.listen(process.env.PORT, () => {
-//     logger.info(`🚀 Server running on port ${process.env.PORT}`);
-//   });
-// });

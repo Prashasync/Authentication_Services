@@ -1,7 +1,7 @@
-const { Sequelize } = require('sequelize');
-const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.js')[env];
-const logger = require('../utils/logger');
+const { Sequelize } = require("sequelize");
+const env = process.env.NODE_ENV || "development";
+const config = require(__dirname + "/../config/config.js")[env];
+const logger = require("../utils/logger");
 const db = {};
 
 // Custom logger for Sequelize
@@ -23,14 +23,17 @@ const sequelize = new Sequelize(
     },
   }
 );
- 
-sequelize.authenticate()
-  .then(() => logger.info('✅ Database connected successfully'))
-  .catch((err) => logger.error(`❌ Unable to connect to the database: ${err.message}`));
+
+sequelize
+  .authenticate()
+  .then(() => logger.info("✅ Database connected successfully"))
+  .catch((err) =>
+    logger.error(`❌ Unable to connect to the database: ${err.message}`)
+  );
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.User = require('./user')(sequelize, Sequelize);
+db.User = require('./User')(sequelize, Sequelize);
 db.Otp = require('./Otp')(sequelize, Sequelize);
 
 module.exports = db;
