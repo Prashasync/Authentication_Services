@@ -30,7 +30,7 @@ sequelize.authenticate()
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.User = require('./User')(sequelize, Sequelize);
+db.User = require('./user')(sequelize, Sequelize);
 db.Otp = require('./Otp')(sequelize, Sequelize);
 
 module.exports = db;

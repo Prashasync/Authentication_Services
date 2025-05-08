@@ -10,7 +10,17 @@ const { generateToken, generateTempToken } = require("../utils/jwt");
 require("dotenv").config();
 
 // AWS SQS setup
-// const sqsClient = new SQSClient({ region: process.env.AWS_REGION });
+const sqsClient = new SQSClient(
+  { 
+    region: process.env.AWS_REGION,
+    // MessageGroupId: "otp-emails",
+    // MessageDeduplicationId: `${Date.now()}`,
+     credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  }
+  }
+);
 
 const AuthService = {
   async getUser(user_id) {
@@ -69,10 +79,13 @@ const AuthService = {
       created_at: new Date(),
     });
 
-    await sendEmail(
+    logger.info(`OTP for ${newUser.dataValues.email}: ${otp}`)
+
+    await this.sendEmailOTP(
       newUser.dataValues.email,
-      "OTP Verification",
-      newOtp.dataValues.otp_text
+      newOtp.dataValues.otp_text,
+      "email",
+      newUser.dataValues.phone 
     );
     // if (phone) await sendOTPSMS(phone, otp);
 
@@ -84,8 +97,8 @@ const AuthService = {
     };
   },
 
-  async sendEmailOTP(to, otp, method = "email") {
-    const otpId = Math.random().toString(36).substr(2, 9);
+  async sendEmailOTP(to, otp, method = "email",phone = null) {
+    const otpId = Math.random().toString(36).slice(2, 9);
 
     const messageBody = {
       to,
@@ -93,14 +106,18 @@ const AuthService = {
       method,
       otpId,
       type: "otp_verification",
+      phone,
     };
 
     const command = new SendMessageCommand({
       QueueUrl: process.env.SQS_QUEUE_URL,
       MessageBody: JSON.stringify(messageBody),
+      MessageGroupId: "otp-emails",
+      MessageDeduplicationId: `${Date.now()}`,
     });
 
     await sqsClient.send(command);
+    console.log("coomand for sws", command);
     logger.info(`OTP message pushed to SQS for: ${to}, OTP ID: ${otpId}`);
 
     return otpId;
@@ -222,10 +239,11 @@ const AuthService = {
     userOtp.created_at = new Date();
     await userOtp.save();
 
-    await sendEmail(
+    await this.sendEmailOTP(
       user.dataValues.email,
       userOtp.otp_text,
-      "OTP Verification"
+      "OTP Verification",
+      user.dataValues.phone 
     );
     // if (user.phone) await sendOTPSMS(user.phone, otp);
 
@@ -297,7 +315,7 @@ const AuthService = {
       return { status: 400, message: "OTP expired." };
     }
 
-    const status = await sendEmail(email, "Prasha Sync Password Reset.");
+    const status = await this.sendEmailOTP(email, "Prasha Sync Password Reset.");
     if (!status) {
       return {
         status: 400,
@@ -317,14 +335,17 @@ const AuthService = {
     const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
     const userCheck = await db.User.findOne({ where: { email } });
-    const emailStatus = await sendEmail(email, otp);
-    if (!emailStatus) {
-      return {
-        status: 400,
-        message:
-          "There was an error sending the recovery OTP. Please try again",
-      };
-    }
+    await this.sendEmailOTP(email, otp, "email");
+
+    
+    // const emailStatus = await this.sendEmailOTP(email, otp);
+    // if (!emailStatus) {
+    //   return {
+    //     status: 400,
+    //     message:
+    //       "There was an error sending the recovery OTP. Please try again",
+    //   };
+    // }
 
     return {
       status: 200,
