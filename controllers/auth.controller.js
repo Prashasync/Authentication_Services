@@ -36,7 +36,7 @@ exports.verifyOtp = async (req, res) => {
   const { email, otp } = req.body;
   try {
     const { status, message, token } = await AuthService.verifyOtp(email, otp);
-  
+
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
@@ -79,7 +79,7 @@ exports.loginUser = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      maxAge: 15 * 60 * 1000, 
+      maxAge: 15 * 60 * 1000,
       sameSite: "lax",
     });
 
@@ -117,7 +117,6 @@ exports.createGoogleUser = async (req, res) => {
 
 exports.verifyRecoveryOTP = async (req, res) => {
   const { email, otp } = req.body;
-
   try {
     const result = await AuthService.verifyRecoveryOTP(email, otp);
     return res
@@ -141,5 +140,35 @@ exports.sendPasswordRecoveryEmail = async (req, res) => {
   } catch (error) {
     console.error("Recovery email error:", error);
     res.status(500).json({ error: error.message || "Internal Server Error" });
+  }
+};
+
+exports.resetPassword = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const result = await AuthService.resetPassword(email, password);
+
+    if (result.status !== 200) {
+      return res.status(result.status).json({ message: result.error });
+    }
+
+    return res.status(200).json({ message: "Password reset successfully" });
+  } catch (error) {
+    console.error("Password reset error:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+exports.getAWSConfig = async (req, res) => {
+  try {
+    // console.log(process.env)
+    // res.json({
+    //   authentication_server: process.env.REACT_APP_SERVER_URL,
+    //   patient_server: process.env.REACT_APP_PATIENT_SERVER_URL,
+    //   google_authentication: process.env.REACT_APP_GOOGLE_CLIENT_ID
+    // })
+  } catch (error) {
+    console.error("There was an error", error);
+    throw new Error("There was an error");
   }
 };

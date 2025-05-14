@@ -2662,3 +2662,1001 @@
 [2025-05-05 17:02:07] INFO: [Request] GET /api/v1/auth/profile 304 - 65ms
 [2025-05-05 17:20:09] INFO: [Request] GET /api/v1/auth/profile 401 - 10ms
 [2025-05-05 17:20:09] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
+[2025-05-06 16:49:29] INFO: ✅ Database connected successfully
+[2025-05-06 16:49:29] INFO: ✅ Server running on port 4000
+[2025-05-06 16:51:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 15ms
+[2025-05-06 16:51:25] INFO: [Request] POST /api/v1/auth/login 200 - 433ms
+[2025-05-06 16:51:26] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-06 16:51:26] INFO: [Request] GET /api/v1/auth/profile 304 - 129ms
+[2025-05-06 16:51:50] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-06 16:51:51] INFO: [Request] POST /api/v1/auth/login 200 - 379ms
+[2025-05-06 16:51:51] INFO: [Request] GET /api/v1/auth/profile 200 - 77ms
+[2025-05-06 16:51:51] INFO: [Request] GET /api/v1/auth/profile 304 - 62ms
+[2025-05-06 16:51:57] INFO: [Request] GET /api/v1/auth/profile 304 - 39ms
+[2025-05-06 16:51:57] INFO: [Request] GET /api/v1/auth/profile 304 - 54ms
+[2025-05-06 16:52:04] INFO: [Request] GET /api/v1/auth/profile 304 - 29ms
+[2025-05-06 16:52:04] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-06 19:12:42] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 19ms
+[2025-05-06 19:12:42] INFO: [Request] POST /api/v1/auth/login 200 - 395ms
+[2025-05-06 19:12:43] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-06 19:12:43] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-06 19:16:34] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-06 19:16:34] INFO: [Request] POST /api/v1/auth/login 200 - 403ms
+[2025-05-06 19:16:35] INFO: [Request] GET /api/v1/auth/profile 304 - 111ms
+[2025-05-06 19:16:35] INFO: [Request] GET /api/v1/auth/profile 304 - 55ms
+[2025-05-06 21:15:07] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-06 21:15:08] INFO: [Request] POST /api/v1/auth/login 200 - 444ms
+[2025-05-06 21:15:08] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-06 21:15:08] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-06 21:38:06] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-06 21:38:06] INFO: [Request] POST /api/v1/auth/login 200 - 365ms
+[2025-05-06 21:38:07] INFO: [Request] GET /api/v1/auth/profile 304 - 106ms
+[2025-05-06 21:38:07] INFO: [Request] GET /api/v1/auth/profile 304 - 50ms
+[2025-05-06 22:06:50] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 13ms
+[2025-05-06 22:06:51] INFO: [Request] POST /api/v1/auth/login 400 - 956ms
+[2025-05-06 22:06:54] INFO: [Request] POST /api/v1/auth/login 200 - 148ms
+[2025-05-06 22:06:55] INFO: [Request] GET /api/v1/auth/profile 304 - 109ms
+[2025-05-06 22:06:55] INFO: [Request] GET /api/v1/auth/profile 304 - 52ms
+[2025-05-06 22:49:42] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-06 22:49:42] INFO: [Request] POST /api/v1/auth/login 200 - 396ms
+[2025-05-06 22:49:43] INFO: [Request] GET /api/v1/auth/profile 304 - 119ms
+[2025-05-06 22:49:43] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-06 23:07:24] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 11ms
+[2025-05-06 23:07:25] INFO: [Request] POST /api/v1/auth/login 200 - 446ms
+[2025-05-06 23:07:25] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-06 23:07:26] INFO: [Request] GET /api/v1/auth/profile 304 - 62ms
+[2025-05-07 01:32:02] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-07 01:32:02] INFO: [Request] POST /api/v1/auth/login 200 - 438ms
+[2025-05-07 01:32:03] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-07 01:32:03] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-07 01:56:42] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 48ms
+[2025-05-07 01:56:42] INFO: [Request] POST /api/v1/auth/login 200 - 517ms
+[2025-05-07 01:56:43] INFO: [Request] GET /api/v1/auth/profile 304 - 29ms
+[2025-05-07 01:56:43] INFO: [Request] GET /api/v1/auth/profile 304 - 136ms
+[2025-05-07 11:24:33] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-07 11:24:33] INFO: [Request] POST /api/v1/auth/login 200 - 425ms
+[2025-05-07 11:24:34] INFO: [Request] GET /api/v1/auth/profile 304 - 78ms
+[2025-05-07 11:24:34] INFO: [Request] GET /api/v1/auth/profile 304 - 173ms
+[2025-05-07 11:39:55] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 14ms
+[2025-05-07 11:39:56] INFO: [Request] POST /api/v1/auth/login 200 - 448ms
+[2025-05-07 11:39:56] INFO: [Request] GET /api/v1/auth/profile 304 - 34ms
+[2025-05-07 11:39:56] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-07 12:02:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 23ms
+[2025-05-07 12:02:57] INFO: [Request] POST /api/v1/auth/login 200 - 416ms
+[2025-05-07 12:02:58] INFO: [Request] GET /api/v1/auth/profile 304 - 169ms
+[2025-05-07 12:02:58] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-07 12:31:06] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 25ms
+[2025-05-07 12:31:07] INFO: [Request] POST /api/v1/auth/login 200 - 536ms
+[2025-05-07 12:31:07] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-07 12:31:07] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-07 23:46:21] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-07 23:46:22] INFO: [Request] POST /api/v1/auth/login 200 - 502ms
+[2025-05-07 23:46:22] INFO: [Request] GET /api/v1/auth/profile 304 - 50ms
+[2025-05-07 23:46:23] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-08 00:08:29] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 18ms
+[2025-05-08 00:08:30] INFO: [Request] POST /api/v1/auth/login 400 - 339ms
+[2025-05-08 00:08:33] INFO: [Request] POST /api/v1/auth/login 200 - 166ms
+[2025-05-08 00:08:34] INFO: [Request] GET /api/v1/auth/profile 304 - 51ms
+[2025-05-08 00:08:34] INFO: [Request] GET /api/v1/auth/profile 304 - 123ms
+[2025-05-08 00:33:45] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 12ms
+[2025-05-08 00:33:45] INFO: [Request] POST /api/v1/auth/login 200 - 544ms
+[2025-05-08 00:33:46] INFO: [Request] GET /api/v1/auth/profile 304 - 103ms
+[2025-05-08 00:33:46] INFO: [Request] GET /api/v1/auth/profile 304 - 44ms
+[2025-05-08 01:06:14] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 17ms
+[2025-05-08 01:06:14] INFO: [Request] POST /api/v1/auth/login 200 - 512ms
+[2025-05-08 01:06:15] INFO: [Request] GET /api/v1/auth/profile 304 - 50ms
+[2025-05-08 01:06:15] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-08 01:22:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 20ms
+[2025-05-08 01:22:42] INFO: [Request] POST /api/v1/auth/login 200 - 474ms
+[2025-05-08 01:22:42] INFO: [Request] GET /api/v1/auth/profile 304 - 81ms
+[2025-05-08 01:22:42] INFO: [Request] GET /api/v1/auth/profile 304 - 131ms
+[2025-05-08 01:57:51] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 14ms
+[2025-05-08 01:57:51] INFO: [Request] POST /api/v1/auth/login 200 - 442ms
+[2025-05-08 01:57:52] INFO: [Request] GET /api/v1/auth/profile 304 - 46ms
+[2025-05-08 01:57:52] INFO: [Request] GET /api/v1/auth/profile 304 - 155ms
+[2025-05-08 15:57:14] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 126ms
+[2025-05-08 15:57:15] INFO: [Request] POST /api/v1/auth/login 200 - 909ms
+[2025-05-08 15:57:18] INFO: [Request] GET /api/v1/auth/profile 200 - 1544ms
+[2025-05-08 15:57:18] INFO: [Request] GET /api/v1/auth/profile 304 - 80ms
+[2025-05-08 16:19:55] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 24ms
+[2025-05-08 16:19:56] INFO: [Request] POST /api/v1/auth/login 200 - 519ms
+[2025-05-08 16:20:04] INFO: [Request] GET /api/v1/auth/profile 304 - 7687ms
+[2025-05-08 16:20:04] INFO: [Request] GET /api/v1/auth/profile 304 - 150ms
+[2025-05-08 17:26:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 80ms
+[2025-05-08 17:26:04] INFO: [Request] POST /api/v1/auth/login 200 - 1133ms
+[2025-05-08 17:26:10] INFO: [Request] GET /api/v1/auth/profile 304 - 4790ms
+[2025-05-08 17:26:10] INFO: [Request] GET /api/v1/auth/profile 304 - 59ms
+[2025-05-09 01:13:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 43ms
+[2025-05-09 01:13:03] INFO: [Request] POST /api/v1/auth/login 200 - 488ms
+[2025-05-09 01:13:04] INFO: [Request] GET /api/v1/auth/profile 304 - 724ms
+[2025-05-09 01:13:04] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-09 13:52:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 35ms
+[2025-05-09 13:52:37] INFO: [Request] POST /api/v1/auth/login 400 - 573ms
+[2025-05-09 14:03:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 14ms
+[2025-05-09 14:03:08] INFO: [Request] POST /api/v1/auth/login 400 - 570ms
+[2025-05-09 15:01:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-09 15:01:57] INFO: [Request] POST /api/v1/auth/login 200 - 401ms
+[2025-05-09 15:01:58] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-09 15:01:58] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-09 15:15:20] INFO: [Request] GET /api/v1/auth/profile 304 - 537ms
+[2025-05-09 15:15:21] INFO: [Request] GET /api/v1/auth/profile 304 - 46ms
+[2025-05-09 15:15:37] INFO: [Request] GET /api/v1/aws_configs 404 - 243ms
+[2025-05-09 15:15:37] INFO: [Request] GET /api/v1/aws_configs 404 - 14ms
+[2025-05-09 15:17:56] INFO: [Request] GET /api/v1/aws_configs 404 - 1ms
+[2025-05-09 15:17:56] INFO: [Request] GET /api/v1/aws_configs 404 - 1ms
+[2025-05-09 15:18:12] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-09 15:18:12] INFO: [Request] POST /api/v1/auth/login 200 - 402ms
+[2025-05-09 15:18:13] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-09 15:18:13] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-09 15:18:18] INFO: [Request] GET /api/v1/aws_configs 404 - 1ms
+[2025-05-09 15:18:18] INFO: [Request] GET /api/v1/aws_configs 404 - 10ms
+[2025-05-09 17:28:09] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 34ms
+[2025-05-09 17:28:09] INFO: [Request] POST /api/v1/auth/login 200 - 451ms
+[2025-05-09 17:28:10] INFO: [Request] GET /api/v1/auth/profile 304 - 85ms
+[2025-05-09 17:28:10] INFO: [Request] GET /api/v1/auth/profile 304 - 85ms
+[2025-05-09 17:49:27] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 16ms
+[2025-05-09 17:49:28] INFO: [Request] POST /api/v1/auth/login 200 - 585ms
+[2025-05-09 17:49:29] INFO: [Request] GET /api/v1/auth/profile 304 - 575ms
+[2025-05-09 17:49:29] INFO: [Request] GET /api/v1/auth/profile 304 - 129ms
+[2025-05-09 18:04:45] INFO: [Request] GET /api/v1/auth/profile 401 - 59ms
+[2025-05-09 18:04:45] INFO: [Request] GET /api/v1/auth/profile 401 - 0ms
+[2025-05-09 18:04:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-09 18:04:57] INFO: [Request] POST /api/v1/auth/login 200 - 511ms
+[2025-05-09 18:04:57] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-09 18:04:58] INFO: [Request] GET /api/v1/auth/profile 304 - 127ms
+[2025-05-09 18:05:57] INFO: [Request] GET /api/v1/auth/profile 304 - 388ms
+[2025-05-09 18:05:57] INFO: [Request] GET /api/v1/auth/profile 304 - 44ms
+[2025-05-09 18:07:01] INFO: [Request] GET /api/v1/auth/profile 304 - 293ms
+[2025-05-09 18:07:01] INFO: [Request] GET /api/v1/auth/profile 304 - 49ms
+[2025-05-09 18:33:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 36ms
+[2025-05-09 18:33:42] INFO: [Request] POST /api/v1/auth/login 200 - 573ms
+[2025-05-09 18:33:42] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-09 18:33:43] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-09 18:35:20] INFO: [Request] GET /api/v1/auth/profile 304 - 423ms
+[2025-05-09 18:35:21] INFO: [Request] GET /api/v1/auth/profile 304 - 71ms
+[2025-05-09 18:56:54] INFO: [Request] GET /api/v1/auth/profile 401 - 17ms
+[2025-05-09 18:56:54] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
+[2025-05-09 18:57:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-09 18:57:08] INFO: [Request] POST /api/v1/auth/login 200 - 420ms
+[2025-05-09 18:57:09] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-09 18:57:09] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-09 18:57:15] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-09 18:57:15] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-09 19:03:12] INFO: [Request] GET /api/v1/auth/profile 304 - 421ms
+[2025-05-09 19:03:12] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-09 19:03:36] INFO: [Request] GET /api/v1/auth/profile 304 - 246ms
+[2025-05-09 19:03:36] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-09 19:03:46] INFO: [Request] GET /api/v1/auth/profile 304 - 42ms
+[2025-05-09 19:03:46] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-09 20:17:54] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-09 20:17:55] INFO: [Request] POST /api/v1/auth/login 200 - 362ms
+[2025-05-09 20:17:55] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-09 20:17:55] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-11 00:38:13] INFO: ✅ Database connected successfully
+[2025-05-11 00:39:15] INFO: ✅ Database connected successfully
+[2025-05-11 00:39:49] INFO: ✅ Database connected successfully
+[2025-05-11 00:39:59] INFO: ✅ Database connected successfully
+[2025-05-11 00:40:45] INFO: ✅ Database connected successfully
+[2025-05-11 00:40:45] INFO: ✅ Server running on port 4000
+[2025-05-11 00:40:51] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 35ms
+[2025-05-11 00:40:51] INFO: [Request] POST /api/v1/auth/login 200 - 324ms
+[2025-05-11 00:40:53] INFO: [Request] GET /api/v1/auth/profile 304 - 33ms
+[2025-05-11 00:40:53] INFO: [Request] GET /api/v1/auth/profile 304 - 142ms
+[2025-05-11 00:56:37] INFO: [Request] GET /api/v1/auth/profile 401 - 14ms
+[2025-05-11 00:56:37] INFO: [Request] GET /api/v1/auth/profile 401 - 2ms
+[2025-05-11 00:56:50] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-11 00:56:51] INFO: [Request] POST /api/v1/auth/login 200 - 536ms
+[2025-05-11 00:56:51] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-11 00:56:51] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-11 01:12:23] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-11 01:12:23] INFO: [Request] POST /api/v1/auth/login 200 - 414ms
+[2025-05-11 01:12:24] INFO: [Request] GET /api/v1/auth/profile 304 - 57ms
+[2025-05-11 01:12:24] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-11 01:27:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-11 01:27:42] INFO: [Request] POST /api/v1/auth/login 200 - 411ms
+[2025-05-11 01:27:42] INFO: [Request] GET /api/v1/auth/profile 304 - 145ms
+[2025-05-11 01:27:42] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-11 01:54:40] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-11 01:54:40] INFO: [Request] POST /api/v1/auth/login 200 - 366ms
+[2025-05-11 01:54:41] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-11 01:54:41] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-11 02:10:16] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-11 02:10:16] INFO: [Request] POST /api/v1/auth/login 200 - 425ms
+[2025-05-11 02:10:17] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-11 02:10:17] INFO: [Request] GET /api/v1/auth/profile 304 - 51ms
+[2025-05-11 02:38:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-11 02:38:25] INFO: [Request] POST /api/v1/auth/login 200 - 455ms
+[2025-05-11 02:38:31] INFO: [Request] GET /api/v1/auth/profile 304 - 5291ms
+[2025-05-11 02:38:31] INFO: [Request] GET /api/v1/auth/profile 304 - 44ms
+[2025-05-11 13:04:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 43ms
+[2025-05-11 13:04:38] INFO: [Request] POST /api/v1/auth/login 200 - 499ms
+[2025-05-11 13:04:38] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-11 13:04:38] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-11 14:14:50] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 18ms
+[2025-05-11 14:14:50] INFO: [Request] POST /api/v1/auth/login 200 - 385ms
+[2025-05-11 14:14:51] INFO: [Request] GET /api/v1/auth/profile 304 - 67ms
+[2025-05-11 14:14:51] INFO: [Request] GET /api/v1/auth/profile 304 - 68ms
+[2025-05-11 14:34:18] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-11 14:34:18] INFO: [Request] POST /api/v1/auth/login 200 - 415ms
+[2025-05-11 14:34:19] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-11 14:34:19] INFO: [Request] GET /api/v1/auth/profile 304 - 86ms
+[2025-05-11 15:10:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 56ms
+[2025-05-11 15:10:56] INFO: [Request] POST /api/v1/auth/login 200 - 439ms
+[2025-05-11 15:10:57] INFO: [Request] GET /api/v1/auth/profile 304 - 56ms
+[2025-05-11 15:10:57] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-11 15:11:38] INFO: [Request] GET /api/v1/aws_configs 404 - 146ms
+[2025-05-11 15:11:38] INFO: [Request] GET /api/v1/aws_configs 404 - 20ms
+[2025-05-11 15:11:45] INFO: [Request] GET /api/v1/auth/profile 304 - 190ms
+[2025-05-11 15:11:45] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-11 15:13:37] INFO: [Request] GET /api/v1/auth/profile 304 - 226ms
+[2025-05-11 15:13:37] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-11 15:26:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 12ms
+[2025-05-11 15:26:56] INFO: [Request] POST /api/v1/auth/login 200 - 384ms
+[2025-05-11 15:26:57] INFO: [Request] GET /api/v1/auth/profile 304 - 117ms
+[2025-05-11 15:26:57] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-11 15:53:33] INFO: [Request] GET /api/v1/auth/profile 401 - 40ms
+[2025-05-11 15:53:33] INFO: [Request] GET /api/v1/auth/profile 401 - 2ms
+[2025-05-11 15:54:14] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-05-11 15:54:15] INFO: [Request] POST /api/v1/auth/login 200 - 324ms
+[2025-05-11 15:54:15] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-11 15:54:15] INFO: [Request] GET /api/v1/auth/profile 304 - 140ms
+[2025-05-11 16:10:30] INFO: [Request] GET /api/v1/auth/profile 401 - 17ms
+[2025-05-11 16:10:30] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
+[2025-05-11 16:11:22] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-05-11 16:11:22] INFO: [Request] POST /api/v1/auth/login 200 - 466ms
+[2025-05-11 16:11:23] INFO: [Request] GET /api/v1/auth/profile 304 - 44ms
+[2025-05-11 16:11:23] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-11 19:49:04] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 62ms
+[2025-05-11 19:49:18] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-11 20:15:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 47ms
+[2025-05-11 20:16:49] INFO: ✅ Database connected successfully
+[2025-05-11 20:16:50] INFO: ✅ Server running on port 4000
+[2025-05-11 20:24:16] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-05-11 20:24:16] INFO: [Request] POST /api/v1/auth/login 200 - 385ms
+[2025-05-11 20:24:29] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-05-11 20:24:29] INFO: [Request] POST /api/v1/auth/login 200 - 299ms
+[2025-05-11 20:25:27] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-11 20:25:28] INFO: [Request] POST /api/v1/auth/login 200 - 361ms
+[2025-05-11 20:26:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-11 20:26:25] INFO: [Request] POST /api/v1/auth/login 200 - 350ms
+[2025-05-11 20:30:30] INFO: ✅ Database connected successfully
+[2025-05-11 20:30:30] INFO: ✅ Server running on port 4000
+[2025-05-12 01:49:21] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 30ms
+[2025-05-12 01:49:21] INFO: [Request] POST /api/v1/auth/login 200 - 432ms
+[2025-05-12 01:56:33] INFO: ✅ Database connected successfully
+[2025-05-12 01:56:34] INFO: ✅ Server running on port 4000
+[2025-05-12 01:57:45] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 11ms
+[2025-05-12 01:57:45] INFO: [Request] POST /api/v1/auth/login 200 - 347ms
+[2025-05-12 02:04:09] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 84ms
+[2025-05-12 02:14:40] INFO: ✅ Database connected successfully
+[2025-05-12 02:14:40] INFO: ✅ Server running on port 4000
+[2025-05-12 02:16:50] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 32ms
+[2025-05-12 02:16:50] INFO: [Request] POST /api/v1/auth/login 200 - 373ms
+[2025-05-12 11:11:43] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 14ms
+[2025-05-12 11:11:44] INFO: [Request] POST /api/v1/auth/login 200 - 486ms
+[2025-05-12 11:12:38] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-05-12 11:12:38] INFO: [Request] POST /api/v1/auth/login 200 - 324ms
+[2025-05-12 11:13:38] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-12 11:13:38] INFO: [Request] POST /api/v1/auth/login 200 - 382ms
+[2025-05-12 13:07:30] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 16ms
+[2025-05-12 13:07:30] INFO: [Request] POST /api/v1/auth/login 200 - 682ms
+[2025-05-12 13:32:58] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-05-12 13:32:58] INFO: [Request] POST /api/v1/auth/login 200 - 445ms
+[2025-05-12 13:32:59] INFO: [Request] GET /api/v1/auth/profile 304 - 194ms
+[2025-05-12 13:32:59] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 13:33:39] INFO: [Request] GET /api/v1/auth/profile 304 - 340ms
+[2025-05-12 13:33:39] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-12 13:33:51] INFO: [Request] GET /api/v1/auth/profile 304 - 178ms
+[2025-05-12 13:33:51] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-12 13:34:06] INFO: [Request] GET /api/v1/auth/profile 304 - 222ms
+[2025-05-12 13:34:06] INFO: [Request] GET /api/v1/auth/profile 304 - 33ms
+[2025-05-12 13:37:38] INFO: [Request] GET /api/v1/auth/profile 304 - 350ms
+[2025-05-12 13:37:38] INFO: [Request] GET /api/v1/auth/profile 304 - 68ms
+[2025-05-12 13:57:23] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-05-12 13:57:24] INFO: [Request] POST /api/v1/auth/login 200 - 402ms
+[2025-05-12 13:57:24] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 13:57:24] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-12 14:00:31] INFO: [Request] GET /api/v1/auth/profile 304 - 413ms
+[2025-05-12 14:00:31] INFO: [Request] GET /api/v1/auth/profile 304 - 97ms
+[2025-05-12 14:09:07] INFO: [Request] GET /api/v1/auth/profile 304 - 571ms
+[2025-05-12 14:09:07] INFO: [Request] GET /api/v1/auth/profile 304 - 33ms
+[2025-05-12 14:09:08] INFO: [Request] GET /api/v1/auth/profile 304 - 411ms
+[2025-05-12 14:09:08] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-12 14:09:12] INFO: [Request] GET /api/v1/auth/profile 304 - 46ms
+[2025-05-12 14:09:12] INFO: [Request] GET /api/v1/auth/profile 304 - 48ms
+[2025-05-12 14:09:12] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 14:09:12] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-12 14:09:20] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-12 14:09:20] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-12 14:09:20] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-12 14:09:20] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-12 14:09:34] INFO: [Request] GET /api/v1/auth/profile 304 - 294ms
+[2025-05-12 14:09:34] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-12 14:09:35] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 14:09:35] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-12 14:09:39] INFO: [Request] GET /api/v1/auth/profile 304 - 39ms
+[2025-05-12 14:09:39] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-12 14:09:39] INFO: [Request] GET /api/v1/auth/profile 304 - 42ms
+[2025-05-12 14:09:39] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 14:10:46] INFO: [Request] GET /api/v1/auth/profile 304 - 295ms
+[2025-05-12 14:11:28] INFO: [Request] GET /api/v1/auth/profile 304 - 211ms
+[2025-05-12 14:11:28] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-12 14:11:34] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-12 14:11:34] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-12 14:20:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 14ms
+[2025-05-12 14:20:37] INFO: [Request] POST /api/v1/auth/login 200 - 383ms
+[2025-05-12 14:22:30] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-05-12 14:22:30] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-12 14:22:40] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-12 14:22:40] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 14:23:04] INFO: [Request] GET /api/v1/auth/profile 304 - 278ms
+[2025-05-12 14:23:04] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-12 14:23:28] INFO: [Request] GET /api/v1/auth/profile 304 - 363ms
+[2025-05-12 14:23:28] INFO: [Request] GET /api/v1/auth/profile 304 - 37ms
+[2025-05-12 14:24:11] INFO: [Request] GET /api/v1/auth/profile 304 - 225ms
+[2025-05-12 14:24:11] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-12 14:24:14] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-12 14:24:14] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-12 14:36:37] INFO: [Request] GET /api/v1/auth/profile 401 - 10ms
+[2025-05-12 14:36:37] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
+[2025-05-12 14:36:45] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-12 14:36:46] INFO: [Request] POST /api/v1/auth/login 200 - 500ms
+[2025-05-12 14:36:46] INFO: [Request] GET /api/v1/auth/profile 200 - 22ms
+[2025-05-12 14:36:46] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-12 14:36:55] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 14:36:55] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 14:37:12] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-12 14:37:12] INFO: [Request] POST /api/v1/auth/login 200 - 379ms
+[2025-05-12 14:37:12] INFO: [Request] GET /api/v1/auth/profile 200 - 67ms
+[2025-05-12 14:37:12] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 14:43:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 12ms
+[2025-05-12 14:43:56] INFO: [Request] POST /api/v1/auth/login 200 - 383ms
+[2025-05-12 14:43:57] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 14:43:57] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-12 14:47:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-12 14:47:04] INFO: [Request] POST /api/v1/auth/login 200 - 405ms
+[2025-05-12 14:47:04] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-12 14:47:04] INFO: [Request] GET /api/v1/auth/profile 304 - 132ms
+[2025-05-12 14:47:17] INFO: [Request] GET /api/v1/auth/profile 304 - 221ms
+[2025-05-12 14:47:17] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-12 14:47:46] INFO: [Request] GET /api/v1/auth/profile 304 - 460ms
+[2025-05-12 14:47:46] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 15:16:20] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-12 15:16:20] INFO: [Request] POST /api/v1/auth/login 200 - 419ms
+[2025-05-12 15:16:21] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-12 15:16:21] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 15:47:02] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-12 15:47:02] INFO: [Request] POST /api/v1/auth/login 200 - 425ms
+[2025-05-12 15:47:03] INFO: [Request] GET /api/v1/auth/profile 304 - 39ms
+[2025-05-12 15:47:03] INFO: [Request] GET /api/v1/auth/profile 304 - 34ms
+[2025-05-12 16:06:42] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-12 16:06:42] INFO: [Request] POST /api/v1/auth/login 200 - 373ms
+[2025-05-12 16:06:43] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-12 16:06:43] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-12 16:26:00] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-12 16:26:00] INFO: [Request] POST /api/v1/auth/login 200 - 438ms
+[2025-05-12 16:26:01] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-12 16:26:01] INFO: [Request] GET /api/v1/auth/profile 304 - 43ms
+[2025-05-12 16:46:40] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-12 16:46:40] INFO: [Request] POST /api/v1/auth/login 200 - 474ms
+[2025-05-12 16:46:41] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 16:46:41] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-12 19:27:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-12 19:27:57] INFO: [Request] POST /api/v1/auth/login 200 - 451ms
+[2025-05-12 19:27:57] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 19:27:58] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-12 19:43:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 11ms
+[2025-05-12 19:43:38] INFO: [Request] POST /api/v1/auth/login 200 - 653ms
+[2025-05-12 19:43:38] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-12 19:43:39] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-12 20:05:04] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-12 20:05:04] INFO: [Request] POST /api/v1/auth/login 400 - 400ms
+[2025-05-12 20:05:08] INFO: [Request] POST /api/v1/auth/login 200 - 181ms
+[2025-05-12 20:05:08] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-12 20:05:09] INFO: [Request] GET /api/v1/auth/profile 304 - 126ms
+[2025-05-12 21:13:29] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-12 21:13:30] INFO: [Request] POST /api/v1/auth/login 200 - 405ms
+[2025-05-12 21:13:30] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-12 21:13:30] INFO: [Request] GET /api/v1/auth/profile 304 - 133ms
+[2025-05-12 22:27:17] INFO: ✅ Database connected successfully
+[2025-05-12 22:27:17] INFO: ✅ Server running on port 4000
+[2025-05-12 22:27:24] INFO: ✅ Database connected successfully
+[2025-05-12 22:27:30] INFO: ✅ Database connected successfully
+[2025-05-12 22:27:30] INFO: ✅ Server running on port 4000
+[2025-05-12 22:47:26] INFO: [Request] OPTIONS /auth/create-google-account 204 - 16ms
+[2025-05-12 22:47:26] INFO: [Request] POST /auth/create-google-account 404 - 5ms
+[2025-05-12 22:48:13] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 0ms
+[2025-05-12 22:48:13] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 494ms
+[2025-05-12 22:52:28] INFO: ✅ Database connected successfully
+[2025-05-12 22:52:28] INFO: ✅ Server running on port 4000
+[2025-05-12 22:52:44] INFO: ✅ Database connected successfully
+[2025-05-12 22:52:45] INFO: ✅ Server running on port 4000
+[2025-05-12 22:52:51] INFO: ✅ Database connected successfully
+[2025-05-12 22:52:52] INFO: ✅ Server running on port 4000
+[2025-05-12 22:53:46] INFO: ✅ Database connected successfully
+[2025-05-12 22:53:47] INFO: ✅ Server running on port 4000
+[2025-05-12 22:54:11] INFO: ✅ Database connected successfully
+[2025-05-12 22:54:12] INFO: ✅ Server running on port 4000
+[2025-05-12 22:55:00] INFO: ✅ Database connected successfully
+[2025-05-12 22:55:01] INFO: ✅ Server running on port 4000
+[2025-05-12 22:55:04] INFO: ✅ Database connected successfully
+[2025-05-12 22:55:07] INFO: ✅ Database connected successfully
+[2025-05-12 22:55:10] INFO: ✅ Database connected successfully
+[2025-05-12 22:55:11] INFO: ✅ Server running on port 4000
+[2025-05-12 22:55:39] INFO: ✅ Database connected successfully
+[2025-05-12 22:55:40] INFO: ✅ Server running on port 4000
+[2025-05-12 22:55:53] INFO: ✅ Database connected successfully
+[2025-05-12 22:55:54] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:00] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:01] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:05] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:06] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:22] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:23] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:29] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:30] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:33] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:34] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:37] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:38] INFO: ✅ Server running on port 4000
+[2025-05-12 22:56:42] INFO: ✅ Database connected successfully
+[2025-05-12 22:56:43] INFO: ✅ Server running on port 4000
+[2025-05-12 22:57:12] INFO: ✅ Database connected successfully
+[2025-05-12 22:57:12] INFO: ✅ Server running on port 4000
+[2025-05-12 22:57:28] INFO: ✅ Database connected successfully
+[2025-05-12 22:57:29] INFO: ✅ Server running on port 4000
+[2025-05-12 22:57:43] INFO: ✅ Database connected successfully
+[2025-05-12 22:57:44] INFO: ✅ Server running on port 4000
+[2025-05-12 22:58:35] INFO: ✅ Database connected successfully
+[2025-05-12 22:58:40] INFO: ✅ Database connected successfully
+[2025-05-12 22:58:40] INFO: ✅ Server running on port 4000
+[2025-05-12 23:00:06] INFO: ✅ Database connected successfully
+[2025-05-12 23:00:07] INFO: ✅ Server running on port 4000
+[2025-05-12 23:00:26] INFO: ✅ Database connected successfully
+[2025-05-12 23:00:27] INFO: ✅ Server running on port 4000
+[2025-05-12 23:00:57] INFO: ✅ Database connected successfully
+[2025-05-12 23:00:58] INFO: ✅ Server running on port 4000
+[2025-05-12 23:01:15] INFO: ✅ Database connected successfully
+[2025-05-12 23:01:15] INFO: ✅ Server running on port 4000
+[2025-05-12 23:02:13] INFO: ✅ Database connected successfully
+[2025-05-12 23:02:14] INFO: ✅ Server running on port 4000
+[2025-05-12 23:03:38] INFO: ✅ Database connected successfully
+[2025-05-12 23:03:39] INFO: ✅ Server running on port 4000
+[2025-05-12 23:04:00] INFO: ✅ Database connected successfully
+[2025-05-12 23:04:01] INFO: ✅ Server running on port 4000
+[2025-05-12 23:04:57] INFO: ✅ Database connected successfully
+[2025-05-12 23:04:58] INFO: ✅ Server running on port 4000
+[2025-05-12 23:05:16] INFO: ✅ Database connected successfully
+[2025-05-12 23:05:17] INFO: ✅ Server running on port 4000
+[2025-05-12 23:07:31] INFO: ✅ Database connected successfully
+[2025-05-12 23:07:34] INFO: ✅ Database connected successfully
+[2025-05-12 23:07:34] INFO: ✅ Server running on port 4000
+[2025-05-12 23:08:47] INFO: ✅ Database connected successfully
+[2025-05-12 23:08:48] INFO: ✅ Server running on port 4000
+[2025-05-12 23:08:57] INFO: ✅ Database connected successfully
+[2025-05-12 23:08:58] INFO: ✅ Server running on port 4000
+[2025-05-12 23:09:00] INFO: ✅ Database connected successfully
+[2025-05-12 23:09:01] INFO: ✅ Server running on port 4000
+[2025-05-12 23:09:04] INFO: ✅ Database connected successfully
+[2025-05-12 23:09:05] INFO: ✅ Server running on port 4000
+[2025-05-12 23:09:42] INFO: ✅ Database connected successfully
+[2025-05-12 23:09:42] INFO: ✅ Server running on port 4000
+[2025-05-12 23:12:09] INFO: ✅ Database connected successfully
+[2025-05-12 23:12:09] INFO: ✅ Server running on port 4000
+[2025-05-12 23:13:09] INFO: ✅ Database connected successfully
+[2025-05-12 23:13:09] INFO: ✅ Server running on port 4000
+[2025-05-12 23:13:19] INFO: ✅ Database connected successfully
+[2025-05-12 23:13:19] INFO: ✅ Server running on port 4000
+[2025-05-12 23:13:22] INFO: ✅ Database connected successfully
+[2025-05-12 23:13:23] INFO: ✅ Server running on port 4000
+[2025-05-12 23:13:55] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 9ms
+[2025-05-12 23:13:55] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 573ms
+[2025-05-12 23:14:26] INFO: ✅ Database connected successfully
+[2025-05-12 23:14:27] INFO: ✅ Server running on port 4000
+[2025-05-12 23:14:42] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 9ms
+[2025-05-12 23:14:43] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 383ms
+[2025-05-12 23:16:17] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-05-12 23:16:17] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 371ms
+[2025-05-12 23:17:59] INFO: ✅ Database connected successfully
+[2025-05-12 23:18:00] INFO: ✅ Server running on port 4000
+[2025-05-12 23:18:20] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 11ms
+[2025-05-12 23:18:21] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 396ms
+[2025-05-12 23:24:37] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 11ms
+[2025-05-12 23:24:37] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 300ms
+[2025-05-12 23:26:24] INFO: ✅ Database connected successfully
+[2025-05-12 23:26:25] INFO: ✅ Server running on port 4000
+[2025-05-12 23:28:03] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-05-12 23:28:04] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 432ms
+[2025-05-12 23:30:02] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 4ms
+[2025-05-12 23:30:02] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 256ms
+[2025-05-12 23:33:14] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 8ms
+[2025-05-12 23:33:14] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 369ms
+[2025-05-12 23:35:15] INFO: ✅ Database connected successfully
+[2025-05-12 23:35:16] INFO: ✅ Server running on port 4000
+[2025-05-12 23:36:38] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-05-12 23:36:39] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 626ms
+[2025-05-12 23:40:33] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 3ms
+[2025-05-12 23:40:33] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 355ms
+[2025-05-12 23:42:11] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 10ms
+[2025-05-12 23:42:12] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 288ms
+[2025-05-12 23:47:08] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 8ms
+[2025-05-12 23:47:08] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 256ms
+[2025-05-12 23:47:09] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 47ms
+[2025-05-12 23:47:36] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-12 23:47:37] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 221ms
+[2025-05-12 23:47:37] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 44ms
+[2025-05-12 23:48:02] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 2ms
+[2025-05-12 23:48:02] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 249ms
+[2025-05-12 23:48:25] INFO: ✅ Database connected successfully
+[2025-05-12 23:48:26] INFO: ✅ Server running on port 4000
+[2025-05-12 23:48:48] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 10ms
+[2025-05-12 23:48:48] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 355ms
+[2025-05-12 23:52:24] INFO: ✅ Database connected successfully
+[2025-05-12 23:52:26] INFO: ✅ Server running on port 4000
+[2025-05-12 23:52:38] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-05-12 23:52:39] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 399ms
+[2025-05-12 23:53:40] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-05-12 23:53:40] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 193ms
+[2025-05-12 23:55:16] INFO: ✅ Database connected successfully
+[2025-05-12 23:55:16] INFO: ✅ Server running on port 4000
+[2025-05-12 23:56:31] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-05-12 23:56:32] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 325ms
+[2025-05-12 23:57:04] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-05-12 23:57:05] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 206ms
+[2025-05-12 23:57:57] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 8ms
+[2025-05-12 23:57:57] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 319ms
+[2025-05-12 23:58:44] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 0ms
+[2025-05-12 23:58:44] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 351ms
+[2025-05-12 23:58:56] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 4ms
+[2025-05-12 23:58:56] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 266ms
+[2025-05-13 00:43:58] INFO: ✅ Database connected successfully
+[2025-05-13 00:43:59] INFO: ✅ Server running on port 4000
+[2025-05-13 00:44:19] INFO: ✅ Database connected successfully
+[2025-05-13 00:44:19] INFO: ✅ Server running on port 4000
+[2025-05-13 00:44:36] INFO: ✅ Database connected successfully
+[2025-05-13 00:44:37] INFO: ✅ Server running on port 4000
+[2025-05-13 00:45:57] INFO: ✅ Database connected successfully
+[2025-05-13 00:45:58] INFO: ✅ Server running on port 4000
+[2025-05-13 00:46:37] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 9ms
+[2025-05-13 00:46:37] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 332ms
+[2025-05-13 00:51:36] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 9ms
+[2025-05-13 00:51:37] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 243ms
+[2025-05-13 01:06:48] INFO: ✅ Database connected successfully
+[2025-05-13 01:06:49] INFO: ✅ Server running on port 4000
+[2025-05-13 01:07:29] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-05-13 01:07:29] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 392ms
+[2025-05-13 01:14:57] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 5ms
+[2025-05-13 01:14:57] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 298ms
+[2025-05-13 03:04:52] INFO: ✅ Database connected successfully
+[2025-05-13 03:04:52] INFO: ✅ Server running on port 4000
+[2025-05-13 03:06:13] INFO: [Request] OPTIONS /api/v1/auth/password-recovery 204 - 6ms
+[2025-05-13 03:06:16] INFO: [Request] POST /api/v1/auth/password-recovery 200 - 2757ms
+[2025-05-13 03:07:46] INFO: [Request] OPTIONS /api/v1/login/auth/verify-otp 204 - 6ms
+[2025-05-13 03:07:46] INFO: [Request] POST /api/v1/login/auth/verify-otp 404 - 4ms
+[2025-05-13 03:08:06] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-05-13 03:08:07] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 307ms
+[2025-05-13 03:08:59] INFO: ✅ Database connected successfully
+[2025-05-13 03:09:00] INFO: ✅ Server running on port 4000
+[2025-05-13 03:09:28] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 9ms
+[2025-05-13 03:09:28] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 243ms
+[2025-05-13 03:09:43] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 1ms
+[2025-05-13 03:09:43] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 287ms
+[2025-05-13 03:14:22] INFO: ✅ Database connected successfully
+[2025-05-13 03:14:23] INFO: ✅ Server running on port 4000
+[2025-05-13 03:14:55] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 9ms
+[2025-05-13 03:14:55] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 299ms
+[2025-05-13 03:15:27] INFO: ✅ Database connected successfully
+[2025-05-13 03:15:28] INFO: ✅ Server running on port 4000
+[2025-05-13 03:18:23] INFO: ✅ Database connected successfully
+[2025-05-13 03:18:23] INFO: ✅ Server running on port 4000
+[2025-05-13 03:18:27] INFO: ✅ Database connected successfully
+[2025-05-13 03:18:28] INFO: ✅ Server running on port 4000
+[2025-05-13 03:20:55] INFO: ✅ Database connected successfully
+[2025-05-13 03:20:55] INFO: ✅ Server running on port 4000
+[2025-05-13 03:21:10] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 8ms
+[2025-05-13 03:21:10] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 227ms
+[2025-05-13 03:23:53] INFO: ✅ Database connected successfully
+[2025-05-13 03:23:58] INFO: ✅ Database connected successfully
+[2025-05-13 03:24:00] INFO: ✅ Database connected successfully
+[2025-05-13 03:24:01] INFO: ✅ Server running on port 4000
+[2025-05-13 03:24:08] INFO: ✅ Database connected successfully
+[2025-05-13 03:24:09] INFO: ✅ Server running on port 4000
+[2025-05-13 03:24:42] INFO: ✅ Database connected successfully
+[2025-05-13 03:24:42] INFO: ✅ Server running on port 4000
+[2025-05-13 03:25:42] INFO: ✅ Database connected successfully
+[2025-05-13 03:25:42] INFO: ✅ Server running on port 4000
+[2025-05-13 03:25:49] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 6ms
+[2025-05-13 03:25:49] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 64ms
+[2025-05-13 03:26:54] INFO: ✅ Database connected successfully
+[2025-05-13 03:26:55] INFO: ✅ Server running on port 4000
+[2025-05-13 03:27:02] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 8ms
+[2025-05-13 03:27:02] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 91ms
+[2025-05-13 03:27:36] INFO: ✅ Database connected successfully
+[2025-05-13 03:27:37] INFO: ✅ Server running on port 4000
+[2025-05-13 03:28:09] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 6ms
+[2025-05-13 03:28:11] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1794ms
+[2025-05-13 03:28:32] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 0ms
+[2025-05-13 03:28:32] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 223ms
+[2025-05-13 10:14:04] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-13 10:14:04] INFO: [Request] POST /api/v1/auth/login 200 - 424ms
+[2025-05-13 10:14:07] INFO: [Request] GET /api/v1/auth/profile 304 - 110ms
+[2025-05-13 10:14:07] INFO: [Request] GET /api/v1/auth/profile 304 - 75ms
+[2025-05-13 10:21:23] INFO: [Request] GET /api/v1/auth/profile 304 - 546ms
+[2025-05-13 10:21:23] INFO: [Request] GET /api/v1/auth/profile 304 - 110ms
+[2025-05-13 10:21:40] INFO: [Request] GET /api/v1/auth/profile 304 - 346ms
+[2025-05-13 10:21:40] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-13 10:22:39] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 22ms
+[2025-05-13 10:22:40] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 391ms
+[2025-05-13 10:23:49] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-13 10:23:49] INFO: [Request] POST /api/v1/auth/login 200 - 382ms
+[2025-05-13 10:23:50] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 10:23:50] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 10:24:21] INFO: [Request] GET /api/v1/auth/profile 304 - 375ms
+[2025-05-13 10:24:21] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 10:42:24] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-13 10:42:24] INFO: [Request] POST /api/v1/auth/login 200 - 426ms
+[2025-05-13 10:42:25] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 10:42:25] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-13 10:44:23] INFO: [Request] GET /api/v1/auth/profile 304 - 260ms
+[2025-05-13 10:44:23] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-13 11:00:12] INFO: ✅ Database connected successfully
+[2025-05-13 11:00:13] INFO: ✅ Server running on port 4000
+[2025-05-13 11:29:30] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 51ms
+[2025-05-13 11:30:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 11:30:07] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 11:30:43] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 11:31:52] INFO: ✅ Database connected successfully
+[2025-05-13 11:31:53] INFO: ✅ Server running on port 4000
+[2025-05-13 11:31:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-13 11:33:35] INFO: ✅ Database connected successfully
+[2025-05-13 11:33:35] INFO: ✅ Server running on port 4000
+[2025-05-13 11:33:59] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-13 11:34:54] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 12:04:10] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 45ms
+[2025-05-13 12:07:09] INFO: ✅ Database connected successfully
+[2025-05-13 12:07:11] INFO: ✅ Database connected successfully
+[2025-05-13 12:07:12] INFO: ✅ Server running on port 4000
+[2025-05-13 12:07:35] INFO: ✅ Database connected successfully
+[2025-05-13 12:07:35] INFO: ✅ Server running on port 4000
+[2025-05-13 12:07:58] INFO: ✅ Database connected successfully
+[2025-05-13 12:07:59] INFO: ✅ Server running on port 4000
+[2025-05-13 12:09:07] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 62ms
+[2025-05-13 12:09:58] INFO: ✅ Database connected successfully
+[2025-05-13 12:10:17] INFO: ✅ Database connected successfully
+[2025-05-13 12:10:17] INFO: ✅ Server running on port 4000
+[2025-05-13 12:10:29] INFO: ✅ Database connected successfully
+[2025-05-13 12:10:29] INFO: ✅ Server running on port 4000
+[2025-05-13 12:11:00] INFO: ✅ Database connected successfully
+[2025-05-13 12:11:01] INFO: ✅ Server running on port 4000
+[2025-05-13 12:11:04] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-13 12:12:56] INFO: ✅ Database connected successfully
+[2025-05-13 12:12:57] INFO: ✅ Server running on port 4000
+[2025-05-13 12:13:09] INFO: ✅ Database connected successfully
+[2025-05-13 12:13:11] INFO: ✅ Server running on port 4000
+[2025-05-13 12:13:23] INFO: ✅ Database connected successfully
+[2025-05-13 12:13:23] INFO: ✅ Server running on port 4000
+[2025-05-13 12:13:25] INFO: ✅ Database connected successfully
+[2025-05-13 12:13:26] INFO: ✅ Server running on port 4000
+[2025-05-13 12:13:33] INFO: ✅ Database connected successfully
+[2025-05-13 12:13:34] INFO: ✅ Server running on port 4000
+[2025-05-13 12:14:07] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-13 12:14:07] INFO: [Request] POST /api/v1/auth/login 200 - 339ms
+[2025-05-13 12:14:08] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-13 12:14:08] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 12:14:37] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 6ms
+[2025-05-13 12:14:38] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 410ms
+[2025-05-13 12:16:27] INFO: ✅ Database connected successfully
+[2025-05-13 12:16:27] INFO: ✅ Server running on port 4000
+[2025-05-13 12:17:33] INFO: ✅ Database connected successfully
+[2025-05-13 12:17:34] INFO: ✅ Server running on port 4000
+[2025-05-13 12:22:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 8ms
+[2025-05-13 12:22:38] INFO: [Request] POST /api/v1/auth/login 200 - 359ms
+[2025-05-13 12:22:38] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-13 12:22:38] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-13 12:39:14] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-13 12:39:14] INFO: [Request] POST /api/v1/auth/login 200 - 412ms
+[2025-05-13 12:39:15] INFO: [Request] GET /api/v1/auth/profile 304 - 81ms
+[2025-05-13 12:39:15] INFO: [Request] GET /api/v1/auth/profile 304 - 45ms
+[2025-05-13 12:42:54] INFO: [Request] GET /api/v1/auth/profile 304 - 310ms
+[2025-05-13 12:42:54] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-13 12:44:11] INFO: [Request] GET /api/v1/auth/profile 304 - 187ms
+[2025-05-13 12:44:11] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 12:45:00] INFO: [Request] GET /api/v1/auth/profile 304 - 305ms
+[2025-05-13 12:45:00] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 12:45:06] INFO: [Request] GET /api/v1/auth/profile 304 - 33ms
+[2025-05-13 12:45:06] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-13 12:45:12] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 12:45:13] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-13 13:12:18] INFO: [Request] GET /api/v1/auth/profile 401 - 10ms
+[2025-05-13 13:12:18] INFO: [Request] GET /api/v1/auth/profile 401 - 4ms
+[2025-05-13 13:12:34] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 13:12:34] INFO: [Request] POST /api/v1/auth/login 200 - 349ms
+[2025-05-13 13:12:35] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-13 13:12:35] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 13:20:57] INFO: [Request] GET /api/v1/auth/profile 304 - 350ms
+[2025-05-13 13:20:57] INFO: [Request] GET /api/v1/auth/profile 304 - 46ms
+[2025-05-13 13:28:07] INFO: ✅ Database connected successfully
+[2025-05-13 13:28:08] INFO: ✅ Server running on port 4000
+[2025-05-13 13:28:22] INFO: ✅ Database connected successfully
+[2025-05-13 13:28:22] INFO: ✅ Server running on port 4000
+[2025-05-13 13:29:28] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 13ms
+[2025-05-13 13:29:31] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 2478ms
+[2025-05-13 13:29:58] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 6ms
+[2025-05-13 13:29:58] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 285ms
+[2025-05-13 13:30:49] INFO: ✅ Database connected successfully
+[2025-05-13 13:30:49] INFO: ✅ Server running on port 4000
+[2025-05-13 13:30:56] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 5ms
+[2025-05-13 13:30:56] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 500 - 80ms
+[2025-05-13 13:31:27] INFO: ✅ Database connected successfully
+[2025-05-13 13:31:27] INFO: ✅ Server running on port 4000
+[2025-05-13 13:31:32] INFO: ✅ Database connected successfully
+[2025-05-13 13:31:32] INFO: ✅ Server running on port 4000
+[2025-05-13 13:31:36] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 18ms
+[2025-05-13 13:31:36] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 62ms
+[2025-05-13 13:35:12] INFO: ✅ Database connected successfully
+[2025-05-13 13:35:12] INFO: ✅ Server running on port 4000
+[2025-05-13 13:35:27] INFO: ✅ Database connected successfully
+[2025-05-13 13:35:28] INFO: ✅ Server running on port 4000
+[2025-05-13 13:36:14] INFO: ✅ Database connected successfully
+[2025-05-13 13:36:15] INFO: ✅ Server running on port 4000
+[2025-05-13 13:36:39] INFO: ✅ Database connected successfully
+[2025-05-13 13:36:39] INFO: ✅ Server running on port 4000
+[2025-05-13 13:37:58] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 9ms
+[2025-05-13 13:38:00] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1787ms
+[2025-05-13 13:39:06] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 1ms
+[2025-05-13 13:39:07] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 326ms
+[2025-05-13 13:48:38] INFO: ✅ Database connected successfully
+[2025-05-13 13:48:38] INFO: ✅ Server running on port 4000
+[2025-05-13 13:58:18] INFO: ✅ Database connected successfully
+[2025-05-13 13:58:18] INFO: ✅ Server running on port 4000
+[2025-05-13 13:59:15] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 8ms
+[2025-05-13 13:59:17] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1650ms
+[2025-05-13 14:00:31] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 0ms
+[2025-05-13 14:00:33] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 200 - 1446ms
+[2025-05-13 14:13:26] INFO: ✅ Database connected successfully
+[2025-05-13 14:13:26] INFO: ✅ Server running on port 4000
+[2025-05-13 14:13:38] INFO: ✅ Database connected successfully
+[2025-05-13 14:13:38] INFO: ✅ Server running on port 4000
+[2025-05-13 14:13:55] INFO: ✅ Database connected successfully
+[2025-05-13 14:13:56] INFO: ✅ Server running on port 4000
+[2025-05-13 14:37:38] INFO: ✅ Database connected successfully
+[2025-05-13 14:37:38] INFO: ✅ Server running on port 4000
+[2025-05-13 14:37:42] INFO: ✅ Database connected successfully
+[2025-05-13 14:37:42] INFO: ✅ Server running on port 4000
+[2025-05-13 14:38:02] INFO: ✅ Database connected successfully
+[2025-05-13 14:38:03] INFO: ✅ Server running on port 4000
+[2025-05-13 14:38:11] INFO: ✅ Database connected successfully
+[2025-05-13 14:38:12] INFO: ✅ Server running on port 4000
+[2025-05-13 14:41:33] INFO: ✅ Database connected successfully
+[2025-05-13 14:41:34] INFO: ✅ Server running on port 4000
+[2025-05-13 14:41:41] INFO: ✅ Database connected successfully
+[2025-05-13 14:41:41] INFO: ✅ Server running on port 4000
+[2025-05-13 14:42:34] INFO: ✅ Database connected successfully
+[2025-05-13 14:42:35] INFO: ✅ Server running on port 4000
+[2025-05-13 14:43:44] INFO: ✅ Database connected successfully
+[2025-05-13 14:43:44] INFO: ✅ Server running on port 4000
+[2025-05-13 14:44:17] INFO: ✅ Database connected successfully
+[2025-05-13 14:44:18] INFO: ✅ Server running on port 4000
+[2025-05-13 14:44:27] INFO: ✅ Database connected successfully
+[2025-05-13 14:44:28] INFO: ✅ Server running on port 4000
+[2025-05-13 14:45:54] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 17ms
+[2025-05-13 14:45:54] INFO: [Request] POST /api/v1/auth/reset-password 404 - 2ms
+[2025-05-13 14:49:56] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 2ms
+[2025-05-13 14:49:56] INFO: [Request] POST /api/v1/auth/reset-password 404 - 2ms
+[2025-05-13 14:51:37] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 5ms
+[2025-05-13 14:51:39] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 2014ms
+[2025-05-13 14:55:44] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 2ms
+[2025-05-13 14:55:45] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 252ms
+[2025-05-13 14:56:35] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 4ms
+[2025-05-13 14:56:35] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 220ms
+[2025-05-13 15:03:13] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 27ms
+[2025-05-13 15:03:14] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1655ms
+[2025-05-13 15:03:32] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 0ms
+[2025-05-13 15:03:32] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 221ms
+[2025-05-13 15:04:59] INFO: ✅ Database connected successfully
+[2025-05-13 15:05:00] INFO: ✅ Server running on port 4000
+[2025-05-13 15:05:09] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 14ms
+[2025-05-13 15:05:10] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 66ms
+[2025-05-13 15:07:55] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 12ms
+[2025-05-13 15:07:55] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 320ms
+[2025-05-13 15:08:30] INFO: ✅ Database connected successfully
+[2025-05-13 15:08:31] INFO: ✅ Server running on port 4000
+[2025-05-13 15:08:47] INFO: ✅ Database connected successfully
+[2025-05-13 15:08:50] INFO: ✅ Database connected successfully
+[2025-05-13 15:08:50] INFO: ✅ Server running on port 4000
+[2025-05-13 15:08:59] INFO: ✅ Database connected successfully
+[2025-05-13 15:09:01] INFO: ✅ Server running on port 4000
+[2025-05-13 15:09:23] INFO: ✅ Database connected successfully
+[2025-05-13 15:09:23] INFO: ✅ Server running on port 4000
+[2025-05-13 15:09:32] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 8ms
+[2025-05-13 15:09:32] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 87ms
+[2025-05-13 15:12:48] INFO: ✅ Database connected successfully
+[2025-05-13 15:12:48] INFO: ✅ Server running on port 4000
+[2025-05-13 15:12:54] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 10ms
+[2025-05-13 15:12:56] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1518ms
+[2025-05-13 15:13:17] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 4ms
+[2025-05-13 15:13:17] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 200 - 301ms
+[2025-05-13 15:13:27] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 1ms
+[2025-05-13 15:13:28] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 368ms
+[2025-05-13 15:14:29] INFO: ✅ Database connected successfully
+[2025-05-13 15:14:29] INFO: ✅ Server running on port 4000
+[2025-05-13 15:15:28] INFO: ✅ Database connected successfully
+[2025-05-13 15:15:28] INFO: ✅ Server running on port 4000
+[2025-05-13 15:15:32] INFO: ✅ Database connected successfully
+[2025-05-13 15:15:32] INFO: ✅ Server running on port 4000
+[2025-05-13 15:15:45] INFO: ✅ Database connected successfully
+[2025-05-13 15:15:45] INFO: ✅ Server running on port 4000
+[2025-05-13 15:15:50] INFO: ✅ Database connected successfully
+[2025-05-13 15:15:50] INFO: ✅ Server running on port 4000
+[2025-05-13 15:15:54] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 39ms
+[2025-05-13 15:15:54] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 89ms
+[2025-05-13 15:22:31] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 3ms
+[2025-05-13 15:22:32] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 400 - 306ms
+[2025-05-13 15:23:04] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 3ms
+[2025-05-13 15:23:04] INFO: [Request] POST /api/v1/auth/reset-password 404 - 6ms
+[2025-05-13 15:24:55] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 1ms
+[2025-05-13 15:24:55] INFO: [Request] POST /api/v1/auth/reset-password 404 - 2ms
+[2025-05-13 15:25:51] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 3ms
+[2025-05-13 15:25:51] INFO: [Request] POST /api/v1/auth/reset-password 404 - 1ms
+[2025-05-13 15:26:00] INFO: ✅ Database connected successfully
+[2025-05-13 15:26:00] INFO: ✅ Server running on port 4000
+[2025-05-13 15:26:05] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 5ms
+[2025-05-13 15:26:05] INFO: [Request] POST /api/v1/auth/reset-password 404 - 5ms
+[2025-05-13 15:28:13] INFO: ✅ Database connected successfully
+[2025-05-13 15:28:13] INFO: ✅ Server running on port 4000
+[2025-05-13 15:48:13] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 15ms
+[2025-05-13 15:48:13] INFO: [Request] POST /api/v1/auth/reset-password 404 - 21ms
+[2025-05-13 15:54:34] INFO: ✅ Database connected successfully
+[2025-05-13 15:54:35] INFO: ✅ Server running on port 4000
+[2025-05-13 15:54:42] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 6ms
+[2025-05-13 15:54:42] INFO: [Request] POST /api/v1/auth/reset-password 500 - 70ms
+[2025-05-13 15:56:06] INFO: ✅ Database connected successfully
+[2025-05-13 15:56:07] INFO: ✅ Server running on port 4000
+[2025-05-13 15:56:19] INFO: ✅ Database connected successfully
+[2025-05-13 15:56:20] INFO: ✅ Server running on port 4000
+[2025-05-13 15:56:39] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 8ms
+[2025-05-13 15:56:39] INFO: [Request] POST /api/v1/auth/reset-password 500 - 231ms
+[2025-05-13 15:57:43] INFO: ✅ Database connected successfully
+[2025-05-13 15:57:43] INFO: ✅ Server running on port 4000
+[2025-05-13 15:57:53] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 11ms
+[2025-05-13 15:57:53] INFO: [Request] POST /api/v1/auth/reset-password 500 - 71ms
+[2025-05-13 15:58:14] INFO: ✅ Database connected successfully
+[2025-05-13 15:58:14] INFO: ✅ Server running on port 4000
+[2025-05-13 15:58:21] INFO: ✅ Database connected successfully
+[2025-05-13 15:58:22] INFO: ✅ Server running on port 4000
+[2025-05-13 15:58:34] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 6ms
+[2025-05-13 15:58:34] INFO: [Request] POST /api/v1/auth/reset-password 500 - 310ms
+[2025-05-13 16:01:35] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 1ms
+[2025-05-13 16:01:35] INFO: [Request] POST /api/v1/auth/reset-password 500 - 324ms
+[2025-05-13 16:02:18] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 1ms
+[2025-05-13 16:02:19] INFO: [Request] POST /api/v1/auth/reset-password 500 - 240ms
+[2025-05-13 16:02:22] INFO: [Request] POST /api/v1/auth/reset-password 500 - 48ms
+[2025-05-13 16:02:39] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 1ms
+[2025-05-13 16:02:40] INFO: [Request] POST /api/v1/auth/reset-password 500 - 237ms
+[2025-05-13 16:03:24] INFO: ✅ Database connected successfully
+[2025-05-13 16:03:27] INFO: ✅ Database connected successfully
+[2025-05-13 16:03:28] INFO: ✅ Server running on port 4000
+[2025-05-13 16:03:33] INFO: ✅ Database connected successfully
+[2025-05-13 16:03:33] INFO: ✅ Server running on port 4000
+[2025-05-13 16:03:52] INFO: ✅ Database connected successfully
+[2025-05-13 16:03:53] INFO: ✅ Server running on port 4000
+[2025-05-13 16:04:04] INFO: ✅ Database connected successfully
+[2025-05-13 16:04:05] INFO: ✅ Server running on port 4000
+[2025-05-13 16:04:11] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 21ms
+[2025-05-13 16:04:11] INFO: [Request] POST /api/v1/auth/reset-password 200 - 242ms
+[2025-05-13 16:07:26] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 4ms
+[2025-05-13 16:07:27] INFO: [Request] POST /api/v1/auth/reset-password 400 - 656ms
+[2025-05-13 16:08:10] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 3ms
+[2025-05-13 16:08:12] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1980ms
+[2025-05-13 16:08:40] INFO: [Request] OPTIONS /api/v1/auth/verify-password-recovery-otp 204 - 1ms
+[2025-05-13 16:08:40] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 200 - 246ms
+[2025-05-13 16:08:54] INFO: [Request] OPTIONS /api/v1/auth/reset-password 204 - 1ms
+[2025-05-13 16:08:54] INFO: [Request] POST /api/v1/auth/reset-password 200 - 347ms
+[2025-05-13 16:10:33] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 16:10:33] INFO: [Request] POST /api/v1/auth/login 200 - 361ms
+[2025-05-13 16:10:37] INFO: [Request] GET /api/v1/auth/profile 200 - 30ms
+[2025-05-13 16:10:37] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 16:11:03] INFO: [Request] GET /api/v1/auth/profile 304 - 204ms
+[2025-05-13 16:11:03] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 16:15:36] INFO: [Request] GET /api/v1/auth/profile 304 - 212ms
+[2025-05-13 16:15:36] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 16:15:40] INFO: [Request] GET /api/v1/auth/profile 304 - 52ms
+[2025-05-13 16:15:40] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 16:16:11] INFO: [Request] GET /api/v1/auth/profile 304 - 191ms
+[2025-05-13 16:16:11] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-13 16:36:47] INFO: [Request] GET /api/v1/auth/profile 401 - 8ms
+[2025-05-13 16:36:47] INFO: [Request] GET /api/v1/auth/profile 401 - 2ms
+[2025-05-13 16:36:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 16:36:57] INFO: [Request] POST /api/v1/auth/login 200 - 414ms
+[2025-05-13 16:36:57] INFO: [Request] GET /api/v1/auth/profile 200 - 27ms
+[2025-05-13 16:36:57] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 16:36:58] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 16:36:58] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 16:37:01] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 16:37:01] INFO: [Request] GET /api/v1/auth/profile 304 - 54ms
+[2025-05-13 16:38:35] INFO: [Request] GET /api/v1/auth/profile 304 - 301ms
+[2025-05-13 16:38:35] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 16:39:05] INFO: [Request] GET /api/v1/auth/profile 304 - 364ms
+[2025-05-13 16:39:05] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-13 16:39:10] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 16:39:10] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 16:39:11] INFO: [Request] GET /api/v1/auth/profile 304 - 54ms
+[2025-05-13 16:39:11] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-13 16:39:14] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 16:39:14] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-13 16:39:14] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 16:39:14] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 16:39:16] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-13 16:39:16] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 16:39:18] INFO: [Request] GET /api/v1/auth/profile 304 - 29ms
+[2025-05-13 16:39:18] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 16:40:08] INFO: [Request] GET /api/v1/auth/profile 304 - 326ms
+[2025-05-13 16:40:08] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 16:41:11] INFO: [Request] GET /api/v1/auth/profile 304 - 221ms
+[2025-05-13 16:41:12] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-13 16:43:04] INFO: [Request] GET /api/v1/auth/profile 304 - 245ms
+[2025-05-13 16:43:04] INFO: [Request] GET /api/v1/auth/profile 304 - 16ms
+[2025-05-13 16:43:08] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 16:43:08] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 16:43:35] INFO: [Request] GET /api/v1/auth/profile 304 - 277ms
+[2025-05-13 16:43:35] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-13 16:43:39] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 16:43:39] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 16:49:09] INFO: [Request] GET /api/v1/auth/profile 304 - 387ms
+[2025-05-13 16:49:09] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 19:39:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-13 19:39:08] INFO: [Request] POST /api/v1/auth/login 200 - 399ms
+[2025-05-13 19:39:09] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-13 19:39:09] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 19:39:09] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-13 19:39:09] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 19:52:39] INFO: [Request] GET /api/v1/auth/profile 304 - 617ms
+[2025-05-13 19:52:39] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 19:52:39] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 19:52:39] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 19:54:05] INFO: ✅ Database connected successfully
+[2025-05-13 19:54:05] INFO: ✅ Server running on port 4000
+[2025-05-13 19:57:01] INFO: [Request] GET /api/v1/auth/profile 401 - 20ms
+[2025-05-13 19:57:01] INFO: [Request] GET /api/v1/auth/profile 401 - 8ms
+[2025-05-13 19:57:01] INFO: [Request] GET /api/v1/auth/profile 401 - 2ms
+[2025-05-13 19:57:01] INFO: [Request] GET /api/v1/auth/profile 401 - 5ms
+[2025-05-13 19:57:48] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-13 19:57:49] INFO: [Request] POST /api/v1/auth/login 200 - 443ms
+[2025-05-13 19:57:49] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 19:57:49] INFO: [Request] GET /api/v1/auth/profile 304 - 98ms
+[2025-05-13 19:57:50] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 19:57:50] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 20:00:01] INFO: [Request] GET /api/v1/auth/profile 304 - 302ms
+[2025-05-13 20:00:01] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 20:00:01] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 20:00:01] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 20:20:10] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 15ms
+[2025-05-13 20:20:10] INFO: [Request] POST /api/v1/auth/login 200 - 589ms
+[2025-05-13 20:20:11] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-13 20:20:11] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 20:20:11] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-13 20:20:11] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 20:20:19] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-13 20:20:19] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 20:20:19] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 20:20:19] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 20:35:34] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-13 20:35:34] INFO: [Request] POST /api/v1/auth/login 200 - 416ms
+[2025-05-13 20:35:34] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-13 20:35:34] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-13 20:35:34] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-13 20:35:35] INFO: [Request] GET /api/v1/auth/profile 304 - 43ms
+[2025-05-13 21:03:45] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-13 21:03:46] INFO: [Request] POST /api/v1/auth/login 200 - 435ms
+[2025-05-13 21:03:46] INFO: [Request] GET /api/v1/auth/profile 304 - 59ms
+[2025-05-13 21:03:46] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-13 21:03:46] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-13 21:03:46] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-13 21:09:53] INFO: [Request] GET /api/v1/auth/profile 304 - 464ms
+[2025-05-13 21:09:53] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-13 21:13:53] INFO: [Request] GET /api/v1/auth/profile 304 - 339ms
+[2025-05-13 21:13:53] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-13 21:14:20] INFO: [Request] GET /api/v1/auth/profile 304 - 248ms
+[2025-05-13 21:14:20] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-13 21:14:20] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-13 21:14:20] INFO: [Request] GET /api/v1/auth/profile 304 - 59ms

@@ -6,11 +6,8 @@ const logger = require("../utils/logger");
 const db = require("../models");
 const jwt = require("jsonwebtoken");
 const sendEmail = require("../utils/mailer");
-const { generateToken, generateTempToken } = require("../utils/jwt");
+const { generateToken } = require("../utils/jwt");
 require("dotenv").config();
-
-// AWS SQS setup
-// const sqsClient = new SQSClient({ region: process.env.AWS_REGION });
 
 const AuthService = {
   async getUser(user_id) {
@@ -34,8 +31,6 @@ const AuthService = {
     const hashedPassword = await bcrypt.hash(password, 10);
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
-
-    console.log(otp)
 
     const newUser = await db.User.create({
       email,
@@ -126,8 +121,6 @@ const AuthService = {
       if (userOtp.otp_attempts >= 5) {
         userOtp.blocked_until = new Date(now.getTime() + 15 * 60 * 1000);
       }
-
-
 
       await userOtp.save();
 
@@ -242,78 +235,97 @@ const AuthService = {
   },
 
   async loginWithGoogle(credential, clientId) {
-    const ticket = await client.verifyIdToken({
-      idToken: credential,
-      audience: clientId,
-    });
-
-    const payload = ticket.getPayload();
-    const { email, given_name, family_name, sub } = payload;
-    const normalizedEmail = email.toLowerCase();
-
-    let user = await db.User.findOne({
-      where: { email: normalizedEmail, provider: "google" },
-    });
-
-    if (user.rows.length === 0) {
-      const newUser = await db.Users.findOne({
-        normalizedEmail,
-        given_name,
-        family_name,
-        provider: "google",
-        google_id: sub,
+    try {
+      const ticket = await client.verifyIdToken({
+        idToken: credential,
+        audience: clientId,
       });
-      user = newUser;
 
-      await db.Patients.create({
-        user_id: newUser.user_id,
-        first_name: newUser.given_name,
-        last_name: newUser.family_name,
-        email: normalizedEmail,
+      const payload = ticket.getPayload();
+      const { email, given_name, family_name, sub } = payload;
+      const normalizedEmail = email.toLowerCase();
+
+      let socialLogin = await db.SocialLogins.findOne({
+        where: { provider_id: sub, provider_name: "google" },
       });
+
+      let userId;
+
+      if (!socialLogin) {
+        const newPatient = await db.Patient.create({
+          first_name: given_name,
+          last_name: family_name,
+          email: normalizedEmail,
+        });
+
+        socialLogin = await db.SocialLogins.create({
+          email: normalizedEmail,
+          provider_name: "google",
+          provider_id: sub,
+          user_id: newPatient.patient_id,
+        });
+
+        userId = newPatient.patient_id;
+      } else {
+        userId = socialLogin.user_id;
+      }
+
+      const jwtToken = jwt.sign({ id: userId }, process.env.JWT_SECRET, {
+        expiresIn: "1d",
+      });
+
+      return {
+        token: jwtToken,
+        user: {
+          id: userId,
+          email: normalizedEmail,
+        },
+      };
+    } catch (error) {
+      console.error("Error verifying Google token:", error);
+      throw new Error("Google token verification failed");
     }
-
-    const jwtToken = jwt.sign(
-      { id: user.rows[0].user_id, email: user.rows[0].email },
-      process.env.JWT_SECRET,
-      { expiresIn: "1d" }
-    );
-
-    return {
-      token: jwtToken,
-      user: user.rows[0],
-    };
   },
 
   async verifyRecoveryOTP(email, otp) {
-    const userCheck = await db.User.findOne({ where: { email } });
-    if (userCheck.rows.length === 0) {
-      return { status: 400, message: "Invalid OTP or email" };
-    }
+    try {
+      const userCheck = await db.User.findOne({ where: { email } });
+      if (!userCheck) {
+        return { status: 400, message: "Invalid OTP or email" };
+      }
 
-    const userId = userCheck.rows[0].user_id;
-    const otpCheck = await verifyOTP(userId, otp);
+      const userId = userCheck.user_id;
+      const otpRecord = await db.Otp.findOne({
+        where: {
+          user_id: userId,
+          status: "pending",
+        },
+      });
+      if (!otpRecord) {
+        return { status: 400, message: "Invalid OTP or email" };
+      }
+      if (otpRecord.otp_text !== otp) {
+        return { status: 400, message: "Invalid OTP code. Please try again" };
+      }
+      if (new Date() > otpRecord.valid_until) {
+        return { status: 400, message: "OTP expired" };
+      }
 
-    if (otpCheck === "INVALID_OTP") {
-      return { status: 400, message: "Invalid OTP code. Please try again" };
-    }
-    if (otpCheck === "OTP_EXPIRED") {
-      return { status: 400, message: "OTP expired." };
-    }
+      otpRecord.status = "validated";
+      otpRecord.validated_at = new Date();
+      await otpRecord.save();
 
-    const status = await sendEmail(email, "Prasha Sync Password Reset.");
-    if (!status) {
       return {
-        status: 400,
-        message:
-          "There was an error sending the password reset email. Please try again",
+        status: 200,
+        data: { message: "OTP verified successfully" },
+      };
+    } catch (error) {
+      console.error("Error verifying OTP:", error);
+      return {
+        status: 500,
+        message: "Internal server error. Please try again later.",
       };
     }
-
-    return {
-      status: 200,
-      data: { message: "OTP verified successfully", otp: otpCheck },
-    };
   },
 
   async sendPasswordRecoveryEmail(email) {
@@ -330,6 +342,25 @@ const AuthService = {
       };
     }
 
+    const otpRecord = await db.Otp.findOne({
+      where: { user_id: userCheck.user_id },
+    });
+
+    if (otpRecord) {
+      otpRecord.otp_text = otp;
+      otpRecord.valid_until = expiresAt;
+      otpRecord.status = "pending";
+      await otpRecord.save();
+    } else {
+      await db.Otp.create({
+        user_id: userCheck.user_id,
+        otp_text: otp,
+        valid_until: expiresAt,
+        created_at: new Date(),
+        status: "pending",
+      });
+    }
+
     return {
       status: 200,
       data: {
@@ -338,6 +369,38 @@ const AuthService = {
         status: emailStatus,
       },
     };
+  },
+
+  async resetPassword(email, password) {
+    console.log("Resetting password for email:", email);
+    console.log("New password", password);
+
+
+
+    const user = await db.User.findOne({ where: { email } });
+    if (!user) {
+      return { status: 400, error: "Invalid user" };
+    }
+
+    const otpRecord = await db.Otp.findOne({
+      where: {
+        user_id: user.user_id,
+        status: "validated",
+      },
+    });
+
+    if (!otpRecord) {
+      return { status: 400, error: "OTP not validated" };
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+    user.password_hash = hashedPassword;
+    await user.save();
+
+    otpRecord.status = "used";
+    await otpRecord.save();
+
+    return { status: 200, user };
   },
 };
 

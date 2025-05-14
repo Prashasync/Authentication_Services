@@ -4,8 +4,8 @@ FROM node:alpine
 # Create and set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package.json package-lock.json /app/
+# Copy only package.json (no lock file)
+COPY package.json ./
 
 # Install dependencies
 RUN npm install
@@ -14,7 +14,7 @@ RUN npm install
 COPY . /app/
 
 # Expose the port your container app
-EXPOSE 3000    
+EXPOSE 4000    
 
-# Define the command to start your application (replace "start" with the actual command to start your app)
+# Start your application
 CMD ["npm", "start"]
