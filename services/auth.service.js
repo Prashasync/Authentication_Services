@@ -44,7 +44,6 @@ const AuthService = {
     const hashedPassword = await bcrypt.hash(password, 10);
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
-
     console.log(otp)
 
     const newUser = await db.User.create({
@@ -61,7 +60,6 @@ const AuthService = {
       user_id: newUser.dataValues.user_id,
       valid_until: otpExpiresAt,
       status: "pending",
-      created_at: new Date(),
     });
 
     logger.info(`OTP for ${newUser.dataValues.email}: ${otp}`)
@@ -234,7 +232,7 @@ const AuthService = {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     userOtp.otp_text = otp;
     userOtp.valid_until = new Date(Date.now() + 5 * 60 * 1000);
-    userOtp.created_at = new Date();
+    // userOtp.created_at = new Date();
     await userOtp.save();
 
     await this.sendEmailOTP(

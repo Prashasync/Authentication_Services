@@ -2793,3 +2793,20 @@
 [2025-05-06 17:47:44] INFO: [Request] POST /api/v1/auth/register 200 - 3015ms
 [2025-05-06 20:04:42] INFO: ✅ Database connected successfully
 [2025-05-06 20:04:45] INFO: ✅ Server running on port 3001
+[2025-05-14 17:23:54] INFO: ✅ Database connected successfully
+[2025-05-14 17:24:03] INFO: ✅ Server running on port 4000
+[2025-05-14 17:41:17] INFO: [Request] POST /api/auth/register 404 - 8ms
+[2025-05-14 17:44:33] INFO: [Request] POST /v1/api/auth/register 404 - 1ms
+[2025-05-14 17:44:57] INFO: [Request] POST /api/v1/auth/register 500 - 3546ms
+[2025-05-14 18:13:13] INFO: ✅ Database connected successfully
+[2025-05-14 18:13:20] INFO: ✅ Server running on port 4000
+[2025-05-14 18:19:57] INFO: ✅ Database connected successfully
+[2025-05-14 18:20:05] INFO: ✅ Server running on port 4000
+[2025-05-14 18:27:26] INFO: [Request] POST /api/v1/auth/register 400 - 2548ms
+[2025-05-14 18:28:02] INFO: OTP for tapol12845@magpit.com: 339424
+[2025-05-14 18:28:03] INFO: OTP message pushed to SQS for: tapol12845@magpit.com, OTP ID: bvk0zw4
+[2025-05-14 18:28:03] INFO: [Request] POST /api/v1/auth/register 200 - 4044ms
+[2025-05-14 18:30:19] INFO: OTP for zsasco123@gmail.com: 373177
+[2025-05-14 18:30:20] INFO: OTP message pushed to SQS for: zsasco123@gmail.com, OTP ID: 22mbw59
+[2025-05-14 18:30:20] INFO: [Request] POST /api/v1/auth/register 200 - 4414ms
+[2025-05-14 18:33:38] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 3475ms
