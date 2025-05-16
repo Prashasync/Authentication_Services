@@ -5,10 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js --inspect"
+    "dev": "nodemon app.js --inspect",
+    "fetch-secrets": "node ./utils/loadSecret.js"
   },
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.810.0",
     "@aws-sdk/client-sqs": "^3.782.0",
     "authentication-service": "file:",
     "aws-sdk": "^2.1692.0",

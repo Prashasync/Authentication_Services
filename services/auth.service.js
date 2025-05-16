@@ -5,7 +5,6 @@ const bcrypt = require("bcrypt");
 const logger = require("../utils/logger");
 const db = require("../models");
 const jwt = require("jsonwebtoken");
-const sendEmail = require("../utils/mailer");
 const { generateToken, generateTempToken } = require("../utils/jwt");
 require("dotenv").config();
 
@@ -45,7 +44,6 @@ const AuthService = {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
-    console.log(otp)
 
     const newUser = await db.User.create({
       email,
@@ -61,7 +59,6 @@ const AuthService = {
       user_id: newUser.dataValues.user_id,
       valid_until: otpExpiresAt,
       status: "pending",
-      created_at: new Date(),
     });
 
     logger.info(`OTP for ${newUser.dataValues.email}: ${otp}`)
@@ -82,9 +79,49 @@ const AuthService = {
     };
   },
 
-  async sendEmailOTP(to, otp, method = "email",phone = null) {
-    const otpId = Math.random().toString(36).slice(2, 9);
+  async Verify(email) {
+    console.log("email here", email);
+  try{
+   const user = await db.User.findOne({ where: { email } });
+    if (!user) {
+      return { status: 400, message: "User does`t exist" };
+    }
 
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
+
+
+  
+    const newOtp = await db.Otp.create({
+      otp_text: otp,
+      user_id: user.dataValues.user_id,
+      valid_until: otpExpiresAt,
+      status: "pending",
+    });
+
+    logger.info(`OTP for ${user.dataValues.email}: ${otp}`)
+
+    await this.sendEmailOTP(
+      email,
+      newOtp.dataValues.otp_text,
+      "email",
+    );
+    // if (phone) await sendOTPSMS(phone, otp);
+   
+    return {
+      status: 200,
+      message: "verifyication OTP sent",
+      isVerified: user.dataValues.isVerified,
+      token: user.dataValues.email,
+    };
+  }catch(error){
+    console.error("error here is authservice",error);
+    throw error;
+  }
+  },
+
+  async sendEmailOTP(to, otp, method = "email",phone = null) {
+    const otpId = "123";
     const messageBody = {
       to,
       otp,
@@ -107,10 +144,14 @@ const AuthService = {
 
     return otpId;
   },
+    
+  
 
-  async verifyOtp(email, otp) {
+    async verifyOtp(email, otp) {
+      
+    try{
     const user = await db.User.findOne({ where: { email } });
-
+    
     if (!user) {
       return { status: 400, data: { message: "User not found" } };
     }
@@ -126,12 +167,14 @@ const AuthService = {
     const now = new Date();
 
     if (userOtp.blocked_until && now < new Date(userOtp.blocked_until)) {
+
       return {
         status: 403,
         data: { message: "Too many failed attempts. Try again later." },
       };
-    }
 
+    }
+   
     const isOtpInvalid =
       !userOtp.otp_text ||
       userOtp.otp_text !== otp ||
@@ -143,9 +186,9 @@ const AuthService = {
       if (userOtp.otp_attempts >= 5) {
         userOtp.blocked_until = new Date(now.getTime() + 15 * 60 * 1000);
       }
-
-
-
+      
+      console.log("userotp", userOtp);
+      console.log("user",user);
       await userOtp.save();
 
       const message =
@@ -180,8 +223,13 @@ const AuthService = {
       message: "OTP verified successfully",
       token,
     };
+  } catch(error){
+      console.error("auth service error", error);
+      throw error;
+  }
   },
 
+  
   async loginUser(email, password) {
     const user = await db.User.findOne({ where: { email } });
 
@@ -254,107 +302,288 @@ const AuthService = {
     };
   },
 
-  async loginWithGoogle(credential, clientId) {
-    const ticket = await client.verifyIdToken({
-      idToken: credential,
-      audience: clientId,
-    });
+  // async loginWithGoogle(credential, clientId) {
+  //   const ticket = await client.verifyIdToken({
+  //     idToken: credential,
+  //     audience: clientId,
+  //   });
 
-    const payload = ticket.getPayload();
-    const { email, given_name, family_name, sub } = payload;
-    const normalizedEmail = email.toLowerCase();
+  //   const payload = ticket.getPayload();
+  //   const { email, given_name, family_name, sub } = payload;
+  //   const normalizedEmail = email.toLowerCase();
 
-    let user = await db.User.findOne({
-      where: { email: normalizedEmail, provider: "google" },
-    });
+  //   let user = await db.User.findOne({
+  //     where: { email: normalizedEmail, provider: "google" },
+  //   });
 
-    if (user.rows.length === 0) {
-      const newUser = await db.Users.findOne({
-        normalizedEmail,
-        given_name,
-        family_name,
-        provider: "google",
-        google_id: sub,
+  //   if (user.rows.length === 0) {
+  //     const newUser = await db.Users.findOne({
+  //       normalizedEmail,
+  //       given_name,
+  //       family_name,
+  //       provider: "google",
+  //       google_id: sub,
+  //     });
+  //     user = newUser;
+
+  //     await db.Patients.create({
+  //       user_id: newUser.user_id,
+  //       first_name: newUser.given_name,
+  //       last_name: newUser.family_name,
+  //       email: normalizedEmail,
+  //     });
+  //   }
+
+  //   const jwtToken = jwt.sign(
+  //     { id: user.rows[0].user_id, email: user.rows[0].email },
+  //     process.env.JWT_SECRET,
+  //     { expiresIn: "1d" }
+  //   );
+
+  //   return {
+  //     token: jwtToken,
+  //     user: user.rows[0],
+  //   };
+  // },
+
+
+    async loginWithGoogle(credential, clientId) {
+    try {
+      const ticket = await client.verifyIdToken({
+        idToken: credential,
+        audience: clientId,
       });
-      user = newUser;
 
-      await db.Patients.create({
-        user_id: newUser.user_id,
-        first_name: newUser.given_name,
-        last_name: newUser.family_name,
-        email: normalizedEmail,
+      const payload = ticket.getPayload();
+      const { email, given_name, family_name, sub } = payload;
+      const normalizedEmail = email.toLowerCase();
+
+      let socialLogin = await db.SocialLogins.findOne({
+        where: { provider_id: sub, provider_name: "google" },
       });
-    }
 
-    const jwtToken = jwt.sign(
-      { id: user.rows[0].user_id, email: user.rows[0].email },
-      process.env.JWT_SECRET,
-      { expiresIn: "1d" }
-    );
+      let userId;
 
-    return {
-      token: jwtToken,
-      user: user.rows[0],
-    };
-  },
+      if (!socialLogin) {
+        const newPatient = await db.Patient.create({
+          first_name: given_name,
+          last_name: family_name,
+          email: normalizedEmail,
+        });
 
-  async verifyRecoveryOTP(email, otp) {
-    const userCheck = await db.User.findOne({ where: { email } });
-    if (userCheck.rows.length === 0) {
-      return { status: 400, message: "Invalid OTP or email" };
-    }
+        socialLogin = await db.SocialLogins.create({
+          email: normalizedEmail,
+          provider_name: "google",
+          provider_id: sub,
+          user_id: newPatient.patient_id,
+        });
 
-    const userId = userCheck.rows[0].user_id;
-    const otpCheck = await verifyOTP(userId, otp);
+        userId = newPatient.patient_id;
+      } else {
+        userId = socialLogin.user_id;
+      }
 
-    if (otpCheck === "INVALID_OTP") {
-      return { status: 400, message: "Invalid OTP code. Please try again" };
-    }
-    if (otpCheck === "OTP_EXPIRED") {
-      return { status: 400, message: "OTP expired." };
-    }
+      const jwtToken = jwt.sign({ id: userId }, process.env.JWT_SECRET, {
+        expiresIn: "1d",
+      });
 
-    const status = await this.sendEmailOTP(email, "Prasha Sync Password Reset.");
-    if (!status) {
       return {
-        status: 400,
-        message:
-          "There was an error sending the password reset email. Please try again",
+        token: jwtToken,
+        user: {
+          id: userId,
+          email: normalizedEmail,
+        },
       };
+    } catch (error) {
+      console.error("Error verifying Google token:", error);
+      throw new Error("Google token verification failed");
     }
-
-    return {
-      status: 200,
-      data: { message: "OTP verified successfully", otp: otpCheck },
-    };
   },
 
   async sendPasswordRecoveryEmail(email) {
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
+  const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
-    const userCheck = await db.User.findOne({ where: { email } });
-    await this.sendEmailOTP(email, otp, "email");
-
-    
-    // const emailStatus = await this.sendEmailOTP(email, otp);
-    // if (!emailStatus) {
-    //   return {
-    //     status: 400,
-    //     message:
-    //       "There was an error sending the recovery OTP. Please try again",
-    //   };
-    // }
-
+  const userCheck = await db.User.findOne({ where: { email } });
+  if (!userCheck) {
+    // For security, do not reveal email existence
     return {
       status: 200,
       data: {
-        message:
-          "If an account exists for that email, a password reset link has been sent.",
-        status: emailStatus,
+        message: "If an account exists for that email, a password reset link has been sent.",
+        status: "OTP sent via SQS",
       },
     };
-  },
+  }
+
+  // Send OTP via SQS (do not use sendEmail directly)
+  await this.sendEmailOTP(email, otp, "OTP", userCheck.phone);
+
+  const otpRecord = await db.Otp.findOne({
+    where: { user_id: userCheck.user_id },
+  });
+
+  if (otpRecord) {
+    otpRecord.otp_text = otp;
+    otpRecord.valid_until = expiresAt;
+    otpRecord.status = "pending";
+    await otpRecord.save();
+  } else {
+    await db.Otp.create({
+      user_id: userCheck.user_id,
+      otp_text: otp,
+      valid_until: expiresAt,
+      created_at: new Date(),
+      status: "pending",
+    });
+  }
+
+  return {
+    status: 200,
+    data: {
+      message: "If an account exists for that email, a password reset link has been sent.",
+      status: "OTP sent via SQS",
+    },
+  };
+},
+
+
+  // async verifyRecoveryOTP(email, otp) {
+  //   const userCheck = await db.User.findOne({ where: { email } });
+  //   if (userCheck.rows.length === 0) {
+  //     return { status: 400, message: "Invalid OTP or email" };
+  //   }
+
+  //   const userId = userCheck.rows[0].user_id;
+  //   const otpCheck = await verifyOTP(userId, otp);
+
+  //   if (otpCheck === "INVALID_OTP") {
+  //     return { status: 400, message: "Invalid OTP code. Please try again" };
+  //   }
+  //   if (otpCheck === "OTP_EXPIRED") {
+  //     return { status: 400, message: "OTP expired." };
+  //   }
+
+  //   const status = await this.sendEmailOTP(email, "Prasha Sync Password Reset.");
+  //   if (!status) {
+  //     return {
+  //       status: 400,
+  //       message:
+  //         "There was an error sending the password reset email. Please try again",
+  //     };
+  //   }
+
+  //   return {
+  //     status: 200,
+  //     data: { message: "OTP verified successfully", otp: otpCheck },
+  //   };
+  // },
+
+
+  async verifyRecoveryOTP(email, otp) {
+  try {
+    const userCheck = await db.User.findOne({ where: { email } });
+    if (!userCheck) {
+      return { status: 400, message: "Invalid OTP or email" };
+    }
+
+    const userId = userCheck.user_id;
+    const otpRecord = await db.Otp.findOne({
+      where: {
+        user_id: userId,
+        status: "pending",
+      },
+    });
+    if (!otpRecord) {
+      return { status: 400, message: "Invalid OTP or email" };
+    }
+    if (otpRecord.otp_text !== otp) {
+      return { status: 400, message: "Invalid OTP code. Please try again" };
+    }
+    if (new Date() > otpRecord.valid_until) {
+      return { status: 400, message: "OTP expired" };
+    }
+
+    otpRecord.status = "validated";
+    otpRecord.validated_at = new Date();
+    await otpRecord.save();
+
+    // OPTIONAL: Notify user via SQS
+    await this.sendEmailOTP(email, null, "OTP_VERIFIED", userCheck.phone);
+
+    return {
+      status: 200,
+      data: { message: "OTP verified successfully" },
+    };
+  } catch (error) {
+    console.error("Error verifying OTP:", error);
+    return {
+      status: 500,
+      message: "Internal server error. Please try again later.",
+    };
+  }
+},
+
+async resetPassword(email, password) {
+  console.log("Resetting password for email:", email);
+  console.log("New password", password);
+
+  const user = await db.User.findOne({ where: { email } });
+  if (!user) {
+    return { status: 400, error: "Invalid user" };
+  }
+
+  const otpRecord = await db.Otp.findOne({
+    where: {
+      user_id: user.user_id,
+      status: "validated",
+    },
+  });
+
+  if (!otpRecord) {
+    return { status: 400, error: "OTP not validated" };
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  user.password_hash = hashedPassword;
+  await user.save();
+
+  otpRecord.status = "used";
+  await otpRecord.save();
+
+  // OPTIONAL: Notify user via SQS
+  await this.sendEmailOTP(email, null, "PASSWORD_RESET", user.phone);
+
+  return { status: 200, user };
+},
+
+
+  // async sendPasswordRecoveryEmail(email) {
+  //   const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  //   const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
+
+  //   const userCheck = await db.User.findOne({ where: { email } });
+  //   await this.sendEmailOTP(email, otp, "email");
+
+    
+  //   // const emailStatus = await this.sendEmailOTP(email, otp);
+  //   // if (!emailStatus) {
+  //   //   return {
+  //   //     status: 400,
+  //   //     message:
+  //   //       "There was an error sending the recovery OTP. Please try again",
+  //   //   };
+  //   // }
+
+  //   return {
+  //     status: 200,
+  //     data: {
+  //       message:
+  //         "If an account exists for that email, a password reset link has been sent.",
+  //       status: emailStatus,
+  //     },
+  //   };
+  // },
 };
 
 module.exports = AuthService;

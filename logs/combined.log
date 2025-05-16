@@ -2662,134 +2662,245 @@
 [2025-05-05 17:02:07] INFO: [Request] GET /api/v1/auth/profile 304 - 65ms
 [2025-05-05 17:20:09] INFO: [Request] GET /api/v1/auth/profile 401 - 10ms
 [2025-05-05 17:20:09] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
-[2025-04-29 16:38:59] INFO: ✅ Database connected successfully
-[2025-04-29 16:39:00] INFO: ✅ Server running on port 3001
-[2025-04-29 16:39:28] INFO: [Request] POST /api/v1/auth/register 500 - 10138ms
-[2025-04-29 17:11:30] INFO: [Request] POST /api/v1/auth/register 200 - 8908ms
-[2025-04-29 18:16:57] INFO: ✅ Database connected successfully
-[2025-04-29 18:16:58] INFO: ✅ Server running on port 3001
-[2025-04-29 18:17:03] INFO: [Request] POST /api/v1/auth/register 400 - 346ms
-[2025-04-29 18:18:03] INFO: OTP for 809raj@gmail.com: 747794
-[2025-04-29 18:18:10] INFO: [Request] POST /api/v1/auth/register 200 - 10593ms
-[2025-04-29 18:20:33] INFO: ✅ Database connected successfully
-[2025-04-29 18:20:34] INFO: ✅ Server running on port 3001
-[2025-04-30 00:45:09] INFO: ✅ Database connected successfully
-[2025-04-30 00:45:10] INFO: ✅ Server running on port 3001
-[2025-04-30 00:46:38] INFO: OTP for catoj97432@mongrec.com: 535384
-[2025-04-30 00:46:45] INFO: [Request] POST /api/v1/auth/register 200 - 9802ms
-[2025-04-30 00:46:57] INFO: ✅ Database connected successfully
-[2025-04-30 00:46:58] INFO: ✅ Server running on port 3001
-[2025-04-30 00:47:17] INFO: ✅ Database connected successfully
-[2025-04-30 00:47:18] INFO: ✅ Server running on port 3001
-[2025-04-30 00:50:15] INFO: OTP for rasac56124@npo2.com: 466636
-[2025-04-30 00:50:15] INFO: [Request] POST /api/v1/auth/register 500 - 2896ms
-[2025-04-30 15:57:30] INFO: ✅ Database connected successfully
-[2025-04-30 15:57:30] INFO: ✅ Server running on port 3001
-[2025-04-30 15:57:50] INFO: [Request] POST /api/v1/auth/register 400 - 2291ms
-[2025-04-30 15:59:00] INFO: OTP for tipew85840@javbing.com: 657866
-[2025-04-30 15:59:02] INFO: [Request] POST /api/v1/auth/register 500 - 4943ms
-[2025-05-01 23:11:39] INFO: ✅ Database connected successfully
-[2025-05-01 23:11:40] INFO: ✅ Server running on port 3001
-[2025-05-01 23:11:48] INFO: [Request] POST /api/v1/auth/register 400 - 252ms
-[2025-05-01 23:12:49] INFO: OTP for wiric63976@javbing.com: 890199
-[2025-05-01 23:12:51] INFO: [Request] POST /api/v1/auth/register 500 - 4670ms
-[2025-05-02 11:47:06] INFO: ✅ Database connected successfully
-[2025-05-02 11:47:09] INFO: ✅ Server running on port 3001
-[2025-05-02 11:47:34] INFO: OTP for wiric63976@javbing.com: 919104
-[2025-05-02 11:47:36] INFO: OTP message pushed to SQS for: wiric63976@javbing.com, OTP ID: uf0ync4ft
-[2025-05-02 11:47:36] INFO: [Request] POST /api/v1/auth/register 200 - 6970ms
-[2025-05-02 11:55:13] INFO: [Request] POST /api/v1/auth/register 500 - 2539ms
-[2025-05-02 11:55:57] INFO: OTP for bipij58068@javbing.com: 584035
-[2025-05-02 11:55:58] INFO: OTP message pushed to SQS for: bipij58068@javbing.com, OTP ID: 4axoj1cjm
-[2025-05-02 11:55:58] INFO: [Request] POST /api/v1/auth/register 200 - 3679ms
-[2025-05-02 12:02:23] INFO: [Request] POST /api/v1/auth/register 500 - 2511ms
-[2025-05-02 12:02:33] INFO: OTP for rivafot436@javbing.com: 951004
-[2025-05-02 12:02:34] INFO: OTP message pushed to SQS for: rivafot436@javbing.com, OTP ID: fts4re56w
-[2025-05-02 12:02:34] INFO: [Request] POST /api/v1/auth/register 200 - 1799ms
-[2025-05-02 12:18:10] INFO: ✅ Database connected successfully
-[2025-05-02 12:18:12] INFO: ✅ Server running on port 3001
-[2025-05-02 12:18:57] INFO: OTP for penipe8840@nutrv.com: 766538
-[2025-05-02 12:18:58] INFO: [Request] POST /api/v1/auth/register 500 - 3673ms
-[2025-05-02 12:19:23] INFO: [Request] POST /api/v1/auth/register 400 - 2149ms
-[2025-05-02 12:22:01] INFO: ✅ Database connected successfully
-[2025-05-02 12:22:03] INFO: ✅ Server running on port 3001
-[2025-05-02 12:22:53] INFO: OTP for fihoj44376@javbing.com: 283198
-[2025-05-02 12:22:54] INFO: [Request] POST /api/v1/auth/register 500 - 4066ms
-[2025-05-02 12:26:06] INFO: ✅ Database connected successfully
-[2025-05-02 12:26:08] INFO: ✅ Server running on port 3001
-[2025-05-02 12:26:11] INFO: [Request] POST /api/v1/auth/register 400 - 254ms
-[2025-05-02 12:26:31] INFO: OTP for fihoj1276@javbing.com: 781783
-[2025-05-02 12:26:32] INFO: OTP message pushed to SQS for: fihoj1276@javbing.com, OTP ID: 6c1kzp67j
-[2025-05-02 12:26:32] INFO: [Request] POST /api/v1/auth/register 200 - 3694ms
-[2025-05-02 12:27:40] INFO: OTP for fihoj128896@javbing.com: 894835
-[2025-05-02 12:27:41] INFO: OTP message pushed to SQS for: fihoj128896@javbing.com, OTP ID: 5mbhpu684
-[2025-05-02 12:27:41] INFO: [Request] POST /api/v1/auth/register 200 - 3881ms
-[2025-05-02 12:29:32] INFO: ✅ Database connected successfully
-[2025-05-02 12:29:33] INFO: ✅ Server running on port 3001
-[2025-05-02 12:29:43] INFO: ✅ Database connected successfully
-[2025-05-02 12:29:45] INFO: ✅ Server running on port 3001
-[2025-05-02 12:30:51] INFO: ✅ Database connected successfully
-[2025-05-02 12:30:53] INFO: ✅ Server running on port 3001
-[2025-05-02 12:30:57] INFO: [Request] POST /api/v1/auth/register 400 - 262ms
-[2025-05-02 12:31:20] INFO: OTP for fihoj36@javbing.com: 704223
-[2025-05-02 12:31:21] INFO: OTP message pushed to SQS for: fihoj36@javbing.com, OTP ID: zodd57jlj
-[2025-05-02 12:31:21] INFO: [Request] POST /api/v1/auth/register 200 - 3807ms
-[2025-05-02 12:31:49] INFO: OTP for fihoj46@javbing.com: 836440
-[2025-05-02 12:31:49] INFO: OTP message pushed to SQS for: fihoj46@javbing.com, OTP ID: ycxhfaxkm
-[2025-05-02 12:31:49] INFO: [Request] POST /api/v1/auth/register 200 - 2845ms
-[2025-05-02 19:49:12] INFO: ✅ Database connected successfully
-[2025-05-02 19:49:14] INFO: ✅ Server running on port 3001
-[2025-05-02 19:50:53] INFO: ✅ Database connected successfully
-[2025-05-02 19:50:55] INFO: ✅ Server running on port 3001
-[2025-05-02 19:52:41] INFO: OTP for fihoj66@javbing.com: 211983
-[2025-05-02 19:52:42] INFO: OTP message pushed to SQS for: fihoj66@javbing.com, OTP ID: 2jybgzqao
-[2025-05-02 19:52:42] INFO: [Request] POST /api/v1/auth/register 200 - 3658ms
-[2025-05-04 23:11:53] INFO: ✅ Database connected successfully
-[2025-05-04 23:11:54] INFO: ✅ Server running on port 3001
-[2025-05-05 00:41:16] INFO: [Request] POST /api/v1/auth/register 500 - 2705ms
-[2025-05-05 00:53:47] INFO: OTP for desotiv623@javbing.com: 614586
-[2025-05-05 00:53:48] INFO: OTP message pushed to SQS for: desotiv623@javbing.com, OTP ID: deup5yeii
-[2025-05-05 00:53:48] INFO: [Request] POST /api/v1/auth/register 200 - 3605ms
-[2025-05-05 01:55:17] INFO: ✅ Database connected successfully
-[2025-05-05 01:55:19] INFO: ✅ Server running on port 3001
-[2025-05-05 01:57:11] INFO: ✅ Database connected successfully
-[2025-05-05 01:57:13] INFO: ✅ Server running on port 3001
-[2025-05-05 01:59:34] INFO: ✅ Database connected successfully
-[2025-05-05 01:59:36] INFO: ✅ Server running on port 3001
-[2025-05-05 16:28:05] INFO: ✅ Database connected successfully
-[2025-05-05 16:28:25] INFO: ✅ Database connected successfully
-[2025-05-05 16:28:27] INFO: ✅ Server running on port 3001
-[2025-05-05 16:28:47] INFO: [Request] POST /api/v1/auth/register 500 - 2589ms
-[2025-05-05 16:28:53] INFO: OTP for 809raj@gmail.com: 175902
-[2025-05-05 16:28:54] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: ywr0qej4z
-[2025-05-05 16:28:54] INFO: [Request] POST /api/v1/auth/register 200 - 2175ms
-[2025-05-05 17:15:35] INFO: ✅ Database connected successfully
-[2025-05-05 17:15:39] INFO: ✅ Server running on port 3001
-[2025-05-05 18:19:07] INFO: OTP for nadinop373@nutrv.com: 653250
-[2025-05-05 18:19:08] INFO: OTP message pushed to SQS for: nadinop373@nutrv.com, OTP ID: wavp97pfr
-[2025-05-05 18:19:08] INFO: [Request] POST /api/v1/auth/register 200 - 3929ms
-[2025-05-05 18:32:10] INFO: ✅ Database connected successfully
-[2025-05-05 18:32:15] INFO: ✅ Server running on port 3001
-[2025-05-05 18:36:26] INFO: ✅ Database connected successfully
-[2025-05-05 18:36:28] INFO: ✅ Server running on port 3001
-[2025-05-06 14:10:22] INFO: ✅ Database connected successfully
-[2025-05-06 14:10:24] INFO: ✅ Server running on port 3001
-[2025-05-06 14:10:43] INFO: [Request] POST /api/v1/auth/register 500 - 2720ms
-[2025-05-06 14:12:34] INFO: ✅ Database connected successfully
-[2025-05-06 14:12:36] INFO: ✅ Server running on port 3001
-[2025-05-06 14:12:39] INFO: OTP for nano1@gmail.com: 548248
-[2025-05-06 14:12:40] INFO: OTP message pushed to SQS for: nano1@gmail.com, OTP ID: zi4vb0x
-[2025-05-06 14:12:40] INFO: [Request] POST /api/v1/auth/register 200 - 2022ms
-[2025-05-06 17:44:14] INFO: OTP for nano2@gmail.com: 558685
-[2025-05-06 17:44:15] INFO: OTP message pushed to SQS for: nano2@gmail.com, OTP ID: htgi1du
-[2025-05-06 17:44:15] INFO: [Request] POST /api/v1/auth/register 200 - 4059ms
-[2025-05-06 17:46:12] INFO: [Request] POST /api/v1/auth/register 500 - 2640ms
-[2025-05-06 17:46:20] INFO: [Request] POST /api/v1/auth/register 500 - 688ms
-[2025-05-06 17:46:41] INFO: OTP for nano5@gmail.com: 338658
-[2025-05-06 17:46:42] INFO: OTP message pushed to SQS for: nano5@gmail.com, OTP ID: mfh75v2
-[2025-05-06 17:46:42] INFO: [Request] POST /api/v1/auth/register 200 - 3756ms
-[2025-05-06 17:47:44] INFO: OTP for nano8@gmail.com: 171585
-[2025-05-06 17:47:44] INFO: OTP message pushed to SQS for: nano8@gmail.com, OTP ID: 0bwlicz
-[2025-05-06 17:47:44] INFO: [Request] POST /api/v1/auth/register 200 - 3015ms
-[2025-05-06 20:04:42] INFO: ✅ Database connected successfully
-[2025-05-06 20:04:45] INFO: ✅ Server running on port 3001
+[2025-05-16 17:22:26] INFO: ✅ Database connected successfully
+[2025-05-16 17:22:32] INFO: ✅ Server running on port 4000
+[2025-05-16 17:24:41] INFO: [Request] POST /api/v1/auth/reset-password 500 - 22ms
+[2025-05-16 17:37:23] INFO: ✅ Database connected successfully
+[2025-05-16 17:37:27] INFO: ✅ Server running on port 4000
+[2025-05-16 17:37:30] INFO: [Request] POST /api/v1/auth/reset-password 400 - 637ms
+[2025-05-16 18:21:30] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 5gt132w
+[2025-05-16 18:21:31] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 5007ms
+[2025-05-16 18:23:18] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 2556ms
+[2025-05-16 18:23:54] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: xlx1faa
+[2025-05-16 18:23:54] INFO: [Request] POST /api/v1/auth/verify-password-recovery-otp 200 - 4312ms
+[2025-05-16 19:24:49] INFO: ✅ Database connected successfully
+[2025-05-16 19:24:56] INFO: ✅ Server running on port 4000
+[2025-05-16 19:25:03] INFO: [Request] POST /api/v1/auth/reset-password 400 - 653ms
+[2025-05-16 21:08:48] INFO: ✅ Database connected successfully
+[2025-05-16 23:32:01] INFO: ✅ Database connected successfully
+[2025-05-16 23:32:07] INFO: ✅ Server running on port 4000
+[2025-05-16 23:37:15] INFO: ✅ Database connected successfully
+[2025-05-16 23:37:19] INFO: ✅ Server running on port 4000
+[2025-05-16 23:54:54] INFO: ✅ Database connected successfully
+[2025-05-16 23:54:58] INFO: ✅ Server running on port 4000
+[2025-05-16 23:58:22] INFO: ✅ Database connected successfully
+[2025-05-16 23:58:35] INFO: ✅ Server running on port 4000
+[2025-05-17 00:01:38] INFO: ✅ Database connected successfully
+[2025-05-17 00:01:43] INFO: ✅ Server running on port 4000
+[2025-05-17 00:05:21] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-17 00:05:24] INFO: [Request] POST /api/v1/auth/login 400 - 2449ms
+[2025-05-17 00:05:24] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:05:24] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:06:40] INFO: ✅ Database connected successfully
+[2025-05-17 00:06:43] INFO: ✅ Server running on port 4000
+[2025-05-17 00:07:40] INFO: ✅ Database connected successfully
+[2025-05-17 00:07:45] INFO: ✅ Server running on port 4000
+[2025-05-17 00:07:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-17 00:07:58] INFO: [Request] POST /api/v1/auth/login 400 - 2465ms
+[2025-05-17 00:07:58] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:07:58] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:09:52] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:09:52] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:10:36] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 00:10:57] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:10:57] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:11:00] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-17 00:11:03] INFO: [Request] POST /api/v1/auth/login 400 - 2462ms
+[2025-05-17 00:11:03] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:11:03] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 00:14:21] INFO: ✅ Database connected successfully
+[2025-05-17 00:14:25] INFO: ✅ Server running on port 4000
+[2025-05-17 00:14:47] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-17 00:14:50] INFO: [Request] POST /api/v1/auth/login 400 - 2484ms
+[2025-05-17 00:14:50] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 3ms
+[2025-05-17 00:14:50] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:18:56] INFO: ✅ Database connected successfully
+[2025-05-17 00:19:03] INFO: ✅ Server running on port 4000
+[2025-05-17 00:19:03] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-17 00:19:03] INFO: [Request] POST /api/v1/auth/login 400 - 415ms
+[2025-05-17 00:19:03] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 00:20:24] INFO: ✅ Database connected successfully
+[2025-05-17 00:20:29] INFO: ✅ Server running on port 4000
+[2025-05-17 00:20:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-05-17 00:20:37] INFO: [Request] POST /api/v1/auth/login 400 - 403ms
+[2025-05-17 00:20:37] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 00:20:37] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:21:46] INFO: ✅ Database connected successfully
+[2025-05-17 00:21:51] INFO: ✅ Server running on port 4000
+[2025-05-17 00:21:56] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-17 00:21:56] INFO: [Request] POST /api/v1/auth/login 400 - 337ms
+[2025-05-17 00:21:56] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:21:56] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:24:12] INFO: ✅ Database connected successfully
+[2025-05-17 00:24:16] INFO: ✅ Server running on port 4000
+[2025-05-17 00:24:17] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-17 00:24:18] INFO: [Request] POST /api/v1/auth/login 400 - 414ms
+[2025-05-17 00:24:18] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:24:18] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 00:26:33] INFO: ✅ Database connected successfully
+[2025-05-17 00:26:40] INFO: ✅ Server running on port 4000
+[2025-05-17 00:26:45] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-17 00:26:46] INFO: [Request] POST /api/v1/auth/login 400 - 339ms
+[2025-05-17 00:26:46] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:26:46] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:29:28] INFO: ✅ Database connected successfully
+[2025-05-17 00:29:32] INFO: ✅ Server running on port 4000
+[2025-05-17 00:29:34] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-17 00:29:35] INFO: [Request] POST /api/v1/auth/login 400 - 411ms
+[2025-05-17 00:29:35] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:29:35] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:29:35] INFO: OTP for nasim.x.mondal@gmail.com: 410689
+[2025-05-17 00:37:32] INFO: ✅ Database connected successfully
+[2025-05-17 00:37:36] INFO: ✅ Server running on port 4000
+[2025-05-17 00:38:00] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-17 00:38:03] INFO: [Request] POST /api/v1/auth/login 400 - 2466ms
+[2025-05-17 00:38:03] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:38:03] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 00:38:04] INFO: OTP for nasim.x.mondal@gmail.com: 669739
+[2025-05-17 00:38:04] INFO: OTP for nasim.x.mondal@gmail.com: 349086
+[2025-05-17 00:38:05] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 00:39:45] INFO: ✅ Database connected successfully
+[2025-05-17 00:39:49] INFO: ✅ Server running on port 4000
+[2025-05-17 00:39:49] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-17 00:39:50] INFO: [Request] POST /api/v1/auth/login 400 - 401ms
+[2025-05-17 00:39:50] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 3ms
+[2025-05-17 00:39:50] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 00:39:50] INFO: OTP for nasim.x.mondal@gmail.com: 285651
+[2025-05-17 00:39:50] INFO: OTP for nasim.x.mondal@gmail.com: 302486
+[2025-05-17 00:39:51] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 00:39:51] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1592ms
+[2025-05-17 00:39:52] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 00:39:52] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2311ms
+[2025-05-17 00:47:30] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-17 00:47:32] INFO: [Request] POST /api/v1/auth/login 400 - 2428ms
+[2025-05-17 00:47:32] INFO: [Request] POST /api/v1/auth/login 400 - 358ms
+[2025-05-17 00:47:40] INFO: [Request] OPTIONS /api/v1/auth/send-password-recovery 204 - 0ms
+[2025-05-17 00:47:41] INFO: OTP message pushed to SQS for: shamir.gibbons@gmail.com, OTP ID: 123
+[2025-05-17 00:47:42] INFO: [Request] POST /api/v1/auth/send-password-recovery 200 - 1848ms
+[2025-05-17 01:04:54] INFO: ✅ Database connected successfully
+[2025-05-17 01:04:58] INFO: ✅ Server running on port 4000
+[2025-05-17 01:10:32] INFO: [Request] OPTIONS /api/v1/auth/login 500 - 9ms
+[2025-05-17 01:11:13] INFO: [Request] OPTIONS /api/v1/auth/login 500 - 13ms
+[2025-05-17 01:11:17] INFO: [Request] OPTIONS /api/v1/auth/login 500 - 2ms
+[2025-05-17 01:12:19] INFO: ✅ Database connected successfully
+[2025-05-17 01:12:24] INFO: ✅ Server running on port 4000
+[2025-05-17 01:12:31] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 2ms
+[2025-05-17 01:12:32] INFO: [Request] POST /api/v1/auth/login 400 - 563ms
+[2025-05-17 01:12:53] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-17 01:12:56] INFO: [Request] POST /api/v1/auth/login 400 - 2422ms
+[2025-05-17 01:12:56] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:12:56] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:12:57] INFO: OTP for nasim.x.mondal@gmail.com: 569450
+[2025-05-17 01:12:57] INFO: OTP for nasim.x.mondal@gmail.com: 162300
+[2025-05-17 01:12:58] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:12:58] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2325ms
+[2025-05-17 01:12:58] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:12:58] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2428ms
+[2025-05-17 01:13:12] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-05-17 01:13:15] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 2514ms
+[2025-05-17 01:13:34] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:13:34] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:13:37] INFO: OTP for nasim.x.mondal@gmail.com: 949493
+[2025-05-17 01:13:37] INFO: OTP for nasim.x.mondal@gmail.com: 987002
+[2025-05-17 01:13:37] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:13:37] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2862ms
+[2025-05-17 01:13:37] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:13:37] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2946ms
+[2025-05-17 01:13:47] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:13:48] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 536ms
+[2025-05-17 01:15:13] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-05-17 01:15:16] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 2709ms
+[2025-05-17 01:23:27] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:23:27] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:23:30] INFO: OTP for nasim.x.mondal@gmail.com: 235589
+[2025-05-17 01:23:30] INFO: OTP for nasim.x.mondal@gmail.com: 983711
+[2025-05-17 01:23:31] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:23:31] INFO: [Request] POST /api/v1/auth/send-otp 200 - 3583ms
+[2025-05-17 01:23:31] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:23:31] INFO: [Request] POST /api/v1/auth/send-otp 200 - 4169ms
+[2025-05-17 01:23:42] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:23:44] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 2615ms
+[2025-05-17 01:30:27] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-17 01:30:30] INFO: [Request] POST /api/v1/auth/login 400 - 2817ms
+[2025-05-17 01:30:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:30:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-17 01:30:31] INFO: OTP for nasim.x.mondal@gmail.com: 568352
+[2025-05-17 01:30:31] INFO: OTP for nasim.x.mondal@gmail.com: 617248
+[2025-05-17 01:30:32] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:30:32] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2151ms
+[2025-05-17 01:30:33] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:30:33] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2341ms
+[2025-05-17 01:30:36] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:30:36] INFO: [Request] POST /api/v1/auth/verify-otp 500 - 38ms
+[2025-05-17 01:36:30] INFO: ✅ Database connected successfully
+[2025-05-17 01:36:41] INFO: ✅ Server running on port 4000
+[2025-05-17 01:36:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 14ms
+[2025-05-17 01:36:42] INFO: [Request] POST /api/v1/auth/login 400 - 492ms
+[2025-05-17 01:36:42] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:36:42] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-05-17 01:36:43] INFO: OTP for nasim.x.mondal@gmail.com: 722951
+[2025-05-17 01:36:43] INFO: OTP for nasim.x.mondal@gmail.com: 374827
+[2025-05-17 01:36:45] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:36:45] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2880ms
+[2025-05-17 01:36:45] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:36:45] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2954ms
+[2025-05-17 01:36:47] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-05-17 01:36:47] INFO: [Request] POST /api/v1/auth/verify-otp 500 - 39ms
+[2025-05-17 01:37:23] INFO: ✅ Database connected successfully
+[2025-05-17 01:37:27] INFO: ✅ Server running on port 4000
+[2025-05-17 01:37:30] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-17 01:37:30] INFO: [Request] POST /api/v1/auth/login 400 - 445ms
+[2025-05-17 01:37:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:37:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 10ms
+[2025-05-17 01:37:31] INFO: OTP for nasim.x.mondal@gmail.com: 445584
+[2025-05-17 01:37:31] INFO: OTP for nasim.x.mondal@gmail.com: 233043
+[2025-05-17 01:37:32] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:37:32] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1800ms
+[2025-05-17 01:37:32] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:37:32] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1702ms
+[2025-05-17 01:37:35] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:37:35] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 512ms
+[2025-05-17 01:42:27] INFO: ✅ Database connected successfully
+[2025-05-17 01:42:31] INFO: ✅ Server running on port 4000
+[2025-05-17 01:42:53] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-17 01:42:55] INFO: [Request] POST /api/v1/auth/login 400 - 2397ms
+[2025-05-17 01:42:55] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:42:55] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:42:56] INFO: OTP for nasim.x.mondal@gmail.com: 787985
+[2025-05-17 01:42:56] INFO: OTP for nasim.x.mondal@gmail.com: 843446
+[2025-05-17 01:42:57] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:42:57] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1898ms
+[2025-05-17 01:42:57] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:42:57] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2014ms
+[2025-05-17 01:43:00] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:43:01] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 526ms
+[2025-05-17 01:46:19] INFO: ✅ Database connected successfully
+[2025-05-17 01:46:25] INFO: ✅ Server running on port 4000
+[2025-05-17 01:46:34] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 26ms
+[2025-05-17 01:46:34] INFO: [Request] POST /api/v1/auth/login 400 - 446ms
+[2025-05-17 01:46:34] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 4ms
+[2025-05-17 01:46:34] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:46:36] INFO: OTP for nasim.x.mondal@gmail.com: 494410
+[2025-05-17 01:46:36] INFO: OTP for nasim.x.mondal@gmail.com: 568480
+[2025-05-17 01:46:37] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:46:37] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2768ms
+[2025-05-17 01:46:37] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:46:37] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2769ms
+[2025-05-17 01:46:39] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 9ms
+[2025-05-17 01:46:39] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 655ms
+[2025-05-17 01:48:51] INFO: ✅ Database connected successfully
+[2025-05-17 01:48:56] INFO: ✅ Server running on port 4000
+[2025-05-17 01:49:07] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-17 01:49:09] INFO: [Request] POST /api/v1/auth/login 400 - 2558ms
+[2025-05-17 01:49:09] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:49:09] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-17 01:49:10] INFO: OTP for nasim.x.mondal@gmail.com: 287740
+[2025-05-17 01:49:10] INFO: OTP for nasim.x.mondal@gmail.com: 893959
+[2025-05-17 01:49:11] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:49:11] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1658ms
+[2025-05-17 01:49:11] INFO: OTP message pushed to SQS for: nasim.x.mondal@gmail.com, OTP ID: 123
+[2025-05-17 01:49:11] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1745ms
+[2025-05-17 01:49:14] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:49:14] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 603ms
+[2025-05-17 01:51:11] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-17 01:51:14] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 2465ms

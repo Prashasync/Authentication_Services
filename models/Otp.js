@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Otp = sequelize.define(
-    "otp",
+    "otps",
     {
       otp_id: {
         type: DataTypes.UUID,
@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      created_at: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
       valid_until: {
         type: DataTypes.DATE,
         allowNull: true,
@@ -32,7 +28,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
     },
+    {
+      tableName: "otps",
+      timestamps: true,
+    }
   );
  
   return Otp;
