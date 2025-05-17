@@ -34,10 +34,9 @@ exports.registerUser = async (req, res) => {
 
 exports.sendOtp = async(req,res) =>{
    const email = req.body.data;
-   console.log("resonse", req.body.data);
 
    try{     
-     const response = await AuthService.Verify(email);
+     const response = await AuthService.generateNewOtp(email);
      res.status(200).json({message:"successfully send the OTP", response});
    }catch(error){
     console.log("problem sending the otp", error);
@@ -46,11 +45,10 @@ exports.sendOtp = async(req,res) =>{
 }
 
 exports.verifyOtp = async (req, res) => {
-  const { email, otp } = req.body;
-  console.log("request bidy", req.body);
-
+  const { email, otp, role } = req.body;
+  console.log('INSIDE OF THE CONTROLLER:', otp)
   try {
-    const { status, message, token } = await AuthService.verifyOtp(email, otp);
+    const { status, message, token } = await AuthService.verifyOtp(email, otp, role);
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -59,6 +57,7 @@ exports.verifyOtp = async (req, res) => {
       sameSite: "lax",
     });
 
+    console.log("RESPONSE FROM VERIFY:", status, message, token)
     return res.status(status).json(message);
   } catch (error) {
     console.error("There was an error verifying the OTP code", error);

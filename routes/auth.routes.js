@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../controllers/auth.controller");
-// const authMiddleware = require("../middlewares/auth");
+const authMiddleware = require("../middlewares/auth");
 
 router.use("/create-google-account", (req, res, next) => {
   res.setHeader("Cross-Origin-Opener-Policy", "unsafe-none");
@@ -9,7 +9,7 @@ router.use("/create-google-account", (req, res, next) => {
   next();
 });
 
-// router.get("/profile", authMiddleware, auth.getUser)/;
+router.get("/profile", authMiddleware, auth.getUser);
 
 router.post("/login", auth.loginUser);
 router.post("/register", auth.registerUser);

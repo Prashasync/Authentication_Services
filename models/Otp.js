@@ -12,11 +12,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      otp_attempts: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       user_id: {
         type: DataTypes.UUID,
         allowNull: false,
       },
       valid_until: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      blocked_until: {
         type: DataTypes.DATE,
         allowNull: true,
       },
@@ -27,6 +35,10 @@ module.exports = (sequelize, DataTypes) => {
       status: {
         type: DataTypes.STRING,
         allowNull: true,
+      },
+      roles: {
+        type: DataTypes.TEXT,
+        allowNull: false
       },
       updatedAt: {
         type: DataTypes.DATE,
