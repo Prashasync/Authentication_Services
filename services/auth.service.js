@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const logger = require("../utils/logger");
 const db = require("../models");
 const jwt = require("jsonwebtoken");
-const { generateToken, generateTempToken } = require("../utils/jwt");
+const { generateToken } = require("../utils/jwt");
 require("dotenv").config();
 
 // AWS SQS setup
@@ -66,7 +66,8 @@ const AuthService = {
       newUser.dataValues.email,
       newOtp.dataValues.otp_text,
       "email",
-      newUser.dataValues.phone
+      newUser.dataValues.phone,
+      newOtp.dataValues.otp_id
     );
     // if (phone) await sendOTPSMS(phone, otp);
 
@@ -98,8 +99,6 @@ const AuthService = {
       });
 
       logger.info(`OTP for ${user.dataValues.email}: ${otp}`);
-
-      console.log("BEFORE SENDING OTP", newOtp)
 
       await this.sendEmailOTP(
         email,
@@ -140,28 +139,21 @@ const AuthService = {
     });
 
     await sqsClient.send(command);
-
-    console.log(otpId)
-
     const userOtp = await db.Otp.findOne({
       where: { otp_id: otpId },
     });
 
     if (userOtp) {
       userOtp.status = "pending";
-      userOtp.updatedAt = new Date(); // Date object instead of timestamp
-      await userOtp.save(); // Save changes to the database
+      userOtp.updatedAt = new Date();
+      await userOtp.save();
     }
-    
 
-    console.log("THIS IS AFTER PUSHING TO SQS:", otp);
     logger.info(`OTP message pushed to SQS for: ${to}, OTP ID: ${otpId}`);
-
     return otpId;
   },
 
   async verifyOtp(email, otp, role) {
-    console.log("OTP FROM VERIFY", otp);
     try {
       const user = await db.User.findOne({ where: { email } });
 
@@ -181,7 +173,6 @@ const AuthService = {
       if (!userOtp) {
         return { status: 400, data: { message: "OTP not found" } };
       }
-      console.log("THIS IS THE USER OTP TABLE:", userOtp);
       const now = new Date();
 
       if (
@@ -195,10 +186,6 @@ const AuthService = {
       }
 
       const isValidOtp = userOtp.otp_text === otp;
-      // (userOtp.blocked_until === null || now < new Date(userOtp.valid_until));
-
-      // console.log("IS VALID OTP",isValidOtp);
-      // console.log("USER OTP",userOtp);
 
       if (!isValidOtp) {
         userOtp.otp_attempts += 1;
@@ -233,7 +220,6 @@ const AuthService = {
       });
 
       const token = generateToken({ id: user.user_id });
-
       return {
         status: 200,
         message: "OTP verified successfully",
@@ -274,7 +260,6 @@ const AuthService = {
     }
 
     const token = generateToken({ id: user.dataValues.user_id });
-
     return {
       status: 200,
       message: "LOGIN_SUCCESSFUL",

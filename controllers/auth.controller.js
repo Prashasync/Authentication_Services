@@ -32,23 +32,27 @@ exports.registerUser = async (req, res) => {
   }
 };
 
-exports.sendOtp = async(req,res) =>{
-   const email = req.body.data;
+exports.sendOtp = async (req, res) => {
+  const email = req.body.data;
 
-   try{     
-     const response = await AuthService.generateNewOtp(email);
-     res.status(200).json({message:"successfully send the OTP", response});
-   }catch(error){
+  try {
+    const response = await AuthService.generateNewOtp(email);
+    res.status(200).json({ message: "successfully send the OTP", response });
+  } catch (error) {
     console.log("problem sending the otp", error);
     throw error;
-   }
-}
+  }
+};
 
 exports.verifyOtp = async (req, res) => {
   const { email, otp, role } = req.body;
-  console.log('INSIDE OF THE CONTROLLER:', otp)
+  console.log("INSIDE OF THE CONTROLLER:", otp);
   try {
-    const { status, message, token } = await AuthService.verifyOtp(email, otp, role);
+    const { status, message, token } = await AuthService.verifyOtp(
+      email,
+      otp,
+      role
+    );
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -57,15 +61,13 @@ exports.verifyOtp = async (req, res) => {
       sameSite: "lax",
     });
 
-    console.log("RESPONSE FROM VERIFY:", status, message, token)
+    console.log("RESPONSE FROM VERIFY:", status, message, token);
     return res.status(status).json(message);
   } catch (error) {
     console.error("There was an error verifying the OTP code", error);
     return res.status(500).json({ message: "Internal server error" });
   }
 };
-
-
 
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
