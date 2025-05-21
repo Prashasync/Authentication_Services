@@ -81,7 +81,8 @@ const AuthService = {
 
   async generateNewOtp(email) {
     try {
-      const user = await db.User.findOne({ where: { email } });
+      const normalizedEmail = JSON.parse(email);
+      const user = await db.User.findOne({ where: { email: normalizedEmail } });
       if (!user) {
         return { status: 400, message: "User does`t exist" };
       }
@@ -155,10 +156,11 @@ const AuthService = {
 
   async verifyOtp(email, otp, role) {
     try {
-      const user = await db.User.findOne({ where: { email } });
+      const normalizedEmail = JSON.parse(email);
+      const user = await db.User.findOne({ where: { email: normalizedEmail } });
 
       if (!user) {
-        return { status: 400, data: { message: "User not found" } };
+        return { status: 400, message: "User not found" };
       }
 
       const userOtp = await db.Otp.findOne({
@@ -199,7 +201,7 @@ const AuthService = {
             ? "Too many failed attempts. Try after 15 mins."
             : "Invalid or expired OTP";
 
-        return { status: 400, data: { message } };
+        return { status: 400, message };
       }
 
       userOtp.otp_text = otp;
@@ -282,35 +284,48 @@ const AuthService = {
         where: { provider_id: sub, provider_name: "google" },
       });
 
-      let userId;
+      let user;
 
-      if (!socialLogin) {
-        const newPatient = await db.Patient.create({
-          first_name: given_name,
-          last_name: family_name,
-          email: normalizedEmail,
+      if (socialLogin) {
+        user = await db.User.findOne({
+          where: { user_id: socialLogin.user_id },
         });
+      } else {
+        user = await db.User.findOne({
+          where: { email: normalizedEmail },
+        });
+
+        if (!user) {
+          user = await db.User.create({
+            email: normalizedEmail,
+            first_name: given_name,
+            last_name: family_name,
+          });
+
+          await db.Patient.create({
+            first_name: given_name,
+            last_name: family_name,
+            email: normalizedEmail,
+            user_id: user.user_id,
+          });
+        }
 
         socialLogin = await db.SocialLogins.create({
           email: normalizedEmail,
           provider_name: "google",
           provider_id: sub,
-          user_id: newPatient.patient_id,
+          user_id: user.user_id,
         });
-
-        userId = newPatient.patient_id;
-      } else {
-        userId = socialLogin.user_id;
       }
 
-      const jwtToken = jwt.sign({ id: userId }, process.env.JWT_SECRET, {
+      const jwtToken = jwt.sign({ id: user.user_id }, process.env.JWT_SECRET, {
         expiresIn: "1d",
       });
 
       return {
         token: jwtToken,
         user: {
-          id: userId,
+          id: user.user_id,
           email: normalizedEmail,
         },
       };

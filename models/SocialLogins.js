@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         status:{  
           type: DataTypes.BOOLEAN,
-          defaultValue: true,
+          defaultValue: false,
         },
       },
       {
@@ -44,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: "updated_at",
       }
     );
+    
   
     return SocialLogins;
   };

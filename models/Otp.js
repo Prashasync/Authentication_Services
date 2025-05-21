@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       otp_attempts: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
       },
       user_id: {
         type: DataTypes.UUID,
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       roles: {
         type: DataTypes.TEXT,
-        allowNull: false
+        allowNull: false,
       },
       updatedAt: {
         type: DataTypes.DATE,
@@ -52,8 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       tableName: "otps",
       timestamps: true,
-    }
+    },
   );
- 
+
   return Otp;
 };

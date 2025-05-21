@@ -46,7 +46,6 @@ exports.sendOtp = async (req, res) => {
 
 exports.verifyOtp = async (req, res) => {
   const { email, otp, role } = req.body;
-  console.log("INSIDE OF THE CONTROLLER:", otp);
   try {
     const { status, message, token } = await AuthService.verifyOtp(
       email,
@@ -174,19 +173,5 @@ exports.resetPassword = async (req, res) => {
   } catch (error) {
     console.error("Password reset error:", error);
     return res.status(500).json({ message: "Internal server error" });
-  }
-};
-
-exports.getAWSConfig = async (req, res) => {
-  try {
-    // console.log(process.env)
-    // res.json({
-    //   authentication_server: process.env.REACT_APP_SERVER_URL,
-    //   patient_server: process.env.REACT_APP_PATIENT_SERVER_URL,
-    //   google_authentication: process.env.REACT_APP_GOOGLE_CLIENT_ID
-    // })
-  } catch (error) {
-    console.error("There was an error", error);
-    throw new Error("There was an error");
   }
 };
