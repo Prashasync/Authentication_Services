@@ -5,6 +5,7 @@ const routes = require("./routes");
 const logger = require("./utils/logger");
 const requestLogger = require("./middlewares/requestLogger");
 const cors = require("cors");
+const session = require("express-session");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -27,6 +28,18 @@ app.use(
       }
     },
     credentials: true,
+  })
+); 
+
+app.use(
+  session({
+    secret: process.env.JWT_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 15 * 60 * 1000,
+    },
+    rolling: true,
   })
 );
 

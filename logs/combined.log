@@ -4788,3 +4788,327 @@
 [2025-05-21 03:30:11] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
 [2025-05-21 03:30:11] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
 [2025-05-21 03:30:11] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 03:39:13] INFO: ✅ Database connected successfully
+[2025-05-21 03:39:14] INFO: ✅ Server running on port 4000
+[2025-05-21 03:39:23] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 6ms
+[2025-05-21 03:39:24] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 181ms
+[2025-05-21 03:39:24] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 03:39:24] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-05-21 03:39:24] INFO: OTP for shamirgibbons@shophr.co: 149793
+[2025-05-21 03:39:24] INFO: OTP for shamirgibbons@shophr.co: 329485
+[2025-05-21 03:39:24] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: e9b1bcc1-9ab0-48d7-b2b9-17a4e44965db
+[2025-05-21 03:39:24] INFO: [Request] POST /api/v1/auth/send-otp 200 - 273ms
+[2025-05-21 03:39:24] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: e2ddf76c-31df-4880-a9b2-e3de41e0fe18
+[2025-05-21 03:39:24] INFO: [Request] POST /api/v1/auth/send-otp 200 - 359ms
+[2025-05-21 03:39:58] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-05-21 03:39:58] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 248ms
+[2025-05-21 03:40:05] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-21 03:40:05] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 62ms
+[2025-05-21 03:40:13] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-05-21 03:40:13] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 45ms
+[2025-05-21 03:40:23] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-05-21 03:40:23] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 278ms
+[2025-05-21 03:40:27] INFO: [Request] GET /api/v1/auth/profile 200 - 28ms
+[2025-05-21 03:40:27] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 03:40:27] INFO: [Request] GET /api/v1/auth/profile 304 - 45ms
+[2025-05-21 03:40:27] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-21 03:40:35] INFO: [Request] GET /api/v1/auth/profile 304 - 51ms
+[2025-05-21 03:40:35] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-21 03:40:35] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 03:40:35] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-21 10:16:21] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 6ms
+[2025-05-21 10:16:22] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 367ms
+[2025-05-21 10:16:22] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 10:16:22] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 12ms
+[2025-05-21 10:16:22] INFO: OTP for shamirgibbons@shophr.co: 573101
+[2025-05-21 10:16:22] INFO: OTP for shamirgibbons@shophr.co: 517068
+[2025-05-21 10:16:23] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: d9f9af55-8060-4f60-9dcf-ad012f3c0392
+[2025-05-21 10:16:23] INFO: [Request] POST /api/v1/auth/send-otp 200 - 605ms
+[2025-05-21 10:16:23] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 566b5f67-6b12-439a-afe4-17be584936e2
+[2025-05-21 10:16:23] INFO: [Request] POST /api/v1/auth/send-otp 200 - 610ms
+[2025-05-21 10:17:55] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-21 10:17:55] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 378ms
+[2025-05-21 10:17:58] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 10:17:58] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 10:17:59] INFO: [Request] GET /api/v1/auth/profile 304 - 70ms
+[2025-05-21 10:17:59] INFO: [Request] GET /api/v1/auth/profile 304 - 38ms
+[2025-05-21 10:18:18] INFO: [Request] GET /api/v1/auth/profile 304 - 201ms
+[2025-05-21 10:18:18] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-21 10:18:23] INFO: [Request] GET /api/v1/auth/profile 304 - 47ms
+[2025-05-21 10:18:23] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-21 10:18:24] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-21 10:18:24] INFO: [Request] GET /api/v1/auth/profile 304 - 31ms
+[2025-05-21 10:18:24] INFO: [Request] GET /api/v1/auth/profile 304 - 33ms
+[2025-05-21 10:18:24] INFO: [Request] GET /api/v1/auth/profile 304 - 66ms
+[2025-05-21 10:20:35] INFO: [Request] GET /api/v1/auth/profile 304 - 379ms
+[2025-05-21 10:20:35] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:20:35] INFO: [Request] GET /api/v1/auth/profile 304 - 259ms
+[2025-05-21 10:20:35] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:21:00] INFO: [Request] GET /api/v1/auth/profile 304 - 323ms
+[2025-05-21 10:21:00] INFO: [Request] GET /api/v1/auth/profile 304 - 46ms
+[2025-05-21 10:21:00] INFO: [Request] GET /api/v1/auth/profile 304 - 79ms
+[2025-05-21 10:21:00] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 10:21:01] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-21 10:21:01] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 10:21:07] INFO: [Request] GET /api/v1/auth/profile 304 - 66ms
+[2025-05-21 10:21:07] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:21:07] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-21 10:21:07] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 10:22:51] INFO: [Request] GET /api/v1/auth/profile 304 - 284ms
+[2025-05-21 10:22:51] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 10:22:51] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-21 10:22:51] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 10:27:55] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 4ms
+[2025-05-21 10:27:56] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 425ms
+[2025-05-21 10:27:56] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-05-21 10:27:56] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 10:27:57] INFO: OTP for shamirgibbons@shophr.co: 336736
+[2025-05-21 10:27:57] INFO: OTP for shamirgibbons@shophr.co: 972013
+[2025-05-21 10:27:57] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: de6a9dce-12cd-4348-a7de-aeb2157c0bc8
+[2025-05-21 10:27:57] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1204ms
+[2025-05-21 10:27:57] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 2c15fc8f-90e3-4d71-a125-939b7daae22a
+[2025-05-21 10:27:58] INFO: [Request] POST /api/v1/auth/send-otp 200 - 918ms
+[2025-05-21 10:28:00] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 13ms
+[2025-05-21 10:28:00] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 68ms
+[2025-05-21 10:30:07] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-05-21 10:30:07] INFO: OTP for shamirgibbons@shophr.co: 259374
+[2025-05-21 10:30:07] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 643e7d5a-2a1f-4c6b-baf4-c28a933d5cf7
+[2025-05-21 10:30:07] INFO: [Request] POST /api/v1/auth/send-otp 200 - 470ms
+[2025-05-21 10:34:51] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 4ms
+[2025-05-21 10:34:51] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 430ms
+[2025-05-21 10:34:55] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 10:34:55] INFO: OTP for shamirgibbons@shophr.co: 950433
+[2025-05-21 10:34:55] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: e64bdf13-0632-42dc-90c5-9e79841c1db5
+[2025-05-21 10:34:55] INFO: [Request] POST /api/v1/auth/send-otp 200 - 237ms
+[2025-05-21 10:35:20] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-05-21 10:35:20] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 353ms
+[2025-05-21 10:35:23] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 10:35:23] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:35:24] INFO: [Request] GET /api/v1/auth/profile 304 - 134ms
+[2025-05-21 10:35:24] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:35:58] INFO: [Request] GET /api/v1/auth/profile 304 - 232ms
+[2025-05-21 10:35:58] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:35:58] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-21 10:35:58] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-21 10:36:06] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-21 10:36:06] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:36:06] INFO: [Request] GET /api/v1/auth/profile 304 - 242ms
+[2025-05-21 10:36:06] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 10:43:21] INFO: [Request] GET /api/v1/auth/profile 304 - 366ms
+[2025-05-21 10:43:21] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 10:43:22] INFO: [Request] GET /api/v1/auth/profile 304 - 410ms
+[2025-05-21 10:43:22] INFO: [Request] GET /api/v1/auth/profile 304 - 39ms
+[2025-05-21 10:46:24] INFO: [Request] GET /api/v1/auth/profile 304 - 266ms
+[2025-05-21 10:46:24] INFO: [Request] GET /api/v1/auth/profile 304 - 64ms
+[2025-05-21 10:46:24] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-21 10:46:24] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 10:50:12] INFO: [Request] GET /api/v1/auth/profile 304 - 298ms
+[2025-05-21 10:50:12] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-21 10:50:14] INFO: [Request] GET /api/v1/auth/profile 304 - 61ms
+[2025-05-21 10:50:14] INFO: [Request] GET /api/v1/auth/profile 304 - 31ms
+[2025-05-21 10:50:15] INFO: [Request] GET /api/v1/auth/profile 304 - 217ms
+[2025-05-21 10:50:15] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 10:50:50] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-21 10:50:50] INFO: [Request] POST /api/v1/auth/login 200 - 326ms
+[2025-05-21 10:50:51] INFO: [Request] GET /api/v1/auth/profile 200 - 21ms
+[2025-05-21 10:50:51] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 10:50:51] INFO: [Request] GET /api/v1/auth/profile 304 - 447ms
+[2025-05-21 10:50:51] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 15:52:51] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 10ms
+[2025-05-21 16:02:15] INFO: ✅ Database connected successfully
+[2025-05-21 16:02:16] INFO: ✅ Server running on port 4000
+[2025-05-21 16:02:51] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 12ms
+[2025-05-21 16:02:52] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 383ms
+[2025-05-21 16:03:26] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-05-21 16:03:26] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 319ms
+[2025-05-21 16:03:27] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 4ms
+[2025-05-21 16:03:27] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 16:03:27] INFO: OTP for shamirgibbons@shophr.co: 213763
+[2025-05-21 16:03:27] INFO: OTP for shamirgibbons@shophr.co: 365210
+[2025-05-21 16:03:27] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 1a20969f-c826-496f-9e74-e710d4015256
+[2025-05-21 16:03:27] INFO: [Request] POST /api/v1/auth/send-otp 200 - 294ms
+[2025-05-21 16:03:27] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: e7048618-53db-48e4-bada-d2af594c5ec1
+[2025-05-21 16:03:27] INFO: [Request] POST /api/v1/auth/send-otp 200 - 319ms
+[2025-05-21 16:13:19] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 6ms
+[2025-05-21 16:13:20] INFO: OTP for shamirgibbons@shophr.co: 321662
+[2025-05-21 16:13:20] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: aae9d27a-84f2-4c65-949f-068bb6027553
+[2025-05-21 16:13:20] INFO: [Request] POST /api/v1/auth/send-otp 200 - 620ms
+[2025-05-21 16:13:35] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 16:13:35] INFO: OTP for shamirgibbons@shophr.co: 884968
+[2025-05-21 16:13:35] INFO: OTP for shamirgibbons@shophr.co: 222186
+[2025-05-21 16:13:35] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: f1424a66-4ceb-4e82-b83d-c0aea9dbeb77
+[2025-05-21 16:13:35] INFO: [Request] POST /api/v1/auth/send-otp 200 - 582ms
+[2025-05-21 16:13:36] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 6a02cc18-e094-4ee7-ac79-83d6b249fbdd
+[2025-05-21 16:13:36] INFO: [Request] POST /api/v1/auth/send-otp 200 - 720ms
+[2025-05-21 16:14:10] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 90ms
+[2025-05-21 16:14:11] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 290ms
+[2025-05-21 16:14:11] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-05-21 16:14:11] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 16:14:11] INFO: OTP for shamirgibbons@shophr.co: 937200
+[2025-05-21 16:14:11] INFO: OTP for shamirgibbons@shophr.co: 310966
+[2025-05-21 16:14:11] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 60b5bfce-92f4-453c-a1ee-a96d4d7e1a24
+[2025-05-21 16:14:11] INFO: [Request] POST /api/v1/auth/send-otp 200 - 186ms
+[2025-05-21 16:14:11] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: c13330e0-9348-43c2-ad42-a37bc1da063d
+[2025-05-21 16:14:11] INFO: [Request] POST /api/v1/auth/send-otp 200 - 234ms
+[2025-05-21 16:16:24] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 16:16:24] INFO: OTP for shamirgibbons@shophr.co: 892798
+[2025-05-21 16:16:25] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 22057b27-b584-47d8-8027-4515ecd6dd2f
+[2025-05-21 16:16:25] INFO: [Request] POST /api/v1/auth/send-otp 200 - 729ms
+[2025-05-21 16:16:33] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 16:16:33] INFO: OTP for shamirgibbons@shophr.co: 795910
+[2025-05-21 16:16:33] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: cd4463c9-12da-499c-9957-e3831c6030c2
+[2025-05-21 16:16:33] INFO: [Request] POST /api/v1/auth/send-otp 200 - 119ms
+[2025-05-21 16:19:18] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-21 16:19:18] INFO: OTP for shamirgibbons@shophr.co: 202426
+[2025-05-21 16:19:18] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 79930d26-b8c4-40cb-b670-df772311d8d9
+[2025-05-21 16:19:18] INFO: [Request] POST /api/v1/auth/send-otp 200 - 544ms
+[2025-05-21 16:23:54] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 4ms
+[2025-05-21 16:23:54] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 263ms
+[2025-05-21 16:25:49] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-05-21 16:25:50] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 333ms
+[2025-05-21 16:27:11] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 2ms
+[2025-05-21 16:27:11] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 263ms
+[2025-05-21 16:30:14] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-21 16:30:14] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 437ms
+[2025-05-21 16:43:54] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 3ms
+[2025-05-21 16:43:55] INFO: [Request] POST /api/v1/auth/login 200 - 382ms
+[2025-05-21 16:43:56] INFO: [Request] GET /api/v1/auth/profile 304 - 44ms
+[2025-05-21 16:43:56] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 16:43:56] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 16:43:56] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 17:17:10] INFO: [Request] GET /api/v1/auth/profile 401 - 9ms
+[2025-05-21 17:17:10] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
+[2025-05-21 17:17:10] INFO: [Request] GET /api/v1/auth/profile 401 - 5ms
+[2025-05-21 17:17:10] INFO: [Request] GET /api/v1/auth/profile 401 - 1ms
+[2025-05-21 17:39:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-21 17:39:57] INFO: [Request] POST /api/v1/auth/login 200 - 426ms
+[2025-05-21 17:39:58] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-21 17:39:58] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 17:39:58] INFO: [Request] GET /api/v1/auth/profile 304 - 29ms
+[2025-05-21 17:39:58] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 17:40:57] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-05-21 17:40:57] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-21 17:40:57] INFO: [Request] GET /api/v1/auth/profile 304 - 118ms
+[2025-05-21 17:40:57] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 17:41:39] INFO: [Request] GET /api/v1/auth/profile 304 - 223ms
+[2025-05-21 17:41:39] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 17:41:39] INFO: [Request] GET /api/v1/auth/profile 304 - 132ms
+[2025-05-21 17:41:39] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 17:42:05] INFO: [Request] GET /api/v1/auth/profile 304 - 196ms
+[2025-05-21 17:42:05] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 17:42:06] INFO: [Request] GET /api/v1/auth/profile 304 - 1115ms
+[2025-05-21 17:42:06] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 17:44:10] INFO: [Request] GET /api/v1/auth/profile 304 - 325ms
+[2025-05-21 17:44:10] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 17:44:10] INFO: [Request] GET /api/v1/auth/profile 304 - 40ms
+[2025-05-21 17:44:10] INFO: [Request] GET /api/v1/auth/profile 304 - 61ms
+[2025-05-21 17:44:50] INFO: [Request] GET /api/v1/auth/profile 304 - 209ms
+[2025-05-21 17:44:50] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-21 17:44:51] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-21 17:44:51] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-21 17:45:21] INFO: [Request] GET /api/v1/auth/profile 304 - 448ms
+[2025-05-21 17:45:21] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 17:45:21] INFO: [Request] GET /api/v1/auth/profile 304 - 67ms
+[2025-05-21 17:45:21] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 17:46:03] INFO: [Request] GET /api/v1/auth/profile 304 - 291ms
+[2025-05-21 17:46:03] INFO: [Request] GET /api/v1/auth/profile 304 - 53ms
+[2025-05-21 17:46:19] INFO: [Request] GET /api/v1/auth/profile 304 - 299ms
+[2025-05-21 17:46:19] INFO: [Request] GET /api/v1/auth/profile 304 - 18ms
+[2025-05-21 17:46:19] INFO: [Request] GET /api/v1/auth/profile 304 - 110ms
+[2025-05-21 17:46:19] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-21 17:46:23] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-21 17:46:23] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-21 17:46:23] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 17:46:23] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 17:46:55] INFO: [Request] GET /api/v1/auth/profile 304 - 217ms
+[2025-05-21 17:46:55] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-21 17:46:55] INFO: [Request] GET /api/v1/auth/profile 304 - 62ms
+[2025-05-21 17:46:55] INFO: [Request] GET /api/v1/auth/profile 304 - 17ms
+[2025-05-21 17:47:07] INFO: [Request] GET /api/v1/auth/profile 304 - 179ms
+[2025-05-21 17:47:07] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 17:47:07] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-21 17:47:08] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 17:47:16] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 17:47:16] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 17:47:16] INFO: [Request] GET /api/v1/auth/profile 304 - 37ms
+[2025-05-21 17:47:16] INFO: [Request] GET /api/v1/auth/profile 304 - 35ms
+[2025-05-21 17:47:23] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 17:47:23] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 17:47:23] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 17:47:23] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 17:50:16] INFO: [Request] GET /api/v1/auth/profile 304 - 244ms
+[2025-05-21 17:50:16] INFO: [Request] GET /api/v1/auth/profile 304 - 49ms
+[2025-05-21 17:50:16] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 17:50:16] INFO: [Request] GET /api/v1/auth/profile 304 - 23ms
+[2025-05-21 17:50:29] INFO: [Request] GET /api/v1/auth/profile 304 - 185ms
+[2025-05-21 17:50:29] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 17:50:29] INFO: [Request] GET /api/v1/auth/profile 304 - 34ms
+[2025-05-21 17:50:29] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 17:54:25] INFO: [Request] GET /api/v1/auth/profile 304 - 293ms
+[2025-05-21 17:54:25] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 17:54:25] INFO: [Request] GET /api/v1/auth/profile 304 - 68ms
+[2025-05-21 17:54:25] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-21 17:56:35] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-05-21 17:56:35] INFO: [Request] POST /api/v1/auth/login 200 - 341ms
+[2025-05-21 17:56:36] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 17:56:36] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 17:56:36] INFO: [Request] GET /api/v1/auth/profile 304 - 249ms
+[2025-05-21 17:56:36] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 18:15:35] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-21 18:15:36] INFO: [Request] POST /api/v1/auth/login 200 - 398ms
+[2025-05-21 18:15:36] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-21 18:15:36] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 18:15:36] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 18:15:36] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 18:39:34] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-21 18:39:34] INFO: [Request] POST /api/v1/auth/login 200 - 621ms
+[2025-05-21 18:39:36] INFO: [Request] GET /api/v1/auth/profile 304 - 40ms
+[2025-05-21 18:39:36] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 18:39:36] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 18:39:36] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 19:11:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-21 19:11:42] INFO: [Request] POST /api/v1/auth/login 200 - 482ms
+[2025-05-21 19:11:42] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 19:11:42] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 19:11:42] INFO: [Request] GET /api/v1/auth/profile 304 - 61ms
+[2025-05-21 19:11:42] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-21 19:15:37] INFO: [Request] GET /api/v1/auth/profile 304 - 277ms
+[2025-05-21 19:15:37] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 19:15:37] INFO: [Request] GET /api/v1/auth/profile 304 - 363ms
+[2025-05-21 19:15:37] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-21 19:16:32] INFO: [Request] GET /api/v1/auth/profile 304 - 269ms
+[2025-05-21 19:16:32] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 19:16:33] INFO: [Request] GET /api/v1/auth/profile 304 - 193ms
+[2025-05-21 19:16:33] INFO: [Request] GET /api/v1/auth/profile 304 - 90ms
+[2025-05-21 19:17:35] INFO: [Request] GET /api/v1/auth/profile 304 - 209ms
+[2025-05-21 19:17:35] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-21 19:17:36] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-21 19:17:36] INFO: [Request] GET /api/v1/auth/profile 304 - 64ms
+[2025-05-21 19:48:25] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-21 19:48:26] INFO: [Request] POST /api/v1/auth/login 200 - 443ms
+[2025-05-21 19:48:26] INFO: [Request] GET /api/v1/auth/profile 304 - 29ms
+[2025-05-21 19:48:26] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 19:48:26] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 19:48:26] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 20:07:04] INFO: ✅ Database connected successfully
+[2025-05-21 20:07:05] INFO: ✅ Server running on port 4000
+[2025-05-21 20:11:05] INFO: ✅ Database connected successfully
+[2025-05-21 20:11:06] INFO: ✅ Server running on port 4000
+[2025-05-21 20:11:08] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 12ms
+[2025-05-21 20:11:08] INFO: [Request] POST /api/v1/auth/login 200 - 170ms
+[2025-05-21 20:11:09] INFO: [Request] GET /api/v1/auth/profile 304 - 28ms
+[2025-05-21 20:11:09] INFO: [Request] GET /api/v1/auth/profile 304 - 24ms
+[2025-05-21 20:11:09] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-21 20:11:09] INFO: [Request] GET /api/v1/auth/profile 304 - 30ms
+[2025-05-21 20:42:58] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-05-21 20:42:58] INFO: [Request] POST /api/v1/auth/login 200 - 444ms
+[2025-05-21 20:42:59] INFO: [Request] GET /api/v1/auth/profile 304 - 39ms
+[2025-05-21 20:42:59] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 20:42:59] INFO: [Request] GET /api/v1/auth/profile 304 - 113ms
+[2025-05-21 20:42:59] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
+[2025-05-21 21:04:57] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 10ms
+[2025-05-21 21:04:58] INFO: [Request] POST /api/v1/auth/login 200 - 444ms
+[2025-05-21 21:04:59] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-21 21:04:59] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-21 21:04:59] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-21 21:04:59] INFO: [Request] GET /api/v1/auth/profile 304 - 21ms
