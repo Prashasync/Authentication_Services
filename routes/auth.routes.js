@@ -19,5 +19,5 @@ router.post("/create-google-account", auth.createGoogleUser);
 router.post("/reset-password", auth.resetPassword);
 router.post("/verify-password-recovery-otp", auth.verifyRecoveryOTP);
 router.post("/send-password-recovery", auth.sendPasswordRecoveryEmail);
-
+ 
 module.exports = router;
