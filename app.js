@@ -16,12 +16,15 @@ app.use(
   cors({
     origin: function (origin, callback) {
       const allowedOrigins = [
-        "*",
+        "http://localhost",
         "http://localhost:3000",
+        "http://localhost:80",
         "http://care.prashasync.io",
         "https://care.prashasync.io",
-        "https://api.prashasync.io",
         "http://api.prashasync.io",
+        "https://api.prashasync.io",
+        "http://aibot.prashasync.io",
+        "https://aibot.prashasync.io",
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
