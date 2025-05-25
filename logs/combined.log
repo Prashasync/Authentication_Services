@@ -5647,3 +5647,210 @@
 [2025-05-23 16:59:45] INFO: [Request] GET /api/v1/auth/profile 304 - 43ms
 [2025-05-23 17:01:18] INFO: [Request] GET /api/v1/auth/profile 304 - 316ms
 [2025-05-23 17:01:18] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-24 18:58:37] INFO: ✅ Database connected successfully
+[2025-05-24 18:58:38] INFO: ✅ Server running on port 4000
+[2025-05-24 18:59:41] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 9ms
+[2025-05-24 18:59:41] INFO: [Request] POST /api/v1/auth/login 400 - 243ms
+[2025-05-24 19:00:38] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-05-24 19:00:38] INFO: [Request] POST /api/v1/auth/login 400 - 309ms
+[2025-05-24 19:01:06] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-05-24 19:01:07] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 405ms
+[2025-05-24 19:03:11] INFO: ✅ Database connected successfully
+[2025-05-24 19:03:12] INFO: ✅ Server running on port 4000
+[2025-05-24 19:12:29] INFO: ✅ Database connected successfully
+[2025-05-24 19:12:30] INFO: ✅ Server running on port 4000
+[2025-05-24 19:12:32] INFO: ✅ Database connected successfully
+[2025-05-24 19:12:33] INFO: ✅ Server running on port 4000
+[2025-05-24 19:13:00] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 9ms
+[2025-05-24 19:13:00] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 413ms
+[2025-05-24 19:14:48] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-05-24 19:14:49] INFO: [Request] POST /api/v1/auth/login 400 - 309ms
+[2025-05-24 19:14:55] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 0ms
+[2025-05-24 19:14:55] INFO: [Request] POST /api/v1/auth/login 400 - 34ms
+[2025-05-24 19:16:52] INFO: ✅ Database connected successfully
+[2025-05-24 19:16:55] INFO: ✅ Server running on port 4000
+[2025-05-24 19:17:01] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 8ms
+[2025-05-24 19:17:01] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 161ms
+[2025-05-24 19:18:23] INFO: ✅ Database connected successfully
+[2025-05-24 19:18:24] INFO: ✅ Server running on port 4000
+[2025-05-24 19:18:27] INFO: ✅ Database connected successfully
+[2025-05-24 19:18:28] INFO: ✅ Server running on port 4000
+[2025-05-24 19:18:38] INFO: ✅ Database connected successfully
+[2025-05-24 19:18:39] INFO: ✅ Server running on port 4000
+[2025-05-24 19:18:41] INFO: ✅ Database connected successfully
+[2025-05-24 19:18:42] INFO: ✅ Server running on port 4000
+[2025-05-24 19:18:44] INFO: ✅ Database connected successfully
+[2025-05-24 19:18:44] INFO: ✅ Server running on port 4000
+[2025-05-24 19:18:51] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 7ms
+[2025-05-24 19:18:51] INFO: [Request] POST /api/v1/auth/login 400 - 57ms
+[2025-05-24 19:18:57] INFO: ✅ Database connected successfully
+[2025-05-24 19:18:57] INFO: ✅ Server running on port 4000
+[2025-05-24 19:19:11] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 12ms
+[2025-05-24 19:19:11] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 359ms
+[2025-05-24 19:36:42] INFO: ✅ Database connected successfully
+[2025-05-24 19:36:43] INFO: ✅ Server running on port 4000
+[2025-05-24 19:36:45] INFO: ✅ Database connected successfully
+[2025-05-24 19:36:46] INFO: ✅ Server running on port 4000
+[2025-05-24 19:41:09] INFO: ✅ Database connected successfully
+[2025-05-24 19:41:10] INFO: ✅ Server running on port 4000
+[2025-05-24 19:42:00] INFO: ✅ Database connected successfully
+[2025-05-24 19:42:01] INFO: ✅ Server running on port 4000
+[2025-05-24 19:42:15] INFO: ✅ Database connected successfully
+[2025-05-24 19:42:16] INFO: ✅ Server running on port 4000
+[2025-05-24 19:43:11] INFO: ✅ Database connected successfully
+[2025-05-24 19:43:13] INFO: ✅ Database connected successfully
+[2025-05-24 19:43:14] INFO: ✅ Server running on port 4000
+[2025-05-24 19:43:24] INFO: ✅ Database connected successfully
+[2025-05-24 19:43:25] INFO: ✅ Server running on port 4000
+[2025-05-24 19:43:31] INFO: ✅ Database connected successfully
+[2025-05-24 19:43:32] INFO: ✅ Server running on port 4000
+[2025-05-24 19:43:46] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 10ms
+[2025-05-24 19:43:47] INFO: [Request] POST /api/v1/auth/create-google-account 500 - 348ms
+[2025-05-24 19:45:25] INFO: ✅ Database connected successfully
+[2025-05-24 19:45:26] INFO: ✅ Server running on port 4000
+[2025-05-24 19:45:41] INFO: ✅ Database connected successfully
+[2025-05-24 19:45:41] INFO: ✅ Server running on port 4000
+[2025-05-24 19:45:45] INFO: ✅ Database connected successfully
+[2025-05-24 19:45:46] INFO: ✅ Server running on port 4000
+[2025-05-24 19:46:06] INFO: ✅ Database connected successfully
+[2025-05-24 19:46:07] INFO: ✅ Server running on port 4000
+[2025-05-24 19:46:13] INFO: ✅ Database connected successfully
+[2025-05-24 19:46:15] INFO: ✅ Server running on port 4000
+[2025-05-24 19:46:26] INFO: ✅ Database connected successfully
+[2025-05-24 19:46:27] INFO: ✅ Server running on port 4000
+[2025-05-24 19:46:33] INFO: ✅ Database connected successfully
+[2025-05-24 19:46:33] INFO: ✅ Server running on port 4000
+[2025-05-24 19:46:39] INFO: ✅ Database connected successfully
+[2025-05-24 19:46:39] INFO: ✅ Server running on port 4000
+[2025-05-24 19:47:09] INFO: ✅ Database connected successfully
+[2025-05-24 19:47:10] INFO: ✅ Server running on port 4000
+[2025-05-24 19:47:13] INFO: ✅ Database connected successfully
+[2025-05-24 19:47:14] INFO: ✅ Server running on port 4000
+[2025-05-24 19:47:30] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 4ms
+[2025-05-24 19:47:31] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 405ms
+[2025-05-24 19:47:31] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 5ms
+[2025-05-24 19:47:31] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 3ms
+[2025-05-24 19:47:31] INFO: OTP for shamirgibbons@shophr.co: 286416
+[2025-05-24 19:47:31] INFO: OTP for shamirgibbons@shophr.co: 415644
+[2025-05-24 19:47:31] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 32896934-4709-4cf5-b7fc-2783cccb8fcf
+[2025-05-24 19:47:31] INFO: [Request] POST /api/v1/auth/send-otp 200 - 326ms
+[2025-05-24 19:47:31] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: 8a260920-ad74-401d-86e8-445da6a41d59
+[2025-05-24 19:47:31] INFO: [Request] POST /api/v1/auth/send-otp 200 - 324ms
+[2025-05-24 19:47:52] INFO: ✅ Database connected successfully
+[2025-05-24 19:47:53] INFO: ✅ Server running on port 4000
+[2025-05-24 19:47:59] INFO: ✅ Database connected successfully
+[2025-05-24 19:48:00] INFO: ✅ Server running on port 4000
+[2025-05-24 19:51:38] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 7ms
+[2025-05-24 19:51:38] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 402ms
+[2025-05-24 19:57:32] INFO: ✅ Database connected successfully
+[2025-05-24 19:57:33] INFO: ✅ Server running on port 4000
+[2025-05-24 19:57:57] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 32ms
+[2025-05-24 19:57:57] INFO: OTP for shamirgibbons@shophr.co: 529672
+[2025-05-24 19:57:58] INFO: OTP message pushed to SQS for: "shamirgibbons@shophr.co", OTP ID: f7e8f760-4e3d-4f42-927b-5849d07eb8fa
+[2025-05-24 19:57:58] INFO: [Request] POST /api/v1/auth/send-otp 200 - 510ms
+[2025-05-24 20:00:18] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 0ms
+[2025-05-24 20:00:18] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 366ms
+[2025-05-24 20:00:18] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-24 20:00:18] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-05-24 20:00:18] INFO: OTP for shamir.gibbons@gmail.com: 460019
+[2025-05-24 20:00:19] INFO: OTP message pushed to SQS for: "shamir.gibbons@gmail.com", OTP ID: 6238375d-61c1-4c83-9e0a-9b0cdc95210d
+[2025-05-24 20:00:19] INFO: [Request] POST /api/v1/auth/send-otp 200 - 226ms
+[2025-05-24 20:00:19] INFO: OTP for shamir.gibbons@gmail.com: 536585
+[2025-05-24 20:00:19] INFO: OTP message pushed to SQS for: "shamir.gibbons@gmail.com", OTP ID: e14bbad9-1c18-4585-b041-1e7d405b44e4
+[2025-05-24 20:00:19] INFO: [Request] POST /api/v1/auth/send-otp 200 - 214ms
+[2025-05-24 20:01:50] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 4ms
+[2025-05-24 20:01:51] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 269ms
+[2025-05-24 20:02:00] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-24 20:02:00] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 60ms
+[2025-05-24 20:07:34] INFO: ✅ Database connected successfully
+[2025-05-24 20:07:37] INFO: ✅ Database connected successfully
+[2025-05-24 20:07:38] INFO: ✅ Server running on port 4000
+[2025-05-24 20:08:05] INFO: ✅ Database connected successfully
+[2025-05-24 20:08:05] INFO: ✅ Server running on port 4000
+[2025-05-24 20:08:16] INFO: ✅ Database connected successfully
+[2025-05-24 20:08:17] INFO: ✅ Server running on port 4000
+[2025-05-24 20:09:44] INFO: ✅ Database connected successfully
+[2025-05-24 20:09:44] INFO: ✅ Server running on port 4000
+[2025-05-24 20:10:09] INFO: ✅ Database connected successfully
+[2025-05-24 20:10:10] INFO: ✅ Server running on port 4000
+[2025-05-24 20:10:19] INFO: ✅ Database connected successfully
+[2025-05-24 20:10:20] INFO: ✅ Server running on port 4000
+[2025-05-24 20:10:52] INFO: ✅ Database connected successfully
+[2025-05-24 20:10:53] INFO: ✅ Server running on port 4000
+[2025-05-24 20:11:02] INFO: ✅ Database connected successfully
+[2025-05-24 20:11:02] INFO: ✅ Server running on port 4000
+[2025-05-24 20:11:11] INFO: ✅ Database connected successfully
+[2025-05-24 20:11:14] INFO: ✅ Database connected successfully
+[2025-05-24 20:11:14] INFO: ✅ Server running on port 4000
+[2025-05-24 20:15:20] INFO: ✅ Database connected successfully
+[2025-05-24 20:15:27] INFO: ✅ Database connected successfully
+[2025-05-24 20:15:29] INFO: ✅ Database connected successfully
+[2025-05-24 20:15:30] INFO: ✅ Server running on port 4000
+[2025-05-24 20:15:32] INFO: ✅ Database connected successfully
+[2025-05-24 20:15:33] INFO: ✅ Server running on port 4000
+[2025-05-24 20:15:56] INFO: ✅ Database connected successfully
+[2025-05-24 20:15:57] INFO: ✅ Server running on port 4000
+[2025-05-24 20:16:06] INFO: ✅ Database connected successfully
+[2025-05-24 20:16:07] INFO: ✅ Server running on port 4000
+[2025-05-24 20:16:10] INFO: ✅ Database connected successfully
+[2025-05-24 20:16:11] INFO: ✅ Server running on port 4000
+[2025-05-24 20:16:15] INFO: ✅ Database connected successfully
+[2025-05-24 20:16:16] INFO: ✅ Server running on port 4000
+[2025-05-24 20:16:25] INFO: ✅ Database connected successfully
+[2025-05-24 20:16:26] INFO: ✅ Server running on port 4000
+[2025-05-24 20:16:29] INFO: ✅ Database connected successfully
+[2025-05-24 20:16:30] INFO: ✅ Server running on port 4000
+[2025-05-24 20:16:37] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 5ms
+[2025-05-24 20:17:48] INFO: ✅ Database connected successfully
+[2025-05-24 20:17:51] INFO: ✅ Database connected successfully
+[2025-05-24 20:17:52] INFO: ✅ Server running on port 4000
+[2025-05-24 20:18:11] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-05-24 20:18:12] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 389ms
+[2025-05-24 20:18:12] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 3ms
+[2025-05-24 20:18:12] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 3ms
+[2025-05-24 20:18:12] INFO: OTP for shamir.gibbons@gmail.com: 539690
+[2025-05-24 20:18:12] INFO: OTP for shamir.gibbons@gmail.com: 641328
+[2025-05-24 20:18:12] INFO: OTP message pushed to SQS for: "shamir.gibbons@gmail.com", OTP ID: 4239fcbf-a2e3-406b-9699-433687403ff8
+[2025-05-24 20:18:12] INFO: [Request] POST /api/v1/auth/send-otp 200 - 587ms
+[2025-05-24 20:18:12] INFO: OTP message pushed to SQS for: "shamir.gibbons@gmail.com", OTP ID: c28e10cb-342e-49c3-a90c-d5b0403aa131
+[2025-05-24 20:18:12] INFO: [Request] POST /api/v1/auth/send-otp 200 - 602ms
+[2025-05-24 20:19:53] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-05-24 20:19:54] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 334ms
+[2025-05-24 20:20:17] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 14ms
+[2025-05-24 20:20:17] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 341ms
+[2025-05-24 20:20:21] INFO: [Request] GET /api/v1/auth/profile 200 - 40ms
+[2025-05-24 20:20:21] INFO: [Request] GET /api/v1/auth/profile 304 - 29ms
+[2025-05-24 20:20:21] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-24 20:20:21] INFO: [Request] GET /api/v1/auth/profile 304 - 20ms
+[2025-05-24 20:23:39] INFO: [Request] GET /api/v1/auth/profile 304 - 494ms
+[2025-05-24 20:23:39] INFO: [Request] GET /api/v1/auth/profile 304 - 166ms
+[2025-05-24 20:23:39] INFO: [Request] GET /api/v1/auth/profile 304 - 233ms
+[2025-05-24 20:23:39] INFO: [Request] GET /api/v1/auth/profile 304 - 27ms
+[2025-05-24 20:53:32] INFO: [Request] GET /api/v1/auth/profile 304 - 529ms
+[2025-05-24 20:53:32] INFO: [Request] GET /api/v1/auth/profile 304 - 47ms
+[2025-05-24 20:53:32] INFO: [Request] GET /api/v1/auth/profile 304 - 34ms
+[2025-05-24 20:53:32] INFO: [Request] GET /api/v1/auth/profile 304 - 25ms
+[2025-05-24 21:08:27] INFO: [Request] GET /api/v1/auth/profile 304 - 662ms
+[2025-05-24 21:08:27] INFO: [Request] GET /api/v1/auth/profile 304 - 36ms
+[2025-05-24 21:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 477ms
+[2025-05-24 21:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 22ms
+[2025-05-24 21:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 26ms
+[2025-05-24 21:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 19ms
+[2025-05-24 21:15:43] INFO: ✅ Database connected successfully
+[2025-05-24 21:15:46] INFO: ✅ Server running on port 4000
+[2025-05-24 21:25:04] INFO: [Request] GET /api/v1/auth/profile 304 - 716ms
+[2025-05-24 21:25:04] INFO: [Request] GET /api/v1/auth/profile 304 - 32ms
+[2025-05-24 21:25:04] INFO: [Request] GET /api/v1/auth/profile 304 - 41ms
+[2025-05-24 21:25:04] INFO: [Request] GET /api/v1/auth/profile 304 - 130ms
+[2025-05-24 21:27:02] INFO: ✅ Database connected successfully
+[2025-05-24 21:27:06] INFO: ✅ Server running on port 4000
+[2025-05-24 21:30:21] INFO: [Request] GET /api/v1/auth/profile 304 - 903ms
+[2025-05-24 21:30:21] INFO: [Request] GET /api/v1/auth/profile 304 - 130ms
+[2025-05-24 21:30:21] INFO: [Request] GET /api/v1/auth/profile 304 - 389ms
+[2025-05-24 21:30:21] INFO: [Request] GET /api/v1/auth/profile 304 - 40ms
+[2025-05-24 21:30:38] INFO: ✅ Database connected successfully
+[2025-05-24 21:30:41] INFO: ✅ Server running on port 4000
+[2025-05-24 21:31:18] INFO: ✅ Database connected successfully
+[2025-05-24 21:31:19] INFO: ✅ Server running on port 4000
+[2025-05-24 21:31:30] INFO: ✅ Database connected successfully
+[2025-05-24 21:31:32] INFO: ✅ Server running on port 4000

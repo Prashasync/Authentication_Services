@@ -37,9 +37,10 @@ exports.sendOtp = async (req, res) => {
 
   try {
     const response = await AuthService.generateNewOtp(email);
+
     res.status(200).json({ message: "successfully send the OTP", response });
   } catch (error) {
-    console.log("problem sending the otp", error);
+    console.error("problem sending the otp", error);
     throw error;
   }
 };
@@ -60,7 +61,6 @@ exports.verifyOtp = async (req, res) => {
       sameSite: "lax",
     });
 
-    console.log("RESPONSE FROM VERIFY:", status, message, token);
     return res.status(status).json(message);
   } catch (error) {
     console.error("There was an error verifying the OTP code", error);

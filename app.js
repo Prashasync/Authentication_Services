@@ -19,7 +19,9 @@ app.use(
         "*",
         "http://localhost:3000",
         "http://care.prashasync.io",
-        "http://98.80.73.3:3000",
+        "https://care.prashasync.io",
+        "https://api.prashasync.io",
+        "http://api.prashasync.io",
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);

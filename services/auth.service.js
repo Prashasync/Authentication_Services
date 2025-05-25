@@ -84,7 +84,7 @@ const AuthService = {
       const normalizedEmail = JSON.parse(email);
       const user = await db.User.findOne({ where: { email: normalizedEmail } });
       if (!user) {
-        return { status: 400, message: "User does`t exist" };
+        return { status: 400, message: "User doesn`t exist" };
       }
 
       const otp = Math.floor(100000 + Math.random() * 900000).toString();
@@ -288,13 +288,19 @@ const AuthService = {
 
       if (socialLogin) {
         user = await db.User.findOne({
-          where: { user_id: socialLogin.user_id },
+          where: { email: normalizedEmail },
         });
+        if (!user) {
+          user = await db.User.create({
+            email: normalizedEmail,
+            first_name: given_name,
+            last_name: family_name,
+          });
+        }
       } else {
         user = await db.User.findOne({
           where: { email: normalizedEmail },
         });
-
         if (!user) {
           user = await db.User.create({
             email: normalizedEmail,
