@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js --inspect",
-    "fetch-secrets": "node ./utils/loadSecret.js"
+    "build": "echo 'No build step required for backend service'"
   },
   "license": "ISC",
   "dependencies": {
