@@ -1,0 +1,43 @@
+{
+  "name": "authentication-service",
+  "version": "1.0.0",
+  "description": "Prasha backend authentication-service",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js --inspect",
+    "build": "echo 'No build step required for backend service'"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.810.0",
+    "@aws-sdk/client-sqs": "^3.782.0",
+    "authentication-service": "file:",
+    "aws-sdk": "^2.1692.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.4",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "google-auth-library": "^9.15.1",
+    "joi": "^17.10.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "nodemailer": "^6.10.0",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.6", 
+    "twilio": "^5.5.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.2"
+  }
+}
