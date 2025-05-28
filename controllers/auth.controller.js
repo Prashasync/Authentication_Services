@@ -110,6 +110,7 @@ exports.loginUser = async (req, res) => {
 
 exports.createGoogleUser = async (req, res) => {
   const { credential, clientId } = req.body;
+  console.log(req.body)
   if (!credential)
     return res.status(400).json({ message: 'No token provided' });
 

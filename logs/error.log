@@ -1,2 +1,4 @@
 [2025-04-25 16:02:59] ERROR: ❌ Unable to connect to the database: The server does not support SSL connections
 [2025-05-17 15:07:41] ERROR: ❌ Unable to connect to the database: getaddrinfo ENOTFOUND authenticationdb.cyvysmg4w1i4.us-east-1.rds.amazonaws.com
+[2025-05-27 17:43:32] ERROR: ❌ Unable to connect to the database: The server does not support SSL connections
+[2025-05-27 17:43:52] ERROR: ❌ Unable to connect to the database: The server does not support SSL connections

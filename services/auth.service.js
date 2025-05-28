@@ -88,7 +88,7 @@ const AuthService = {
 
       const otp = Math.floor(100000 + Math.random() * 900000).toString();
       const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000);
-
+console.log(otp)
       const newOtp = await db.Otp.create({
         otp_text: otp,
         user_id: user.dataValues.user_id,
@@ -130,6 +130,8 @@ const AuthService = {
       type: 'otp_verification',
       phone,
     };
+
+    console.log(messageBody)
 
     const command = new SendMessageCommand({
       QueueUrl: process.env.SQS_QUEUE_URL,
