@@ -4,7 +4,7 @@
   "description": "Prasha backend authentication-service",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "dev": "nodemon app.js --inspect",
     "build": "echo 'No build step required for backend service'"
   },
