@@ -11,6 +11,27 @@ exports.getUser = async (req, res) => {
   }
 };
 
+exports.updateUser = async (req, res) => {
+  const user_id = req.user.id;
+  const { currentPassword, newPassword } = req.body;
+  try {
+    const { status, message, data } = await AuthService.updateUser(
+      user_id,
+      currentPassword,
+      newPassword
+    );
+
+    if (status !== 200) {
+      return res.status(status).json({ message });
+    }
+
+    return res.status(200).json({ message, data });
+  } catch (error) {
+    console.error("Error updating user:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+};
+
 exports.registerUser = async (req, res) => {
   const { email, password, phone, title, first_name, last_name, gender } =
     req.body;
@@ -56,7 +77,7 @@ exports.verifyOtp = async (req, res) => {
     return res.status(500).json({ message: "Internal server error" });
   }
 };
- 
+
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
 

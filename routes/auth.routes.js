@@ -5,6 +5,8 @@ const authMiddleware = require("../middlewares/auth");
 
 router.get("/profile", authMiddleware, auth.getUser);
 
+router.patch("/profile", authMiddleware, auth.updateUser);
+
 router.post("/login", auth.loginUser);
 router.post("/logout", auth.logoutUser);
 router.post("/register", auth.registerUser);
