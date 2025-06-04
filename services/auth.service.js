@@ -1,12 +1,12 @@
-const { SQSClient, SendMessageCommand } = require("@aws-sdk/client-sqs");
-const { OAuth2Client } = require("google-auth-library");
+const { SQSClient, SendMessageCommand } = require('@aws-sdk/client-sqs');
+const { OAuth2Client } = require('google-auth-library');
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
-const bcrypt = require("bcrypt");
-const logger = require("../utils/logger");
-const db = require("../models");
-const jwt = require("jsonwebtoken");
-const { generateToken } = require("../utils/jwt");
-require("dotenv").config();
+const bcrypt = require('bcrypt');
+const logger = require('../utils/logger');
+const db = require('../models');
+const jwt = require('jsonwebtoken');
+const { generateToken } = require('../utils/jwt');
+require('dotenv').config();
 
 // AWS SQS setup
 const sqsClient = new SQSClient({
@@ -25,7 +25,7 @@ const AuthService = {
       where: { user_id },
     });
     if (!user) {
-      return { status: 404, data: { message: "User not found" } };
+      return { status: 404, data: { message: 'User not found' } };
     }
     return {
       data: user,
@@ -35,7 +35,7 @@ const AuthService = {
   async registerUser(email, password, title, first_name, last_name, gender) {
     const user = await db.User.findOne({ where: { email } });
     if (user) {
-      return { status: 400, message: "User already exists" };
+      return { status: 400, message: 'User already exists' };
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -55,8 +55,8 @@ const AuthService = {
       otp_text: otp,
       user_id: newUser.dataValues.user_id,
       valid_until: otpExpiresAt,
-      status: "pending",
-      roles: "ACCOUNT_VERIFICATION",
+      status: 'pending',
+      roles: 'ACCOUNT_VERIFICATION',
       otp_attempts: 0,
     });
 
@@ -65,15 +65,16 @@ const AuthService = {
     await this.sendEmailOTP(
       newUser.dataValues.email,
       newOtp.dataValues.otp_text,
-      "email",
+      'email',
       newUser.dataValues.phone,
-      newOtp.dataValues.otp_id
+      newOtp.dataValues.otp_id,
+      'account_verification'
     );
     // if (phone) await sendOTPSMS(phone, otp);
 
     return {
       status: 200,
-      message: "User registered, OTP sent",
+      message: 'User registered, OTP sent',
       isVerified: newUser.dataValues.isVerified,
       token: newUser.dataValues.email,
     };
@@ -83,7 +84,7 @@ const AuthService = {
     try {
       const user = await db.User.findOne({ where: { email } });
       if (!user) {
-        return { status: 400, message: "User doesn`t exist" };
+        return { status: 400, message: 'User doesn`t exist' };
       }
 
       const otp = Math.floor(100000 + Math.random() * 900000).toString();
@@ -94,7 +95,7 @@ const AuthService = {
         otp_attempts: 0,
         valid_until: otpExpiresAt,
         status: null,
-        roles: "ACCOUNT_VERIFICATION",
+        roles: 'ACCOUNT_VERIFICATION',
       });
 
       logger.info(`OTP for ${user.dataValues.email}: ${otp}`);
@@ -102,38 +103,48 @@ const AuthService = {
       await this.sendEmailOTP(
         email,
         newOtp.dataValues.otp_text,
-        "email",
+        'email',
         (phone = null),
-        newOtp.dataValues.otp_id
+        newOtp.dataValues.otp_id,
+        'account_verification'
       );
       // if (phone) await sendOTPSMS(phone, otp);
 
       return {
         status: 200,
-        message: "verifyication OTP sent",
+        message: 'verifyication OTP sent',
         isVerified: user.dataValues.isVerified,
         token: user.dataValues.email,
       };
     } catch (error) {
-      console.error("error here is authservice", error);
+      console.error('error here is authservice', error);
       throw error;
     }
   },
 
-  async sendEmailOTP(to, otp, method = "email", phone, otpId) {
+  async sendEmailOTP(
+    to,
+    otp,
+    method = 'email',
+    phone,
+    otpId,
+    type = 'otp_verification'
+  ) {
     const messageBody = {
       to,
       otp,
       method,
       otpId,
-      type: "otp_verification",
+      type,
       phone,
     };
+    // logger.info('SQS message payload message body', messageBody);
+    logger.info(`SQS message payload: ${JSON.stringify(messageBody)}`);
 
     const command = new SendMessageCommand({
       QueueUrl: process.env.SQS_QUEUE_URL,
       MessageBody: JSON.stringify(messageBody),
-      MessageGroupId: "otp-emails",
+      MessageGroupId: 'otp-emails',
       MessageDeduplicationId: `${Date.now()}`,
     });
 
@@ -143,7 +154,7 @@ const AuthService = {
     });
 
     if (userOtp) {
-      userOtp.status = "pending";
+      userOtp.status = 'pending';
       userOtp.updatedAt = new Date();
       await userOtp.save();
     }
@@ -157,20 +168,20 @@ const AuthService = {
       const user = await db.User.findOne({ where: { email } });
 
       if (!user) {
-        return { status: 400, message: "User not found" };
+        return { status: 400, message: 'User not found' };
       }
 
       const userOtp = await db.Otp.findOne({
         where: {
           user_id: user.user_id,
           roles: role,
-          status: "pending",
+          status: 'pending',
         },
-        order: [["createdAt", "DESC"]],
+        order: [['createdAt', 'DESC']],
       });
 
       if (!userOtp) {
-        return { status: 400, data: { message: "OTP not found" } };
+        return { status: 400, data: { message: 'OTP not found' } };
       }
       const now = new Date();
 
@@ -180,7 +191,7 @@ const AuthService = {
       ) {
         return {
           status: 403,
-          data: { message: "Too many failed attempts. Try again later." },
+          data: { message: 'Too many failed attempts. Try again later.' },
         };
       }
 
@@ -195,16 +206,16 @@ const AuthService = {
 
         const message =
           userOtp.otp_attempts >= 5
-            ? "Too many failed attempts. Try after 15 mins."
-            : "Invalid or expired OTP";
+            ? 'Too many failed attempts. Try after 15 mins.'
+            : 'Invalid or expired OTP';
 
         return { status: 400, message };
       }
 
       userOtp.otp_text = otp;
       userOtp.blocked_until = null;
-      userOtp.status = "validated";
-      userOtp.roles = "ACCOUNT_VERIFICATION";
+      userOtp.status = 'validated';
+      userOtp.roles = 'ACCOUNT_VERIFICATION';
       await userOtp.save();
 
       user.isVerified = true;
@@ -221,22 +232,24 @@ const AuthService = {
       const token = generateToken({ id: user.user_id });
       return {
         status: 200,
-        message: "OTP verified successfully",
+        message: 'OTP verified successfully',
         token,
       };
     } catch (error) {
-      console.error("auth service error", error);
+      console.error('auth service error', error);
       throw error;
     }
   },
 
   async loginUser(email, password) {
     const user = await db.User.findOne({ where: { email } });
+    console.log('Queried user:', user?.dataValues);
 
     if (!user) {
+      console.log('User not found.');
       return {
         status: 400,
-        message: "INVALID_CREDENTIALS",
+        message: 'INVALID_CREDENTIALS',
       };
     }
 
@@ -244,24 +257,27 @@ const AuthService = {
       password,
       user.dataValues.password_hash
     );
+    console.log('Password match:', isMatch);
     if (!isMatch) {
+      console.log('Password is incorrect.');
       return {
         status: 400,
-        message: "INVALID_CREDENTIALS",
+        message: 'INVALID_CREDENTIALS',
       };
     }
 
     if (!user.dataValues.isVerified) {
+      console.log('User is not verified.');
       return {
         status: 400,
-        message: "NOT_VERIFIED",
+        message: 'NOT_VERIFIED',
       };
     }
 
     const token = generateToken({ id: user.dataValues.user_id });
     return {
       status: 200,
-      message: "LOGIN_SUCCESSFUL",
+      message: 'LOGIN_SUCCESSFUL',
       token,
     };
   },
@@ -278,7 +294,7 @@ const AuthService = {
       const normalizedEmail = email.toLowerCase();
 
       let socialLogin = await db.SocialLogins.findOne({
-        where: { provider_id: sub, provider_name: "google" },
+        where: { provider_id: sub, provider_name: 'google' },
       });
 
       let user;
@@ -315,14 +331,14 @@ const AuthService = {
 
         socialLogin = await db.SocialLogins.create({
           email: normalizedEmail,
-          provider_name: "google",
+          provider_name: 'google',
           provider_id: sub,
           user_id: user.user_id,
         });
       }
 
       const jwtToken = jwt.sign({ id: user.user_id }, process.env.JWT_SECRET, {
-        expiresIn: "1d",
+        expiresIn: '1d',
       });
 
       return {
@@ -333,8 +349,8 @@ const AuthService = {
         },
       };
     } catch (error) {
-      console.error("Error verifying Google token:", error);
-      throw new Error("Google token verification failed");
+      console.error('Error verifying Google token:', error);
+      throw new Error('Google token verification failed');
     }
   },
 
@@ -348,13 +364,20 @@ const AuthService = {
         status: 200,
         data: {
           message:
-            "If an account exists for that email, a password reset link has been sent.",
-          status: "OTP sent via SQS",
+            'If an account exists for that email, a password reset link has been sent.',
+          status: 'OTP sent via SQS',
         },
       };
     }
 
-    await this.sendEmailOTP(email, otp, "OTP", userCheck.phone);
+    await this.sendEmailOTP(
+      email,
+      otp,
+      'OTP',
+      userCheck.phone,
+      otpRecord.otp_id,
+      'forgot_password'
+    );
 
     const otpRecord = await db.Otp.findOne({
       where: { user_id: userCheck.user_id },
@@ -363,8 +386,8 @@ const AuthService = {
     if (otpRecord) {
       otpRecord.otp_text = otp;
       otpRecord.valid_until = expiresAt;
-      otpRecord.status = "pending";
-      otpRecord.roles = "FORGET_PASSWORD";
+      otpRecord.status = 'pending';
+      otpRecord.roles = 'FORGET_PASSWORD';
       await otpRecord.save();
     } else {
       await db.Otp.create({
@@ -373,8 +396,8 @@ const AuthService = {
         otp_attempts: 0,
         valid_until: expiresAt,
         created_at: new Date(),
-        status: "pending",
-        roles: "FORGET_PASSWORD",
+        status: 'pending',
+        roles: 'FORGET_PASSWORD',
       });
     }
 
@@ -382,8 +405,8 @@ const AuthService = {
       status: 200,
       data: {
         message:
-          "If an account exists for that email, a password reset link has been sent.",
-        status: "OTP sent via SQS",
+          'If an account exists for that email, a password reset link has been sent.',
+        status: 'OTP sent via SQS',
       },
     };
   },
@@ -392,42 +415,42 @@ const AuthService = {
     try {
       const userCheck = await db.User.findOne({ where: { email } });
       if (!userCheck) {
-        return { status: 400, message: "Invalid OTP or email" };
+        return { status: 400, message: 'Invalid OTP or email' };
       }
 
       const userId = userCheck.user_id;
       const otpRecord = await db.Otp.findOne({
         where: {
           user_id: userId,
-          status: "pending",
+          status: 'pending',
         },
       });
       if (!otpRecord) {
-        return { status: 400, message: "Invalid OTP or email" };
+        return { status: 400, message: 'Invalid OTP or email' };
       }
       if (otpRecord.otp_text !== otp) {
-        return { status: 400, message: "Invalid OTP code. Please try again" };
+        return { status: 400, message: 'Invalid OTP code. Please try again' };
       }
       if (new Date() > otpRecord.valid_until) {
-        return { status: 400, message: "OTP expired" };
+        return { status: 400, message: 'OTP expired' };
       }
 
-      otpRecord.status = "validated";
+      otpRecord.status = 'validated';
       otpRecord.validated_at = new Date();
       await otpRecord.save();
 
       // OPTIONAL: Notify user via SQS
-      await this.sendEmailOTP(email, null, "OTP_VERIFIED", userCheck.phone);
+      await this.sendEmailOTP(email, null, 'OTP_VERIFIED', userCheck.phone);
 
       return {
         status: 200,
-        data: { message: "OTP verified successfully" },
+        data: { message: 'OTP verified successfully' },
       };
     } catch (error) {
-      console.error("Error verifying OTP:", error);
+      console.error('Error verifying OTP:', error);
       return {
         status: 500,
-        message: "Internal server error. Please try again later.",
+        message: 'Internal server error. Please try again later.',
       };
     }
   },
@@ -435,29 +458,35 @@ const AuthService = {
   async resetPassword(email, password) {
     const user = await db.User.findOne({ where: { email } });
     if (!user) {
-      return { status: 400, error: "Invalid user" };
+      return { status: 400, error: 'Invalid user' };
     }
 
     const otpRecord = await db.Otp.findOne({
       where: {
         user_id: user.user_id,
-        status: "validated",
+        status: 'validated',
       },
     });
 
     if (!otpRecord) {
-      return { status: 400, error: "OTP not validated" };
+      return { status: 400, error: 'OTP not validated' };
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
     user.password_hash = hashedPassword;
     await user.save();
 
-    otpRecord.status = "used";
+    otpRecord.status = 'used';
     await otpRecord.save();
 
     // OPTIONAL: Notify user via SQS
-    await this.sendEmailOTP(email, null, "PASSWORD_RESET", user.phone);
+    await this.sendEmailOTP(
+      email,
+      null,
+      'PASSWORD_RESET',
+      user.phone,
+      'password_reset'
+    );
 
     return { status: 200, user };
   },

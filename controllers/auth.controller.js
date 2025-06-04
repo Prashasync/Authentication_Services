@@ -1,4 +1,4 @@
-const AuthService = require("../services/auth.service");
+const AuthService = require('../services/auth.service');
 
 exports.getUser = async (req, res) => {
   const { user } = req;
@@ -6,8 +6,8 @@ exports.getUser = async (req, res) => {
     const { data } = await AuthService.getUser(user.id);
     return res.status(200).json(data);
   } catch (error) {
-    console.error("Error fetching user:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error fetching user:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 };
 
@@ -27,8 +27,8 @@ exports.registerUser = async (req, res) => {
 
     return res.status(status).json({ message, token });
   } catch (error) {
-    console.error("Error registering user:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error registering user:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 };
 
@@ -38,9 +38,9 @@ exports.sendOtp = async (req, res) => {
   try {
     const response = await AuthService.generateNewOtp(email);
 
-    res.status(200).json({ message: "successfully send the OTP", response });
+    res.status(200).json({ message: 'successfully send the OTP', response });
   } catch (error) {
-    console.error("There was an error sending the otp", error);
+    console.error('There was an error sending the otp', error);
     throw error;
   }
 };
@@ -52,18 +52,19 @@ exports.verifyOtp = async (req, res) => {
 
     return res.status(status).json(message);
   } catch (error) {
-    console.error("There was an error verifying the OTP code", error);
-    return res.status(500).json({ message: "Internal server error" });
+    console.error('There was an error verifying the OTP code', error);
+    return res.status(500).json({ message: 'Internal server error' });
   }
 };
- 
+
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
+  console.log('here the email and password is', req.body);
 
   if (!email || !password) {
     return res
       .status(400)
-      .json({ message: "Email and password are required." });
+      .json({ message: 'Email and password are required.' });
   }
 
   try {
@@ -73,47 +74,47 @@ exports.loginUser = async (req, res) => {
     );
 
     const errorMessages = [
-      "INVALID_CREDENTIALS",
-      "NOT_VERIFIED",
-      "OTP request limit exceeded. Try after 1 min.",
+      'INVALID_CREDENTIALS',
+      'NOT_VERIFIED',
+      'OTP request limit exceeded. Try after 1 min.',
     ];
 
     if (errorMessages.includes(message)) {
       return res.status(status).json({ message });
     }
 
-    res.cookie("token", token, {
+    res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: process.env.NODE_ENV === 'production',
       maxAge: 15 * 60 * 100000,
-      sameSite: "lax",
+      sameSite: 'lax',
     });
 
     return res.status(status).json({ message });
   } catch (error) {
-    console.error("Login error:", error.message || error);
-    return res.status(500).json({ message: "Internal server error" });
+    console.error('Login error:', error.message || error);
+    return res.status(500).json({ message: 'Internal server error' });
   }
 };
 
 exports.logoutUser = async (req, res) => {
   try {
-    res.clearCookie("token", {
+    res.clearCookie('token', {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
     });
-    return res.status(200).json({ message: "Logged out successfully" });
+    return res.status(200).json({ message: 'Logged out successfully' });
   } catch (error) {
-    console.error("There was an error with logout, please try again", error);
-    return res.status(500).json({ message: "Internal server error" });
+    console.error('There was an error with logout, please try again', error);
+    return res.status(500).json({ message: 'Internal server error' });
   }
 };
 
 exports.createGoogleUser = async (req, res) => {
   const { credential, clientId } = req.body;
   if (!credential)
-    return res.status(400).json({ message: "No token provided" });
+    return res.status(400).json({ message: 'No token provided' });
 
   try {
     const { token, user } = await AuthService.loginWithGoogle(
@@ -121,17 +122,17 @@ exports.createGoogleUser = async (req, res) => {
       clientId
     );
 
-    res.cookie("token", token, {
+    res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: process.env.NODE_ENV === 'production',
       maxAge: 15 * 60 * 1000,
-      sameSite: "lax",
+      sameSite: 'lax',
     });
 
     res.status(200).json({ user });
   } catch (error) {
-    console.error("Google auth error:", error);
-    res.status(500).json({ message: "Token verification failed" });
+    console.error('Google auth error:', error);
+    res.status(500).json({ message: 'Token verification failed' });
   }
 };
 
@@ -143,10 +144,10 @@ exports.verifyRecoveryOTP = async (req, res) => {
       .status(result.status)
       .json(result.data || { message: result.message });
   } catch (error) {
-    console.error("OTP verification error:", error);
+    console.error('OTP verification error:', error);
     return res
       .status(500)
-      .json({ error: error.message || "Internal Server Error" });
+      .json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -158,8 +159,8 @@ exports.sendPasswordRecoveryEmail = async (req, res) => {
       .status(result.status)
       .json(result.data || { message: result.message });
   } catch (error) {
-    console.error("Recovery email error:", error);
-    res.status(500).json({ error: error.message || "Internal Server Error" });
+    console.error('Recovery email error:', error);
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -172,9 +173,9 @@ exports.resetPassword = async (req, res) => {
       return res.status(result.status).json({ message: result.error });
     }
 
-    return res.status(200).json({ message: "Password reset successfully" });
+    return res.status(200).json({ message: 'Password reset successfully' });
   } catch (error) {
-    console.error("Password reset error:", error);
-    return res.status(500).json({ message: "Internal server error" });
+    console.error('Password reset error:', error);
+    return res.status(500).json({ message: 'Internal server error' });
   }
 };
