@@ -122,7 +122,51 @@ const AuthService = {
     }
   },
 
-  async sendEmailOTP(
+  async updateUser(user_id, currentPassword, newPassword) {
+    const user = await db.User.findOne({ where: { user_id } });
+    if (!user) {
+      return { status: 404, message: "User not found" };
+    }
+
+    if (!currentPassword || !newPassword) {
+      return { status: 400, message: "Current and new passwords are required" };
+    }
+
+    const passwordRegex =
+      /^(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+    if (!passwordRegex.test(newPassword)) {
+      return {
+        status: 400,
+        message:
+          "Password must be at least 8 characters long and contain at least one number and one special character",
+      };
+    }
+
+    const isMatch = await bcrypt.compare(
+      currentPassword,
+      user.dataValues.password_hash
+    );
+    if (!isMatch) {
+      return { status: 400, message: "Current password is incorrect" };
+    }
+
+    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+    user.password_hash = hashedNewPassword;
+    await user.save();
+
+    return {
+      status: 200,
+      message: "Password updated successfully",
+      data: {
+        user_id: user.user_id,
+        email: user.email,
+        first_name: user.first_name,
+        last_name: user.last_name,
+      },
+    };
+  },
+
+ async sendEmailOTP(
     to,
     otp,
     method = 'email',
