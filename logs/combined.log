@@ -8548,3 +8548,276 @@
 [2025-06-03 19:27:20] INFO: [Request] POST /api/v1/auth/send-otp 200 - 4827ms
 [2025-06-03 19:27:21] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: bebf265f-ad11-484f-a5b9-df3665531f1c
 [2025-06-03 19:27:21] INFO: [Request] POST /api/v1/auth/send-otp 200 - 3995ms
+[2025-06-04 11:06:30] INFO: ✅ Database connected successfully
+[2025-06-04 11:06:34] INFO: ✅ Server running on port 4000
+[2025-06-04 11:09:44] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 6ms
+[2025-06-04 11:09:46] INFO: [Request] POST /api/v1/auth/login 400 - 2609ms
+[2025-06-04 11:10:04] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 2ms
+[2025-06-04 11:10:07] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2910ms
+[2025-06-04 11:10:07] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 11:10:07] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 11:10:08] INFO: OTP for 809raj@gmail.com: 872232
+[2025-06-04 11:10:08] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"872232","method":"email","otpId":"55ce0ad6-db59-479e-bedd-17b7faca91e9","type":"account_verification","phone":null}
+[2025-06-04 11:10:08] INFO: OTP for 809raj@gmail.com: 589179
+[2025-06-04 11:10:08] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"589179","method":"email","otpId":"eb91b210-00ac-4b6a-a7e0-32c770bd8635","type":"account_verification","phone":null}
+[2025-06-04 11:10:10] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 55ce0ad6-db59-479e-bedd-17b7faca91e9
+[2025-06-04 11:10:10] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2604ms
+[2025-06-04 11:10:10] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: eb91b210-00ac-4b6a-a7e0-32c770bd8635
+[2025-06-04 11:10:10] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2785ms
+[2025-06-04 11:10:25] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 1ms
+[2025-06-04 11:10:28] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 3207ms
+[2025-06-04 11:10:34] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 11:10:34] INFO: [Request] GET /api/v1/auth/profile 304 - 269ms
+[2025-06-04 11:10:35] INFO: [Request] GET /api/v1/auth/profile 304 - 267ms
+[2025-06-04 11:10:35] INFO: [Request] GET /api/v1/auth/profile 304 - 263ms
+[2025-06-04 11:10:35] INFO: [Request] GET /api/v1/auth/profile 304 - 264ms
+[2025-06-04 11:10:35] INFO: [Request] GET /api/v1/auth/profile 304 - 265ms
+[2025-06-04 11:22:25] INFO: [Request] GET /api/v1/auth/profile 304 - 2386ms
+[2025-06-04 11:22:26] INFO: [Request] GET /api/v1/auth/profile 304 - 267ms
+[2025-06-04 11:22:26] INFO: [Request] GET /api/v1/auth/profile 304 - 270ms
+[2025-06-04 11:22:26] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-04 11:22:26] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-06-04 11:22:27] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-06-04 11:22:27] INFO: [Request] GET /api/v1/auth/profile 304 - 271ms
+[2025-06-04 11:22:27] INFO: [Request] GET /api/v1/auth/profile 304 - 272ms
+[2025-06-04 11:22:28] INFO: [Request] GET /api/v1/auth/profile 304 - 270ms
+[2025-06-04 11:22:28] INFO: [Request] GET /api/v1/auth/profile 304 - 272ms
+[2025-06-04 11:22:43] INFO: [Request] GET /api/v1/auth/profile 304 - 2398ms
+[2025-06-04 11:22:44] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 11:22:44] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-06-04 11:22:44] INFO: [Request] GET /api/v1/auth/profile 304 - 270ms
+[2025-06-04 11:22:44] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 11:22:45] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 11:22:51] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 11:22:52] INFO: [Request] GET /api/v1/auth/profile 304 - 270ms
+[2025-06-04 11:23:14] INFO: [Request] OPTIONS /api/v1/auth/profile 204 - 0ms
+[2025-06-04 11:23:17] INFO: [Request] PATCH /api/v1/auth/profile 400 - 2505ms
+[2025-06-04 11:23:17] INFO: [Request] PATCH /api/v1/auth/profile 400 - 287ms
+[2025-06-04 11:23:17] INFO: [Request] GET /api/v1/auth/profile 304 - 278ms
+[2025-06-04 11:23:18] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-04 11:23:18] INFO: [Request] GET /api/v1/auth/profile 304 - 278ms
+[2025-06-04 11:23:18] INFO: [Request] GET /api/v1/auth/profile 304 - 279ms
+[2025-06-04 11:23:18] INFO: [Request] GET /api/v1/auth/profile 304 - 283ms
+[2025-06-04 11:23:19] INFO: [Request] GET /api/v1/auth/profile 304 - 280ms
+[2025-06-04 11:24:02] INFO: [Request] GET /api/v1/auth/profile 304 - 2367ms
+[2025-06-04 11:24:02] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 11:24:02] INFO: [Request] GET /api/v1/auth/profile 304 - 266ms
+[2025-06-04 11:24:03] INFO: [Request] GET /api/v1/auth/profile 304 - 266ms
+[2025-06-04 11:24:03] INFO: [Request] GET /api/v1/auth/profile 304 - 265ms
+[2025-06-04 11:24:03] INFO: [Request] GET /api/v1/auth/profile 304 - 265ms
+[2025-06-04 12:04:56] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 4ms
+[2025-06-04 12:04:59] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2866ms
+[2025-06-04 12:04:59] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 12:04:59] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-06-04 12:05:00] INFO: OTP for 809raj@gmail.com: 946064
+[2025-06-04 12:05:00] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"946064","method":"email","otpId":"f339eb48-790b-4086-bac5-da3dfd69ea30","type":"account_verification","phone":null}
+[2025-06-04 12:05:00] INFO: OTP for 809raj@gmail.com: 876842
+[2025-06-04 12:05:00] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"876842","method":"email","otpId":"099e5012-2e14-4a91-8766-21472179be96","type":"account_verification","phone":null}
+[2025-06-04 12:05:02] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: f339eb48-790b-4086-bac5-da3dfd69ea30
+[2025-06-04 12:05:02] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2497ms
+[2025-06-04 12:05:02] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 099e5012-2e14-4a91-8766-21472179be96
+[2025-06-04 12:05:02] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2790ms
+[2025-06-04 12:05:18] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-06-04 12:05:22] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 3352ms
+[2025-06-04 12:05:27] INFO: [Request] GET /api/v1/auth/profile 304 - 277ms
+[2025-06-04 12:05:28] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-04 12:05:28] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-04 12:05:28] INFO: [Request] GET /api/v1/auth/profile 304 - 279ms
+[2025-06-04 12:05:29] INFO: [Request] GET /api/v1/auth/profile 304 - 280ms
+[2025-06-04 12:05:29] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-04 17:28:28] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 5ms
+[2025-06-04 17:28:31] INFO: [Request] POST /api/v1/auth/login 400 - 2565ms
+[2025-06-04 17:29:27] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-06-04 17:29:30] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2956ms
+[2025-06-04 17:29:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 17:29:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 17:29:31] INFO: OTP for 809raj@gmail.com: 424745
+[2025-06-04 17:29:31] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"424745","method":"email","otpId":"90c6b988-e75c-45c0-8a0d-a297d9fe8e80","type":"account_verification","phone":null}
+[2025-06-04 17:29:31] INFO: OTP for 809raj@gmail.com: 165357
+[2025-06-04 17:29:31] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"165357","method":"email","otpId":"14e6db24-d292-4ebf-9f47-909291f88b58","type":"account_verification","phone":null}
+[2025-06-04 17:29:32] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 90c6b988-e75c-45c0-8a0d-a297d9fe8e80
+[2025-06-04 17:29:32] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2557ms
+[2025-06-04 17:29:32] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 14e6db24-d292-4ebf-9f47-909291f88b58
+[2025-06-04 17:29:32] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2756ms
+[2025-06-04 17:30:38] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-06-04 17:30:41] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 3321ms
+[2025-06-04 17:30:47] INFO: [Request] GET /api/v1/auth/profile 304 - 274ms
+[2025-06-04 17:30:48] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-04 17:30:48] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-04 17:30:48] INFO: [Request] GET /api/v1/auth/profile 304 - 274ms
+[2025-06-04 17:30:48] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-06-04 17:30:49] INFO: [Request] GET /api/v1/auth/profile 304 - 274ms
+[2025-06-04 18:03:40] INFO: [Request] OPTIONS /api/v1/auth/logout 204 - 1ms
+[2025-06-04 18:03:40] INFO: [Request] POST /api/v1/auth/logout 200 - 5ms
+[2025-06-04 18:03:56] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-06-04 18:03:59] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2774ms
+[2025-06-04 18:03:59] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 18:03:59] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-04 18:03:59] INFO: OTP for 809raj@gmail.com: 376292
+[2025-06-04 18:03:59] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"376292","method":"email","otpId":"e8a8f59e-39c9-4f89-a423-38fcebb81963","type":"account_verification","phone":null}
+[2025-06-04 18:04:00] INFO: OTP for 809raj@gmail.com: 670995
+[2025-06-04 18:04:00] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"670995","method":"email","otpId":"8e709fd6-4492-489f-95d0-8169f262402f","type":"account_verification","phone":null}
+[2025-06-04 18:04:01] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: e8a8f59e-39c9-4f89-a423-38fcebb81963
+[2025-06-04 18:04:01] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2523ms
+[2025-06-04 18:04:01] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 8e709fd6-4492-489f-95d0-8169f262402f
+[2025-06-04 18:04:01] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2790ms
+[2025-06-04 18:04:42] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-06-04 18:04:45] INFO: [Request] POST /api/v1/auth/verify-otp 400 - 2783ms
+[2025-06-04 18:05:02] INFO: [Request] OPTIONS /api/v1/auth/verify-otp 204 - 0ms
+[2025-06-04 18:05:05] INFO: [Request] POST /api/v1/auth/verify-otp 200 - 3204ms
+[2025-06-04 18:05:12] INFO: [Request] GET /api/v1/auth/profile 304 - 263ms
+[2025-06-04 18:05:12] INFO: [Request] GET /api/v1/auth/profile 304 - 262ms
+[2025-06-04 18:05:12] INFO: [Request] GET /api/v1/auth/profile 304 - 268ms
+[2025-06-04 18:05:12] INFO: [Request] GET /api/v1/auth/profile 304 - 271ms
+[2025-06-04 18:05:13] INFO: [Request] GET /api/v1/auth/profile 304 - 264ms
+[2025-06-04 18:05:13] INFO: [Request] GET /api/v1/auth/profile 304 - 267ms
+[2025-06-04 19:50:59] INFO: ✅ Database connected successfully
+[2025-06-04 19:51:04] INFO: ✅ Server running on port 4000
+[2025-06-04 19:57:39] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 13ms
+[2025-06-04 19:57:42] INFO: [Request] POST /api/v1/auth/login 200 - 2631ms
+[2025-06-04 19:57:45] INFO: [Request] GET /api/v1/auth/profile 200 - 278ms
+[2025-06-04 19:57:45] INFO: [Request] GET /api/v1/auth/profile 304 - 282ms
+[2025-06-04 19:57:46] INFO: [Request] GET /api/v1/auth/profile 304 - 272ms
+[2025-06-04 19:57:46] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-04 19:57:46] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-06-04 19:57:46] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-04 20:02:20] INFO: [Request] GET /api/v1/auth/profile 304 - 2464ms
+[2025-06-04 20:02:21] INFO: [Request] GET /api/v1/auth/profile 304 - 288ms
+[2025-06-04 20:02:21] INFO: [Request] GET /api/v1/auth/profile 304 - 278ms
+[2025-06-04 20:02:21] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-04 20:02:22] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-04 20:02:22] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-05 11:21:00] INFO: ✅ Database connected successfully
+[2025-06-05 11:21:04] INFO: ✅ Server running on port 4000
+[2025-06-05 11:22:37] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 4ms
+[2025-06-05 11:22:40] INFO: [Request] POST /api/v1/auth/login 200 - 2561ms
+[2025-06-05 11:22:43] INFO: [Request] GET /api/v1/auth/profile 304 - 271ms
+[2025-06-05 11:22:43] INFO: [Request] GET /api/v1/auth/profile 304 - 273ms
+[2025-06-05 11:22:43] INFO: [Request] GET /api/v1/auth/profile 304 - 280ms
+[2025-06-05 11:22:43] INFO: [Request] GET /api/v1/auth/profile 304 - 271ms
+[2025-06-05 11:22:44] INFO: [Request] GET /api/v1/auth/profile 304 - 270ms
+[2025-06-05 11:22:44] INFO: [Request] GET /api/v1/auth/profile 304 - 267ms
+[2025-06-05 11:34:32] INFO: [Request] GET /api/v1/auth/profile 304 - 2655ms
+[2025-06-05 11:34:33] INFO: [Request] GET /api/v1/auth/profile 304 - 347ms
+[2025-06-05 11:34:33] INFO: [Request] GET /api/v1/auth/profile 304 - 283ms
+[2025-06-05 11:34:33] INFO: [Request] GET /api/v1/auth/profile 304 - 325ms
+[2025-06-05 11:34:33] INFO: [Request] GET /api/v1/auth/profile 304 - 304ms
+[2025-06-05 11:34:34] INFO: [Request] GET /api/v1/auth/profile 304 - 285ms
+[2025-06-05 12:15:02] INFO: [Request] GET /api/v1/auth/profile 304 - 2501ms
+[2025-06-05 12:15:02] INFO: [Request] GET /api/v1/auth/profile 304 - 281ms
+[2025-06-05 12:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 281ms
+[2025-06-05 12:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 280ms
+[2025-06-05 12:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 277ms
+[2025-06-05 12:15:03] INFO: [Request] GET /api/v1/auth/profile 304 - 278ms
+[2025-06-05 12:22:17] INFO: [Request] OPTIONS /api/v1/auth/login 204 - 1ms
+[2025-06-05 12:22:19] INFO: [Request] POST /api/v1/auth/login 200 - 2639ms
+[2025-06-05 12:22:22] INFO: [Request] GET /api/v1/auth/profile 304 - 280ms
+[2025-06-05 12:22:22] INFO: [Request] GET /api/v1/auth/profile 304 - 280ms
+[2025-06-05 12:22:23] INFO: [Request] GET /api/v1/auth/profile 304 - 277ms
+[2025-06-05 12:22:23] INFO: [Request] GET /api/v1/auth/profile 304 - 275ms
+[2025-06-05 12:22:23] INFO: [Request] GET /api/v1/auth/profile 304 - 281ms
+[2025-06-05 12:22:24] INFO: [Request] GET /api/v1/auth/profile 304 - 276ms
+[2025-06-10 15:37:00] INFO: ✅ Database connected successfully
+[2025-06-10 15:37:06] INFO: ✅ Server running on port 4000
+[2025-06-10 15:38:12] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 6ms
+[2025-06-10 15:38:15] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 3177ms
+[2025-06-10 15:38:15] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-06-10 15:38:15] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-10 15:38:16] INFO: OTP for 809raj@gmail.com: 962873
+[2025-06-10 15:38:16] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"962873","method":"email","otpId":"9f023e78-d3e5-47ef-854b-c6bb2effbb13","type":"account_verification","phone":null}
+[2025-06-10 15:38:16] INFO: OTP for 809raj@gmail.com: 470027
+[2025-06-10 15:38:16] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"470027","method":"email","otpId":"37256cad-8606-418d-83da-507989b51763","type":"account_verification","phone":null}
+[2025-06-10 15:38:18] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 9f023e78-d3e5-47ef-854b-c6bb2effbb13
+[2025-06-10 15:38:18] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2359ms
+[2025-06-10 15:38:18] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 37256cad-8606-418d-83da-507989b51763
+[2025-06-10 15:38:18] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2624ms
+[2025-06-11 11:03:59] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 14ms
+[2025-06-11 11:03:59] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-06-11 11:04:02] INFO: OTP for 809raj@gmail.com: 143332
+[2025-06-11 11:04:02] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"143332","method":"email","otpId":"65eeb866-dfb4-40b8-a855-ec33a74d6674","type":"account_verification","phone":null}
+[2025-06-11 11:04:03] INFO: OTP for 809raj@gmail.com: 776605
+[2025-06-11 11:04:03] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"776605","method":"email","otpId":"53d26c45-f60f-4a93-994c-ccce8ba1ffc5","type":"account_verification","phone":null}
+[2025-06-11 11:04:04] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 65eeb866-dfb4-40b8-a855-ec33a74d6674
+[2025-06-11 11:04:04] INFO: [Request] POST /api/v1/auth/send-otp 200 - 5227ms
+[2025-06-11 11:04:04] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 53d26c45-f60f-4a93-994c-ccce8ba1ffc5
+[2025-06-11 11:04:04] INFO: [Request] POST /api/v1/auth/send-otp 200 - 5291ms
+[2025-06-11 11:30:57] INFO: ✅ Database connected successfully
+[2025-06-11 11:31:06] INFO: ✅ Server running on port 4000
+[2025-06-11 11:31:24] INFO: ✅ Database connected successfully
+[2025-06-11 11:31:38] INFO: ✅ Server running on port 4000
+[2025-06-11 11:34:13] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 6ms
+[2025-06-11 11:34:16] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2848ms
+[2025-06-11 11:34:16] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-11 11:34:16] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-06-11 11:34:16] INFO: generating Otp for the eamil
+[2025-06-11 11:34:16] INFO: generating Otp for the eamil
+[2025-06-11 11:34:17] INFO: OTP for 809raj@gmail.com: 981286
+[2025-06-11 11:34:17] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"981286","method":"email","otpId":"28b5163b-efc0-4222-a128-b7c28b83e83a","type":"account_verification","phone":null}
+[2025-06-11 11:34:17] INFO: OTP for 809raj@gmail.com: 530832
+[2025-06-11 11:34:17] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"530832","method":"email","otpId":"21f53b1b-a593-4dba-b5f0-95cab4548288","type":"account_verification","phone":null}
+[2025-06-11 11:34:19] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 28b5163b-efc0-4222-a128-b7c28b83e83a
+[2025-06-11 11:34:19] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2407ms
+[2025-06-11 11:34:19] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 21f53b1b-a593-4dba-b5f0-95cab4548288
+[2025-06-11 11:34:19] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2668ms
+[2025-06-11 11:38:45] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-06-11 11:38:48] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2695ms
+[2025-06-11 11:38:48] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-11 11:38:48] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-11 11:38:48] INFO: generating Otp for the eamil
+[2025-06-11 11:38:48] INFO: generating Otp for the eamil
+[2025-06-11 11:38:49] INFO: OTP for 809raj@gmail.com: 284742
+[2025-06-11 11:38:49] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"284742","method":"email","otpId":"48e4663c-7480-4ae1-a20f-0456a2a61e97","type":"account_verification","phone":null}
+[2025-06-11 11:38:49] INFO: OTP for 809raj@gmail.com: 317103
+[2025-06-11 11:38:49] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"317103","method":"email","otpId":"7ae77065-8c4a-4b28-9bce-6e214a0c5dd0","type":"account_verification","phone":null}
+[2025-06-11 11:38:50] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 48e4663c-7480-4ae1-a20f-0456a2a61e97
+[2025-06-11 11:38:50] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2615ms
+[2025-06-11 11:38:51] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 7ae77065-8c4a-4b28-9bce-6e214a0c5dd0
+[2025-06-11 11:38:51] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2929ms
+[2025-06-11 11:46:36] INFO: ✅ Database connected successfully
+[2025-06-11 11:46:49] INFO: ✅ Server running on port 4000
+[2025-06-11 11:55:39] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 7ms
+[2025-06-11 11:55:41] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2324ms
+[2025-06-11 11:55:41] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-06-11 11:55:41] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-11 11:55:41] INFO: generating Otp for the eamil
+[2025-06-11 11:55:41] INFO: generating Otp for the eamil
+[2025-06-11 11:55:42] INFO: OTP for 809raj@gmail.com: 586568
+[2025-06-11 11:55:42] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"586568","method":"email","otpId":"78095b62-7fd9-49d8-8e41-071a8c7475c4","type":"account_verification","phone":null}
+[2025-06-11 11:55:42] INFO: OTP for 809raj@gmail.com: 252330
+[2025-06-11 11:55:42] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"252330","method":"email","otpId":"5d44ae32-789c-4970-9bc3-5d0ea07fb09c","type":"account_verification","phone":null}
+[2025-06-11 11:55:43] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 78095b62-7fd9-49d8-8e41-071a8c7475c4
+[2025-06-11 11:55:43] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2205ms
+[2025-06-11 11:55:43] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 5d44ae32-789c-4970-9bc3-5d0ea07fb09c
+[2025-06-11 11:55:43] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2327ms
+[2025-06-11 12:11:50] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-06-11 12:11:52] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2317ms
+[2025-06-11 12:11:52] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 2ms
+[2025-06-11 12:11:52] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-11 12:11:52] INFO: generating Otp for the eamil
+[2025-06-11 12:11:52] INFO: generating Otp for the eamil
+[2025-06-11 12:11:53] INFO: OTP for 809raj@gmail.com: 973887
+[2025-06-11 12:11:53] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"973887","method":"email","otpId":"a56292a8-73a4-485e-9bbe-171a178420ef","type":"account_verification","phone":null}
+[2025-06-11 12:11:53] INFO: OTP for 809raj@gmail.com: 287870
+[2025-06-11 12:11:53] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"287870","method":"email","otpId":"27b51895-6b20-48e0-9f2e-0c1d60d180bf","type":"account_verification","phone":null}
+[2025-06-11 12:11:54] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: a56292a8-73a4-485e-9bbe-171a178420ef
+[2025-06-11 12:11:54] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2245ms
+[2025-06-11 12:11:54] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 27b51895-6b20-48e0-9f2e-0c1d60d180bf
+[2025-06-11 12:11:54] INFO: [Request] POST /api/v1/auth/send-otp 200 - 2365ms
+[2025-06-11 12:12:43] INFO: [Request] OPTIONS /api/v1/auth/create-google-account 204 - 1ms
+[2025-06-11 12:12:45] INFO: [Request] POST /api/v1/auth/create-google-account 200 - 2482ms
+[2025-06-11 12:12:45] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-06-11 12:12:45] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 0ms
+[2025-06-11 12:12:45] INFO: generating Otp for the eamil
+[2025-06-11 12:12:45] INFO: generating Otp for the eamil
+[2025-06-11 12:12:46] INFO: OTP for 809raj@gmail.com: 461846
+[2025-06-11 12:12:46] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"461846","method":"email","otpId":"41096f3d-6f2b-43f6-913b-597095539400","type":"account_verification","phone":null}
+[2025-06-11 12:12:46] INFO: OTP for 809raj@gmail.com: 498686
+[2025-06-11 12:12:46] INFO: SQS message payload: {"to":"809raj@gmail.com","otp":"498686","method":"email","otpId":"b6cf1419-3f71-46e1-a6d2-209ce309ec3d","type":"account_verification","phone":null}
+[2025-06-11 12:12:47] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: 41096f3d-6f2b-43f6-913b-597095539400
+[2025-06-11 12:12:47] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1749ms
+[2025-06-11 12:12:47] INFO: OTP message pushed to SQS for: 809raj@gmail.com, OTP ID: b6cf1419-3f71-46e1-a6d2-209ce309ec3d
+[2025-06-11 12:12:47] INFO: [Request] POST /api/v1/auth/send-otp 200 - 1978ms
+[2025-06-11 17:24:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 3ms
+[2025-06-11 17:24:30] INFO: [Request] OPTIONS /api/v1/auth/send-otp 204 - 1ms
+[2025-06-11 17:24:30] INFO: generating Otp for the eamil
+[2025-06-11 17:24:30] INFO: generating Otp for the eamil

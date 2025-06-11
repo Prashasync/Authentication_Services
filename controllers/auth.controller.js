@@ -27,8 +27,8 @@ exports.updateUser = async (req, res) => {
 
     return res.status(200).json({ message, data });
   } catch (error) {
-    console.error("Error updating user:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error updating user:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 };
 
@@ -54,6 +54,7 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.sendOtp = async (req, res) => {
+  console.log('send otp controller called ', new Date().toISOString());
   const email = req.body.data;
 
   try {

@@ -81,6 +81,7 @@ const AuthService = {
   },
 
   async generateNewOtp(email) {
+    logger.info('generating Otp for the eamil', email);
     try {
       const user = await db.User.findOne({ where: { email } });
       if (!user) {
@@ -125,11 +126,11 @@ const AuthService = {
   async updateUser(user_id, currentPassword, newPassword) {
     const user = await db.User.findOne({ where: { user_id } });
     if (!user) {
-      return { status: 404, message: "User not found" };
+      return { status: 404, message: 'User not found' };
     }
 
     if (!currentPassword || !newPassword) {
-      return { status: 400, message: "Current and new passwords are required" };
+      return { status: 400, message: 'Current and new passwords are required' };
     }
 
     const passwordRegex =
@@ -138,7 +139,7 @@ const AuthService = {
       return {
         status: 400,
         message:
-          "Password must be at least 8 characters long and contain at least one number and one special character",
+          'Password must be at least 8 characters long and contain at least one number and one special character',
       };
     }
 
@@ -147,7 +148,7 @@ const AuthService = {
       user.dataValues.password_hash
     );
     if (!isMatch) {
-      return { status: 400, message: "Current password is incorrect" };
+      return { status: 400, message: 'Current password is incorrect' };
     }
 
     const hashedNewPassword = await bcrypt.hash(newPassword, 10);
@@ -156,7 +157,7 @@ const AuthService = {
 
     return {
       status: 200,
-      message: "Password updated successfully",
+      message: 'Password updated successfully',
       data: {
         user_id: user.user_id,
         email: user.email,
@@ -166,7 +167,7 @@ const AuthService = {
     };
   },
 
- async sendEmailOTP(
+  async sendEmailOTP(
     to,
     otp,
     method = 'email',
